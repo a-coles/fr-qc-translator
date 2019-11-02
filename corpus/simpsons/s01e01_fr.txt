@@ -1,0 +1,438 @@
+SEQ 1 - INT/NUIT Voiture des Simpson
+[Les Simpson sont en route pour aller à l'école élémentaire qui organise une fête de Noël]
+Marge : Oh Homer, fais attention.
+Homer : Pas le temps de faire attention, on est en retard.
+
+SEQ 2 - INT/NUIT Ecole élémentaire - Auditorium
+[Homer et Marge s'assoient à leur place pendant qu'une classe chante une chanson. Ils bousculent les gens pour s'asseoir]
+Marge : Désolée... excusez-moi... pardon... pardon excusez-moi... pardon... je suis désolée... pardon. Homer, dépêche-toi.
+Homer : [en même temps que Marge] Eh Herman comment tu vas ? Toi aussi t'as emmené tes fils ici ? Salut mon vieux. On se voit tout à l'heure. Ouille ! Pardonnez mes grosse tatanes !
+[Une classe de 21 élèves chantent. Quand ils ont fini, les gens applaudissent]
+Skinner : Hein, hein. Ils sont formidables. Maintenant, voici les pères Noël du monde entier qui vous sont présentés par les élèves du cours élémentaire deuxième année.
+Marge : Oh c'est la classe de Lisa !
+Fille : Fröhliche Weihnachten. Ca veut dire joyeux Noël en allemand. En Allemagne le serviteur du Père Noël, Ruprecht donne des cadeaux aux enfants qui sont gentils et des martinets aux parents des enfants qui sont méchants.
+[Les gens applaudissent. Puis, c'est Ralph qui est déguisé]
+Ralph : Joyeux Noël à tous. Je m'appelle Otchi Otcha. Je suis un prêtre japonais qui agit comme le Père Noël. J'ai des yeux derrière la tête aussi. Les enfants ont intérêt à bien se tenir quand je suis dans les parages.
+[Il se tourne et les gens sont étonnés de voir des yeux derrière lui. Ils applaudissent]
+Largo : Et maintenant je vous présente Lisa Simpson qui personnifie Tah Wanga. Le Père Noël des mers du Sud.
+Homer : Oh, c'est Lisa. C'est notre fille.
+[Lisa arrive déguisée en jonglant avec des torches. Les gens sont choqués mais applaudissent.]
+Skinner : Maintenant tous les élèves du cours moyen deuxième année vont vous charmer avec un... pot pourri, de nos airs de Noël favoris.
+Elèves : [ils chantent] Sur le long chemin, tout blanc de neige blanche. Un vieux monsieur s'avance, avec sa canne dans la main. Et tout là-haut le vent, qui siffle dans les branches...
+Marge : Est-ce qu'il est pas adorable notre Bart, hein Homer ? Il chante comme un petit ange.
+[Bart chante sur l'air de "Vive le vent" mais en changeant les paroles]
+Bart : Vive la fin, vive la fin, d'cette chanson ringarde. J'en ai ras le bol de faire l'andouille devant cette bande de nouilles... Ouille !
+[Bart est sorti de la scène. La classe finit la chanson]
+Elèves : [ils chantent] Qui s'en va sifflant soufflant dans les grands sapins verts.
+[Plus tard]
+Skinner : Le cours moyen première année va maintenant nous faire la joie de nous interpréter une scène tirée des contes de Noël de Charles Dickens.
+Homer : Oh, c'est pas vrai ! Y'a combien de classes dans cette satanée école ?
+
+SEQ 3 - INT/NUIT Maison des Simpson - Séjour
+[Bart et Lisa font leur liste du Père Noël, Homer s'occupe des décorations et Marge écrit une lettre]
+Marge : Très chers amis, nous avons eu notre lot de chagrin et de joie cette année encore. Les chagrins d'abord. Notre petit chat Boule de Neige est passé sous une voiture. Il s'en est allé au paradis des minous. Mais nous avons acheté un nouveau petit chat, Boule de Neige II. La vie continue. En parlant de la vie qui continue, Grand-père est toujours de ce monde plus grognon que jamais. Maggie marche toute seule à présent et Lisa est toujours aussi bonne élève. Quant à Bart, et bien... on l'aime Bart. Cette période magique de Noël nous met tous le coeur en fête.
+Homer : Marge, elle est pas bientôt finie cette lettre idiote ?
+Marge : Homer vous embrasse. Joyeux Noël à tous. Les Simpson.
+Homer : Marge ! Marge, où est la rallonge pour la guirlande ?
+Marge : Homer, pour l'amour du Ciel. Elle est dans le tiroir, comme d'habitude.
+Homer : Oh excuse-moi. Au fond, je suis qu'un grand enfant. J'adore Noël, je suis excité comme une puce.
+[Homer prend la rallonge dans le tiroir. Elle est toute emmêlée]
+Homer : Oh, tous les ans c'est pareil, regardez-moi ça !
+Marge : Bien les enfants, vous allez me donner vos lettres. Je les enverrai demain à l'atelier du Père Noël au Pôle Nord.
+Bart : Eh m'man. Y'a qu'un seul gros bonhomme qui nous apporte des cadeaux et il s'appelle pas Noël.
+[Marge lit la liste de Lisa. Elle a écrit "Un poney, un poney, un poney, un poney"]
+Marge : Un poney ? Lisa, ça fait au moins trois ans de suite que tu en demandes un. Une fois de plus, je te répète que le Père Noël ne peut pas caser un poney dans sa hotte. Tu veux pas comprendre ?
+Lisa : Mais j'ai vraiment envie d'un poney, maman. Et j'ai été très très sage cette année.
+Marge : Seigneur, espérons que Bart sera un peu plus réaliste.
+[Elle lit la liste de Bart]
+Marge : [affolée] Un tatouage !
+Homer : Un quoi ?
+Bart : Oh ouais, c'est cool les tatouages. On les garde jusqu'à la fin de sa vie.
+Marge : Non, tu n'auras pas de tatouages pour Noël. Pas question.
+Homer : Ah ouais. Et si t'en veux un, il faudra te le payer toi-même avec ton argent de poche.
+Bart : Génial !
+Marge : Homer !
+[Le téléphone sonne. Homer va répondre]
+
+SEQ 4 - INT/NUIT Maison des Simpson - Salon-TV
+Homer : Oui allô ?
+Patty : Marge, s'il vous plait.
+Homer : De la part de qui ?
+Patty : Puis-je parler à Marge, s'il vous plait ?
+Homer : C'est sa sœur à l'appareil, c'est ça ?
+Patty : Marge est là ?
+Homer : Mais enfin, c'est qui qui la demande, hein ?
+Patty : Marge, s'il vous plait.
+Homer : [à Marge] Tiens, c'est ta frangine.
+Marge : Allo ?
+Patty : Marge, c'est Patty. Je voulais te dire que Selma et moi, on tient plus en place à l'idée de passer Noël avec notre petite sœur.
+Marge : Homer et moi on attend votre visite avec impatience.
+Patty : Ca m'étonnerait beaucoup qu'Homer soit impatient. De tous les hommes que t'aurais pu épouser, pourquoi tu en as choisi un qui est odieux avec nous ?
+
+SEQ 5 - EXT/NUIT Maison des Simpson - Devant la maison
+[Homer vient de finir de mettre la guirlande de Noël autour de la maison]
+Bart : Bravo, p'pa !
+Homer : Attention les enfants, préparez-vous à en prendre plein les yeux. Marge, vas-y envoie le courant.
+[Marge branche la guirlande. Il y a environ 5 ampoules qui clignotent sur la centaine de guirlandes]
+Homer : Alors, qu'est-ce que vous en dîtes ?
+Lisa : T'as fait ce que t'as pu.
+[A côté, Ned Flanders fait la même chose avec ses enfants]
+Ned : Arrête-toi une seconde, fiston. Eh, Simpson !
+Homer : Ouais Flanders, qu'est-ce qu'il y a ?
+Ned : Dis-moi comment tu trouves ma décoration ?
+[Flanders a fait une superbe décoration avec écrit "Joyeux Noël" et un Père Noël qui dit "Oh oh oh"]
+Bart : Waahh, c'est géant !
+Lisa : C'est beau !
+Homer : Ça brille beaucoup trop. Qu'est-ce qu'il peut être frimeur, ce Flanders, il m'énerve !
+
+SEQ 6 - INT/JOUR Maison des Simpson - Cuisine
+Marge : Vous venez faire les achats de Noël avec moi ?
+Lisa : D'accord !
+Bart : Ouais, le centre commercial !
+Homer : Tu peux bien me le dire. L'argent pour les cadeaux, tu l'as planqué où ?
+Marge : Ça c'est mon petit secret chéri. Retourne-toi.
+[Homer se retourne. Marge sort le bocal de ses cheveux]
+Marge : Tu peux regarder maintenant.
+Homer : Ouh, le bocal est plein, cette année.
+
+SEQ 7 - INT/JOUR Centre commercial
+[Marge se gare dans la rangée "ZZ". A l'intérieur, Marge et Lisa admirent une vitrine et Bart admire celle des tatouages. Il en repère un avec un coeur où il est écrit "Mother". Il imagine la réaction de Marge]
+Marge : Oh Bart, comme c'est touchant. Le plus beau cadeau qu'une mère puisse recevoir. T'as l'air d'un gros dur comme ça.
+[Bart entre dans le magasin]
+Bart : Un cœur avec écrit "Mère".
+Tatoueur : Oh attends voir. Tu as quel âge, toi ?
+Bart : 21, monsieur.
+Tatoueur : Va t'asseoir derrière.
+
+SEQ 8 - INT/JOUR Centrale nucléaire
+[Pendant que Homer travaille, Smithers appelle au micro]
+Smithers :[au micro] Attention, s'il vous plait. Tout le personnel continue à travailler pendant l'intervention qui va suivre. Et maintenant votre patron et ami, monsieur Burns.
+Burns : [au micro] Bonjour. Je suis fier de vous annoncer que nous avons été en mesure d'accroître la sécurité ici à la centrale sans aucune augmentation de prix pour les abonnés, et sans toucher au salaire des cadres. Quoi qu'il en soit pour vous les ouvriers à demi-qualifiés, il n'y aura pas la moindre prime de Noël. Encore une chose, joyeux Noël.
+Homer : Oh mon Dieu, heureusement qu'on a le bocal.
+
+SEQ 9 - INT/JOUR Centre commercial
+Marge : Où il est votre frère ?
+[Elle entend Bart crier. Elle entre dans le magasin du tatoueur et elle voit Bart se faire tatouer. Elle attrape Bart par le bras. Il n'y a que "Moth" de marqué]
+Bart : Maman, je pensais que tu serais contente.
+[Marge l'emmène dans un magasin pour retirer les tatouages]
+Employé : Oui madame Simpson, nous pouvons faire disparaître ce tatouage. C'est une opération banale qui fait appel au laser.
+Bart : Cool.
+Employé : Néanmoins, sachez que c'est relativement coûteux et que j'exige le paiement immédiat en espèce.
+Marge : Mon Dieu ! Homer, heureusement qu'on a ta prime.
+[Bart est installé couché et l'homme est sur le point d'utiliser le laser]
+Bart : Waahh, c'est dingue ce machin.
+Employé : Tu fais ce que tu veux, mais surtout ne te tortille pas. Tu n'as pas envie de prendre ce rayon glouton entre les yeux ou... entre les jambes, hein ?
+[Il démarre le laser]
+
+SEQ 10 - INT/NUIT Maison des Simpson - Salon-TV
+[Lisa appuie sur le bras de Bart]
+Bart : Aïe ! Tire-toi.
+[Lisa appuie sur le bras de Bart]
+Bart : Aïe ! Tire-toi.
+[Lisa appuie sur le bras de Bart]
+Bart : Aïe ! Tire-toi.
+[Maggie appuie sur le bras de Bart]
+Bart : Aïe ! Tire-toi.
+Homer : Qu'est-ce que t'as là ?
+[Homer appuie sur le bras de Bart]
+Bart : Aïe ! Tire-toi. Là euh... j'avais un super beau tatouage.
+Lisa : Même que pour le faire opérer, maman a dû dépenser tout l'argent de Noël.
+Homer : Hein ?
+[Marge lui montre le bocal vide]
+Homer : Oh ! C'est vrai ! Le bocal est complètement vide ! Oh mon Dieu, nous sommes ruinés ! Noël est annulé, personne n'aura de cadeaux. [Il pleyre]
+Marge : Mais t'en fais pas Homer. C'est pas grave, cette année on puisera un peu plus dans ta prime de Noël.
+Homer : Ah !
+Marge : Homer ?
+Homer : Oui oui, c'est vrai, ma prime de Noël. Quel idiot j'avais oublié. Ce sera sans doute le plus beau Noël qu'on ait connu. Le plus beau qu'une famille vu.
+[Homer sort et voit le père Noël de Flanders sur sa maison, énervé]
+
+SEQ 11 - INT/NUIT Maison des Simpson - Chambre d'Homer et Marge
+Marge : J'ai l'impression qu'il y a quelque chose que tu ne m'as pas dit, Homer.
+Homer : Hein ? Ah, je t'aime Marge.
+Marge : Non ça tu me le dis sans arrêt.
+Homer : Ah, ben c'est parce que je t'aime tellement. Je sais que tu mériterais un type qui aurait un portefeuille plein de billets et une carte de crédit qui serait pas rejetée à chaque fois.
+Marge : Mais je suis persuadée que ça a quelque chose à voir avec ta prime de Noël. J'arrête pas de te la réclamer mais...
+Homer : Marge, je préfère être franc avec toi.
+Marge : Je t'écoute.
+Homer : Je voudrais... Je voudrais que ce soit moi qui m'occupe des achats de Noël cette année.
+Marge : Oh, bien sûr, je suis d'accord.
+[Marge éteint la lumière]
+
+SEQ 12 - INT/JOUR Supermarché
+[Homer fait ses achats de Noël seul dans un magasin bon marché]
+Homer : Marge, Marge, voyons voir... Oh, c'est chouette ça ! Des collants. Solides et sexy. Une boîte de 6, oh, seulement 4$90.
+[Il prend une boîte de collants]
+Homer : Oh, un bloc de papier. Je suis sûr que Bart va trouver 1000 choses à faire avec ça.
+[Il met un bloc de papier dans le caddie]
+Homer : Il me reste plus que la petite Maggie. Oh, regardez-moi ça un petit jouet qui couine. C'est écrit "pour chiens". Bah, elle sait pas lire.
+[Il prend un jouet pour chien à Maggie. En sortant du magasin, il se cognent dans Flanders qui est avec Rod. Leurs cadeaux tombent par terre]
+Ned : Ah Simpson, c'est toi.
+Homer : Salut Flanders.
+Ned : Eh bah dis donc, quel bazar on a fichu, hein ? Bon alors lesquels sont à toi, lesquels sont à moi ?
+Homer : Voyons ça.
+[Flanders et Homer ramassent leurs cadeaux]
+Ned : Bon alors ça c'est à moi, ça c'est à moi, ça c'est à moi, et ça...
+Homer : Ils sont tous à toi.
+[Todd ramasse le jouet pour chien]
+Rod : Eh monsieur Simpson, vous oubliez votre côte de porc.
+Homer : Donne-moi ça !
+Ned : Bon et bien, joyeux Noël, Simpson !
+Rod : Oh là là, papa. Ca va être le plus beau de tous les Noël.
+Ned : Ah ah ah ! Tu peux le dire.
+
+SEQ 13 - INT/JOUR Taverne de Moe
+[Homer est allé boire une bière chez Moe. Son moral est à zéro]
+Moe : Bon sang, qu'est-ce que t'as Homer ? Quelqu'un t'as vendu des pois qui voulaient pas cuire ? Ça fait deux heures que t'es là à téter ta bouteille de bière sans rien dire.
+Homer : Et alors ?
+Moe : Alors c'est Noël, mon vieux.
+Homer : Merci Moe.
+[Barney est déguisé en Père Noël]
+Barney : J'offre une tournée générale !
+Homer : Qu'est-ce que c'est que ce déguisement idiot, Barney ?
+Barney : Je me suis trouvé un petit bouleau à mi-temps. Je fais le Père Noël là-bas au centre commercial.
+Homer : Oh, je pourrais le faire moi aussi ?
+Barney : Oh ça je sais pas trop, les candidats sont triés sur le volet [il rote].
+
+SEQ 14 - INT/JOUR Dans le bureau du responsable du magasin
+Responsable : Aimez-vous les enfants, monsieur ?
+Homer : Est-ce que vous voulez dire tout le temps, même quand ils sont idiots ?
+Responsable : Hmm hmm.
+Homer : Ah bien sûr, je les adore.
+Responsable : Bienvenue dans la maison, Simpson. En espérant que vous suivrez avec succès votre programme de formation.
+
+SEQ 15 - INT/JOUR Dans une salle
+[Les Pères Noël s'entraînent à dire "Oh oh oh" grâce à un professeur. Homer fait de même puis lève la main]
+Prof : Qu'y a t-il encore, Simpson ?
+Homer : Quand est-ce qu'on touchera notre paye ?
+Prof : La veille de Noël, pas avant. Bien, on reprend au début.
+[Les Pères Noël continuent à dire "Oh oh oh". Plus tard, Homer est interrogé]
+Homer : Euh... quand tu... descendras... du ciel, avec tes dollars... par milliers. N'oublie pas... mon petit bocal.
+Prof : Allez réviser, Simpson.
+[Plus tard, l'ultime test. Le prof est sur les genoux d'Homer et se fait passer pour un enfant]
+Homer : Qu'est-ce que tu veux que je t'apporte, petit.
+Prof : D'abord t'es pas le vrai Père Noël.
+Homer : Morveux tu vas voir qui c'est...
+Prof : Non non, Homer ! A ce genre de questions embarrassantes, contentez-vous de répondre que le Père Noël est très occupé à cette époque de l'année, que vous êtes un de ses assistants.
+Homer : Oh, mais je la connaissais aussi cette réponse.
+
+SEQ 16 - INT/NUIT Maison des Simpson - Hall d'entrée
+[Homer rentre, épuisé]
+Marge : Homer, tu as huit heures de retard, où t'étais ?
+Homer : Pas de reproches, Marge. Oublie-moi, je saute direct dans mon bain.
+Marge : Mais Homer, mes sœurs sont arrivées. Tu ne veux pas leur dire bonjour ?
+
+SEQ 17 - INT/NUIT Maison des Simpson - Salon-TV
+[Bart et Lisa voient Homer arriver. Ils se libèrent de Patty et Selma]
+Bart et Lisa : Papa on t'aime !
+Homer : Mais pourquoi ? Oh, d'accord. [ton froid] Salut Patty, salut Selma. Vous avez fait bon voyage ?
+Selma : Ça a été.
+Homer : Vous m'avez l'air en pleine forme.
+Patty : Ça va, oui.
+Homer : Bon ben... joyeux Noël.
+Selma : Pas possible, c'est Noël ? On dirait pas.
+Homer : Ah, et pourquoi ça ?
+Patty : J'ai pas vu de sapin de Noël.
+Homer : Justement, je m'apprêtais à aller en chercher un
+Lisa : On peut venir avec toi ?
+Bart : Oh ouais, p'pa.
+Homer : Non.
+
+SEQ 18 - INT/NUIT Voiture des Simpson
+[Homer voit des sapins à vendre, mais trop cher]
+Homer : 75$... [plus loin] 60$... [encore plus loin, les sapins sont moches]avec de légers défauts, 45$.
+[Finalement, il coupe un sapin dans les bois]
+Homme : Eh vous là-bas, qu'est-ce que vous faîtes ? Vous n'avez pas le droit ! Revenez ici, vous entendez ?
+[L'homme lâche les chiens et tire au fusil]
+
+SEQ 19 - INT/NUIT Maison des Simpson - Salle à manger
+[Homer a ramené le sapin. Il y a une niche d'oiseaux dedans]
+Homer : Alors les enfants, qu'est-ce que vous en pensez ? Il est magnifique, non ?
+Bart : Oh ouais ! Génial !
+Lisa : Il est beau.
+Selma : Pourquoi il y a un abri pour les oiseaux ?
+Homer : Euh, c'est de la décoration.
+Patty : Ça sent la poudre, vous trouvez pas ?
+
+SEQ 20 - INT/JOUR Centre commercial
+[Homer joue le Père Noël. Il y a un enfant sur ses genoux]
+Enfant 1 : Et ensuite, je veux plein de robotoïdes, et l'épée laser de Dark Vador, et un énorme, énorme vaisseau.
+Homer : Oh, voyons fiston t'as pas besoin de toutes ces saloperies. Je suis bien sûr que tu as déjà ce qu'il y a de plus important au monde. Une maison correcte et un gentil papa qui t'aime et qui ferait n'importe quoi pour toi. Eh j'ai pas déjeuné, tu me donnes un bout de ton beignet ?
+[Homer mange un morceau de beignet juste au moment où la photo du Père Noël est prise. Un peu plus loin, Milhouse, Bart et Lewis regardent Homer en Père Noël]
+Milhouse : Vise un peu la dégaine du vrai-faux Père Noël.
+Lewis : J'arrive pas à croire qu'il y en ait qui tombent dans le panneau.
+Bart : Eh Milhouse, je parie que tu t'assoies pas sur ses genoux.
+Milhouse : Ah ouais ? Moi je te parie que tu arraches pas sa barbe.
+Bart : Ah, tu vas voir.
+[Un autre enfant est sur les genoux d'Homer]
+Enfant 2 : J'espère que tu vas mieux, Papa Noël.
+Homer : Oh ça ira mieux quand les sœurs de la mère Noël auront quitté la ville. Merci de te soucier de moi, petite.
+[Bart est le suivant. Homer a peur de se faire repérer mais Bart ne l'a pas reconnu]
+Bart : Bah quoi, qu'est-ce qui t'affole, Père Noël ?
+Homer : Comment tu t'appelles Bart...enaire ? Mon petit partenaire.
+Bart : Moi c'est Bart Simpson. Mais toi t'es qui toi ?
+Homer : Je suis le gentil papa Noël.
+Bart : Ah ouais ? Attends, on va voir ça tout de suite.
+[Il lui enlève sa barbe juste au moment où la photo est prise]
+Homer : D'oh !
+Bart : Homer !
+Homer : J'ai un truc à te dire, mon petit. Viens dans l'atelier du Père Noël. [à Alphie] Monte la garde, Alphie.
+
+SEQ 21 - INT/JOUR Dans l'atelier
+[Homer fait entrer Bart dans la petite cabane lui servant d'atelier pour être tranquille]
+Bart : Me tue pas s'il te plait, je savais pas que c'était toi.
+Homer : Personne ne le sait, fiston. C'est un secret. Cette année, j'ai pas eu de prime de Noël, et pour que ma petite famille ait quand même un vrai Noël, je ferais n'importe quoi.
+Bart : Ouais, ça je te crois, p'pa. Faut vraiment que tu nous aimes pour tomber aussi bas.
+Homer : Allez, arrêtons de faire du sentiment, j'ai du travail qui m'attend, fiston.
+[Ils sortent de l'atelier]
+Homer : Coucou les enfants, le Père Noël est de retour. Oh oh... [il se cogne la tête] Aïe ! Saloperie ! Ça fait mal.
+
+SEQ 22 - INT/NUIT Au guichet
+[Homer va recevoir son argent pour son travail de Père Noël]
+Homer : Ah fiston. Un jour tu connaîtras l'allégresse du travailleur le jour de la paye quand il reçoit un bon gros chèque pour un travail bien fait.
+Guichetière : Simpson, Homer ? Voilà pour vous.
+[Elle lui donne un chèque]
+Homer : Viens mon garçon. On va aller toucher cette petite merveille et acheter des cadeaux pour... Aaahh ! 13$ ! Et attendez, il y a maldonne.
+Guichetière : Le compte y est monsieur. C'est 20$ brut. Moins la sécurité sociale, l'assurance du chômage, le stage de formation, la location du costume et de la barbe et le don à la maison de retraite des vieux Pères Noël. A l'année prochaine.
+Homer : Ohhh...
+Bart : Allez viens, p'pa, on rentre à la maison.
+Homer : 13$, mon Dieu ! Mais qu'est-ce qu'on peur avoir pour 13 malheureux dollars ?
+Barney : Formidable, 13 jolis petits dollars. Direction le champ de course, ça va faire mal.
+Homer : Quoi ?
+Barney : T'as bien entendu, Homer. Je m'en vais tout droit aux courses de chien. J'ai un gentil petit toutou en or dans la quatrième. Tu viens avec moi ?
+Homer : Non, désolé Barney. C'est possible que je sois un père complètement nul mais j'emmènerai quand même pas mon fils dans un truc aussi débectant un soir de Noël.
+Barney : Oh mais viens, sois pas idiot. Et tu sais quoi, le cabot s'appelle Tornade. 10 contre 1. Ouais, c'est dans la poche.
+Bart : Oh p'pa, faut y aller. Ce sera peut-être le miracle qui sauvera le noël de la famille Simpson. Si la télé m'a appris quelque chose, c'est que c'est toujours à Noël qu'il y a des miracles pour les enfants malheureux. C'est arrivé à Michael Jackson, c'est arrivé à Charlie Brown, c'est arrivé aux Schtroumpfs et ça va nous arriver à nous.
+Homer : Bon alors d'accord, allons-y. C'est qui Michael Jackson ?
+
+SEQ 23 - INT/NUIT Maison des Simpson - Salon-TV
+[Le reste de la famille regarde les "Joyeux Petits Lutins"]
+Bubbles : Eh Moldy, tu crois que le Père Noël va réussir à trouver le pays des lutins avec toute cette neige ?
+Moldy : Oh, j'en doute Bubbles. J'ai peur qu'on soit des petits lutins bien tristes pour Noël.
+Lisa : Oh non !
+Abraham : Ah les pauvres !
+Selma : Où est-ce qu'il est ton mari ?
+Patty : Oui, il se fait tard.
+Marge : Il est allé chanter des chants de Noël avec Bart ?
+
+SEQ 24 - EXT/NUIT Dans la rue
+[Bart et Barney chantent]
+Tous : On a plein de pognon, on a plein de pognon. On a tout ce qu'il faut pour gagner le super gros lot.
+Homer : Qu'est-ce qui m'a pris ? Qu'est-ce que je suis en train de faire ?
+
+SEQ 25 - EXT/NUIT Champ de courses
+[Ils sont arrivés. On voit un enfant avec son père]
+Garçon : On peut ouvrir nos cadeaux maintenant, dis papa ?
+Père : Tu connais la tradition, fiston. Pas avant la huitième course.
+Homer : Eh Barney, ton fameux Tornade, c'est lequel ?
+Barney : le numéro 6. Tiens regarde, le voilà. C'est lui notre champion. Il a gagné ses 5 dernières courses.
+[Homer voit le lévrier]
+Homer : Quoi ? Tu veux rire, ce petit sac d'os ambulant ?
+Bart : T'affole pas, c'est tous des petits sacs d'os ambulants.
+Homer : Ah ouais, t'as raison. Je crois que Tornade, c'est notre seul espoir pour passer un joyeux Noël.
+Commentateur : [au micro] Attention, chers parieurs. Changement de dernière minute dans la quatrième. Sir Calad étant déclaré forfait sera remplacé par Petit papa Noël. Je répète Sir Calad a été remplacé par Petit papa Noël.
+Homer : Oh, Bart. T'as entendu comment il s'appelle le clebs ? Petit Papa Noël. Mais c'est un signe, un présage !
+Bart : Coïncidence p'pa, c'est tout.
+
+SEQ 26 - INT/NUIT Champ de courses - Guichet
+Homer : Quelle est la côte de Petit Papa Noël ?
+Guichetier : 99 contre 1.
+Homer : Ouh ! 99 fois 13$ égale... joyeux Noël, mon petit Bart.
+Bart : Je le sens pas trop moi, ce truc-là.
+Homer : T'as pas confiance en ton père ?
+Bart : Ben euh...
+Homer : Je t'en prie fiston. Y'a des jours où ta confiance, c'est tout ce qui me fait vivre.
+[Bart hésite]
+Bart : Bon p'pa, vas-y, fonce.
+Homer : T'es un bon garçon ! [au guichetier] Tout sur Petit Papa Noël.
+
+SEQ 27 - INT/NUIT Maison des Simpson - Salon-TV
+[Les joyeux lutins continuent]
+Lutin : Attention, un ban pour Primmy.
+Lutins : Hip hip hip hourra !
+Lisa : Ouais !
+Abraham : C'est toujours aussi culcul la praline !
+Selma : Il est presque neuf heures. Ça c'est Homer tout craché.
+Patty : Oui, ça lui ressemble bien ce gros sagouin, il gâche toujours tout.
+Lisa : Qu'est-ce qu'il y a tante Patty ?
+Patty : Oh rien du tout, chérie. Je disais seulement des horreurs sur ton père.
+Lisa : Ah, j'aimerais autant que tu évites ça. Parce qu'en dehors du fait qu'il a les faiblesses et les défauts de n'importe quel être humain, il est aussi le seul père que j'ai, ce qui fait qu'il est mon modèle en tant qu'homme et l'image que je conserverai de lui pèsera lourds dans mes relations d'adulte avec les autres hommes. Alors j'espère que tu te souviendras qu'en lui faisant du mal on me fait du mal. Et je suis beaucoup trop jeune pour me défendre contre de telles attaques.
+Patty : Regarde tes dessins animés, chérie.
+
+SEQ 28 - EXT/NUIT Champ de courses
+Homer : Allez vas-y, Bart. Embrasse le ticket, ça nous portera chance. Non pas qu'on en ait besoin.
+[La course commence]
+Commentateur : Et voici Barjot le lapin mécanique. Et c'est parti !
+Homer : Dépêche-toi, fonce Petit Papa Noël ! Fonce, ouais !
+Bart : [en même temps qu'Homer] Vas-y, vas-y le chien, tu les auras. Cours, allez, cours
+Commentateur : Tornade a pris la tête. Pequadruped arrive sur sa gauche, suivi par Chien-de-Guerre et Fifi...
+Homer : Allez fonce, fonce. Allez mon beau chien, allez. T'es le plus fort.
+Commentateur : ... est talonné par Chien-de-Guerre, Jolicoeur...
+Homer : Ouais, allez, montre-moi Petit Papa.
+Commentateur : ... tandis que loin derrière, à la dernière place, nous avons Petit papa Noël.
+Homer : Oh non !
+Bart : T'en fais pas, p'pa. C'est peut-être fait exprès pour qu'il y ait du suspense avant le miracle.
+Homer : Vas-y espèce d'abruti de clebs.
+Bart : Vas-y.
+Homer : Quel plat de nouilles ! Mais qu'est-ce qu'il fout ? Allez le chien, allez mon petit Papa Noël, rattrape-les mais qu'est-ce que tu attends ?
+Bart : [en même temps qu'Homer] Vas-y mon pote, tu peux y arriver. Allez allez allez !
+Commentateur : ... et le vainqueur est Tornade. Second Crocajavan et troisième Chien-de-Guerre.
+Homer : Ohhh...
+Bart : Ça paraît impossible, mais j'avoue que cette fois j'ai été trahi par la télé.
+Homer : Je veux pas m'en aller tant que notre chien aura pas fini.
+[Il attend un moment puis ne le voyant pas arriver]
+Homer : Oh, laissons tomber. Rentrons chez nous.
+[A l'entrée du champ de courses, Homer et Bart cherchent des billets gagnants par terre]
+Homer : T'en as trouvé toi, des tickets gagnants ?
+Bart : Désolé, p'pa.
+[Barney passe en voiture, accompagné par une femme]
+Barney : Eh, Simpson, qu'est-ce que je t'avais dit, t'as vu Tornade ? [il rote] En route, Daria.
+[Homer et Bart voient le propriétaire de Petit Papa Noël se débarrasser du chien]
+Propriétaire : Tire-toi, dégage ! Saloperie, fous-moi le camp. T'es arrivé dernier pour la dernière fois.
+Bart : P'pa, regarde. C'est lui, c'est Petit Papa Noël.
+Propriétaire : Et que je te revois pas !
+[Petit Papa Noël court vers Homer]
+Homer : Ah non, pas ça, non ! Mais fous-moi la paix, hein !
+[Il grimpe dans les bras d'Homer avec un air gentil]
+Bart : Oh, on le garde, papa, s'il te plait.
+Homer : Mais c'est un perdant, c'est un minable, c'est un... [Le chien le lèche. Homer tombe sous le charme] un Simpson.
+
+SEQ 29 - INT/NUIT Maison des Simpson - Salle à manger
+Marge : Je devrais peut-être appeler la police.
+Patty : Il va essayer de se dégriser.
+Selma : Oui, il va rentrer en titubant
+Patty : Et en sentant le parfum bon marché.
+[Homer rentre]
+Marge : Homer !
+Abraham :[réveillé] Hein, quoi qu'est-ce que c'est ?
+Homer : Écoutez-moi, j'ai une confession à vous faire.
+Selma : Ça devient intéressant.
+Homer : Cette année, j'ai pas eu de prime de Noël. J'ai essayé de m'arranger pour pas gâcher le Noël de tout le monde, mais malgré tout ce que j'ai fait...
+Bart : Regardez un peu ce qu'on a ramené.
+[Bart montre le chien. Toute la famille est heureuse]
+Marge : Ohh !
+Lisa : Un chien ! T'es génial, papa.
+Marge : Que Dieu le bénisse.
+Lisa : C'est bien vrai qu'on peut tomber amoureux au premier coup d'oeil ?
+Bart : Si il se sauve on aura pas de mal à le rattraper.
+Marge : Homer, c'est le plus beau de tous les cadeaux.
+Homer : Tu trouves ?
+Marge : Oui. Cette petite bête sera l'ami de la famille et l'ennemi des rôdeurs.
+Lisa : C'est quoi son nom ?
+Homer : Numéro 8... euh, qu'est-ce que je dis ? Petit Papa Noël.
+[Marge et Homer s'embrassent. Tout le monde caresse le chien. Pendant le générique de fin, la famille chante]
+Famille : On l'appelait "Nez Rouge". Ah, comme il était mignon ! Le p'tit renne au nez rouge... Rouge comme un lumignon.
+Bart : Poil au croupion !
+Homer : Bart !
+Famille : Son p'tit nez faisait rire, chacun s'en moquait beaucoup...
+Lisa : Comme le nez de grand-père !
+Homer : Lisa !
+Famille : On allait jusqu'à dire... qu'il aimait boire un p'tit coup.
+Bart : Ha ouais, comme papa !
+Homer : Oh je vous préviens vous deux...
+Famille : Une fée qui l'entendit pleurer dans le noir...
+Marge : A toi Homer !
+Homer : Oh, euh... pour le consoler lui dit, viens au paradis.
+Marge : Bravo Homer !
+Famille : Comme un ange, Nez Rouge, tu conduiras dans le ciel. Avec ton p'tit nez rouge, le chariot du Père-Noël.
+Bart : Il s'est pris pour Ben-Hur et...
+Homer : Mais tu vas la boucler oui ? [On entend le bruit d'Homer étranglant Bart.]

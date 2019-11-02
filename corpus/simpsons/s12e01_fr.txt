@@ -1,0 +1,396 @@
+SEQ 1 - INT/NUIT Centre de loisirs :
+Dirigeant : Bienvenue au centre de loisir des jeunes chrétiens. Vous allez pouvoir participer gratuitement à toutes nos activités. Et si l'une d'elles vous intéresse, payez votre cotisation, et rejoignez-nous.
+[Les gens rient]
+Dirigeant : Je sais, c'est pas demain qu'on vous reverra.
+Homer : Tu l'as dit bouffi.
+
+SEQ 2 - INT/NUIT Centre de loisirs - Terrain de basket :
+[Burns marque un panier... dans un panier en osier]
+Burns : Et hop, ça fait 3 à 1. Oh, ça tourne à la déculottée.
+Abraham : C'est votre tour de récupérer le ballon dans le panier de pêche.
+[Burns monte à l'échelle pour récupérer le ballon]
+Burns : Panier de pêche, je vais lui en balancer une en pleine poire un de ces jours.
+
+SEQ 3 - INT/NUIT Centre de loisirs - Salle de gym :
+Goulash : [accent allemand] Bienvenue dans gymnastique. Je m'appelle Goulash, j'arrive dans votre pays en 83. Moi faire pirouette pour franchir mur Berlin.
+[Les élèves rient]
+Goulash : Pas rigolade ! Ca vous rend les fesses molles. [devant Lisa] Bah voilà joli petit ange. Quel âge es-tu ?
+Lisa : 8 ans.
+Goulash : 8 ans ? Trop vieille. Rentre maison mémé. Dois m'excuser, joli petit ange, Goulash doit aller à côté pour suivre cours pour contrôler colère. Ca a rien à voir. Cours pour contrôler colère, zéro ! Je hais ce cours tellement. Je vomir ce cours.
+
+SEQ 4 - INT/NUIT Centre de loisirs - Couloir :
+[Bart se ballade dans le couloir. Devant une porte, il voit un rappeur]
+Rappeur : Eh mec. Vas dans ce cours, il est top. C'est sur la mode. Ca va du stylie au quepon.
+Bart : Ah c'est cool !
+[il entre. C'est une salle de classe avec une vieille prof insupportable]
+Prof : Bienvenue dans mon cours intitulé "Le jeune homme bien éduqué".
+Bart : Mais le black dehors, il a dit...
+Prof : Est-ce que tu insinues que mon mari t'as mené en bateau ? Bonté divine ! Je devrais te filer un coup de batte dans le derch.
+
+SEQ 5 - INT/NUIT Centre de loisirs - Terrain de basket :
+[Skinner et Lenny font les équipes pour faire un match de basket]
+Lenny : Heu, je choisis... Carl.
+Carl : Lenny et Carl. Ca me plaît, ça sonne bien.
+Skinner : Ah moi, hein ? Bon, voyons
+[Il regarde les joueurs dispos, il n'y a que des mauvais tels que le vendeur de comics, Frink et Homer]
+Homer : Prenez-moi, c'est mon sport préféré. Coach, je vais les démolir.
+Skinner : Très bien. Homer.
+Homer : Ouais ! [aux autres] Pauvres nullos. Oh les pauvres nullos, oh les pauvres nullos. Je suis bien avec vous ? [Skinner fait signe que oui] Pauvres nullos !
+Lenny : Je choisis le professeur Frink.
+Pr Frink : Ah vous ne le regretterez pas, mon garçon. Je suis un sacré passeur, un as du dribble, et mes baskets sont faites en flubber. Admirez le travail.
+[Il fait un petit saut et il rebondit dans toute la salle]
+Pr Frink : Ca fiche la trouille. Aïe ! Ca fait vachement mal. Le flubber me brûle les pieds !
+[Les équipes sont faîtes]
+Dirigeant : Avant que nous ne commencions la séance de fitness, Rainier Wolfcastle souhaiterait vous dire quelques mots à propos de notre centre de loisirs.
+[Rainier fait des pompes et tape des mains en même temps. Il se relève]
+Rainier : Guten tag. J'ai ajouté centre de loisir jeune chrétien. J'ai prévu faire démolir pour en faire une réserve naturel où je chasserai le plus exaltant des gibiers... l'homme ! A présent, commençons le match.
+[Lenny a la balle et dribble. Il est près du panier et il saute]
+Lenny : Lenny prend son envol...
+[Il tombe avant d'atteindre le panier et atterrit sur Moe]
+Lenny : C'est pas du jeu ! Je confisque le ballon. Je l'emmène chez moi.
+Moe : Eh, il est pas à toi ce ballon.
+[Lenny s'enfuit. Rainier sort son fusil]
+Rainier : La chasse a commencée.
+[Il poursuit Lenny. Plus tard, Carl doit faire un lancer]
+Homer : Wou ! T'es le meilleur, Carl. Je suis convaincu que tu peux voler.
+Carl : J'en ai ras le bol que tout le monde pense que je suis bon au basket sous prétexte que je suis afro-américain.
+[Il fait un super saut en tournant sur lui-même et tire tellement fort qui fait exploser la vitre du panier]
+Carl : Je suis le roi ! Je suis le roi ! Le roi des wadwa, le roi des wadwa ! Je suis le meilleur et Dodo m'a donné son coeur !
+[Willie s'avance vers le panier. Son kilt se soulève et on voit ses fesses. Les autres joueurs n'osent pas regarder alors Willie marque un panier]
+Willie : Willie met la main au panier et marque un 2 points. Et 2 points de plus !
+[Homer se concerte avec son équipe]
+Homer : Ecoutez, j'ai une combinaison secrète que je me réservais pour les jeux olympiques, ou pour Mickael Jordan. Alors voilà comment ça se présente. Vous Skinner, vous vous chargez de bloquer Carl. Moe, tu vas te reposer sur le banc. Homer, tu te colle au marquage de Willie. Pas question que je sois au marquage de Willie. Si t'y seras. Tu joues pour l'équipe oui ou non ?
+Skinner : Oh bon sang. J'ai un lacet de défait. [il regarde autour de lui] Je vais devoir m'agenouiller pour relacer ma chaussure.
+[Il se baise. Homer monte sur son dos et saute]
+Homer : Visez un peu le style, bande de nullos. Aahhh !
+[Homer se prend la jambe gauche dans le panier]
+Homer : Ca va, j'ai rien.
+[Mais Homer est trop lourd et le panier tombe et s'écrase sur sa jambe]
+
+SEQ 6 - INT/JOUR Hôpital :
+Dr Hibbert : J'ai bien peur qu'il s'agisse d'une rupture des ligaments croisés antérieurs.
+Homer : Vous avez dit "antérieur" ?
+Dr Hibbert : Oui.
+Homer : Ooohhh !
+Dr Hibbert : Alors, comment est-ce arrivé ?
+Homer : Pit-être qu'un peu de morphine m'aiderait à retrouver la mémoire.
+[Hibbert lui injecte une dose de morphine]
+Homer : [stone] Je sais pas c'est encore embrouillé.
+[Hibbert lui donne une autre dose]
+Homer : Ah ouais. Ca y est Je m'en souviens comme si c'était hier.
+Dr Hibbert : C'est arrivé aujourd'hui.
+Homer : Hé mec tu me bousilles mon trip. Enfin bref. Tout a commencé alors que j'étais...
+[Dans l'histoire d'Homer, on le voit en train de sauter pour marquer un panier sur un terrain de basket à l'extérieur en pleine nuit. Il s'envole jusque dans l'espace]
+Lune : Allez, vas-y Homer.
+[Il marque un panier dans les anneaux d'une planète]
+Homer : Ouais !
+[Mais un petit vaisseau spatial lui fonce dans la jambe]
+Homer : Aaahh ! Chauffard !
+[Retour à l'hôpital]
+Dr Hibbert : Mmm, mieux vaut vous conduire au bloc opératoire.
+Homer : Pit-être qu'un peu de morphine m'aiderait à y aller plus vite.
+Dr Hibbert : [ennuyé] Oohhh...
+[Il lui injecte une nouvelle dose]
+
+SEQ 7 - INT/JOUR Hôpital - Salle d'opération :
+Lisa : On ne compte plus le nombre de fois où il est passé sur le billard.
+Marge : Une de plus et j'aurai droit à une hystérectomie gratuite.
+
+SEQ 8 - INT/JOUR Hôpital :
+[L'opération est terminée. Homer est sur un fauteuil roulant]
+Dr Hibbert : Rassurez-vous Homer vous vous rétablirez de votre blessure à la colonne vertébrale.
+Marge : Comment ça la colonne vertébrale ?
+Dr Hibbert : Il est tombé de la civière mais il lui faudra beaucoup de temps et de rééducation avant de reprendre son travail.
+Homer : Pas travailler ? Mais ma vie a plus de sens loin de la centrale nucléaire.
+Dr Hibbert : Vous devez aussi payer cette grosse facture à l'hôpital. Vous n'auriez pas dû appeler le coiffeur aussi souvent ni commander autant de cassettes porno.
+Homer : Je croyais que "Arène en folie" était une charmante comédie. Vous en faîtes pas pour la facture docteur. On est pas du genre à pas... Ouh regardez, un ours ! Tirons-nous !
+[Homer se lève de son fauteuil pour s'enfuir mais il tombe à cause de sa jambe. Il crie. L'ours arrive et le regarde]
+Dr Hibbert : Homer, je vous interdit de vous servir de votre jambe pendant deux semaines.
+Homer : Deux semaines ? Qu'est-ce que je vais faire pendant ce temps ? Rester assis sur cette chaise à regarder la téloche ? C'est pas mon genre, mon vieux.
+Dr Hibbert : Voyons Homer. Il y a des patients dans cet hôpital qui souffrent beaucoup plus que vous.
+Homer : [triste] Non, ça se peut pas.
+
+SEQ 9 - INT/JOUR Maison des Simpson - Séjour :
+[Homer regarde par la fenêtre]
+Homer : Tout le monde s'amuse sauf moi.
+[Lenny joue avec un cerceau et Carl saute avec un jeu à ressort]
+Carl : Boing ! Boing ! Boing ! Boing ! Boing ! Boing !
+[Barney frappe à la porte. Marge va ouvrir]
+Barney : Madame Simpson, est-ce qu'Homer peut venir s'amuser ?
+Marge : Non, Homer ne pourra pas s'amuser avant un bout de temps.
+Barney : Ohhh... Vous auriez pas un petit gâteau ?
+Marge : Veux-tu te sauver, Barney Gumble ?
+[Elle lui donne un coup de balai. Homer se retourne vers les enfants et grand-père]
+Homer : Enfin, je peux toujours passer le temps avec vous.
+Bart : Euh, je regrette. J'ai un match de base-ball dans 10 minutes.
+Lisa : Et moi j'ai une réunion importante sur la protection des baleines.
+Abraham : Ah ah ah ! Les cartes ont changé de main. Maintenant c'est toi le vieux débris et moi le jeune mec rock'n'roll.
+[Il montre du doigt. Celui-ci craque]
+Abraham : Aïe ! Mon doigt fait encore des siennes.
+Homer : Je m'ennuie à mourir.
+Abraham : Arrête tes bêtises y'a des tas de trucs pour passer le temps. Remonter son pantalon, faire semblant de bosser [il fait semblant d'écrire en chantonnant], rencontrer un chinois et en faire son ami.
+[Un chinois entre dans la pièce]
+Craig : Vous ne devez pas quitter la maison de retraite, monsieur Simpson.
+Abraham : Merci Ping Pong.
+Craig : Je m'appelle Craig.
+Abraham : Ben voyons donc.
+
+SEQ 10 - INT/JOUR Maison des Simpson - Salon TV :
+Homer : Qu'est-ce que je peux m'ennuyer ici. Il faut que je fasse quelque chose avant de devenir dingue. Ouh, j'ai trouvé. Je vais élever des animaux. Je vais croiser le chien avec le chat.
+[Il met Petit Papa Noël et Boule de Neige II dans un sac]
+Homer : Bientôt j'aurai un animal exceptionnel. Il aura la loyauté du chat et la propreté du chien.
+[On entend des bruits de bagarre et des cris d'animaux. Homer ouvre le sac]
+Homer : Non mais c'est pas comme ça qu'il faut faire. [les animaux s'enfuient] Dégonflés !
+[Ned entre par la pore de derrière]
+Ned : Hé hé, Homer.
+Homer : Oh, ça me fait tellement plaisir de parler à un autre être humain. [tout bas] Andouille de Flanders.
+Ned : Eh Homer, je voulais te demander un service. Ma baby-sitter est clouée au lit et j'ai des billets pour un concert de rock chrétien. Ca risque d'être une soirée de grande ferveur. Alors tu penses que Marge pourrait garder Rodinounet et Todd la tornade ?
+Homer : Ben Marge est sortie. Elle est partie identifier un cadavre à la morgue.
+
+SEQ 11 - INT/JOUR Morgue :
+[A la morgue, Marge regarde le cadavre. Il y a Hans Taupeman à l'intérieur]
+Marge : Ce n'est pas mon oncle Lou... et cet homme n'est pas mort !
+Hans : C'est ce que je me tue à vous dire depuis des jours !
+Homme : Ce sont les gaz de décomposition [il referme le tiroir].
+
+SEQ 12 - INT/NUIT Maison des Simpson - Salon TV :
+Ned : Ca t'ennuierait de garder les gosses. Tu me rendrais une fière chandelle.
+Homer : Non, ils me tiendront compagnie. Et puis comme ça un jour tu devras me renvoyer l'ascenseur.
+[Plus tard, ils regardent tous les trois la télé]
+Todd : Monsieur Simpson, est-ce qu'on pourrait avoir un autre sandwich à la confiture ?
+Homer : Ouais, faîtes comme chez vous. Et appelez-moi Homer.
+Rod : Papa dit que c'est grossier d'appeler les adultes par leur prénom.
+Homer : Papa est pas là, hein. Hi hi hi !
+[Ils regardent une émission débile]
+Présentateur : Alors mon petit monsieur, à quoi t'as envie de jouer ?
+Enfant : Aux Pokemons.
+Présentateur : Au poker mon ? Poker mon ? Je sais pas vous mais moi qui en connaît un rayon sur le poker, j'en ai jamais entendu parler. Je connais le strip-poker, le poker uiuaiuaéé.
+[Homer et les enfants rient]
+Homer : Ah les enfants, je vous jure.
+Ned : Alors, les garçons. Vous avez passé une bonne soirée ?
+Rod : Ouais, et monsieur Simpson nous a beaucoup fait rire.
+Todd : Il a dit qu'il se faisait entubé par tous les gens autour de lui.
+Homer : Ah ah ! Ouais... enfin. Alors et ce concert ?
+Ned : Je n'ai jamais entendu un pasteur prononcer le mot C.O.N aussi souvent. Enfin, merci encore.
+Homer : Oh, ça m'a amusé. Mes gosses en ont ras le bol de mes histoires. Tandis que tes gosses, eux ils en redemande.
+Rod : Est-ce que monsieur Simpson pourrait nous garder tous les jours ?
+Ned : Oh oh oh, Roddie. Monsieur Simpson ne dirige pas une garderie.
+Homer : Qu'est-ce qui te permet de dire ça ?
+Ned : Ah bon ? Tu diriges une garderie ?
+Homer : Ah, ça te ferait plaisir, hein ?
+Ned : Ah, ça c'est certain. Je saurais où laisser mes enfants après l'école.
+Homer : Alors j'en ouvre une. Rien que pour voir la tête que tu vas faire.
+[Flanders sourie]
+Homer : C'est ce que je pensais.
+
+SEQ 13 - INT/JOUR Maison des Simpson - Séjour :
+[Homer a ouvert une garderie. Il est devant une affiche où il y a écrit "Propriétaire : Marge Simpson"]
+Marge : Pourquoi t'as mis mon nom sur cette affiche ?
+Homer : C'est une question de légalité. Pour me protéger.
+Milhouse : C'est vrai que votre genou il fait peur à voir ?
+Homer : Bah regarde si tu veux.
+[Il retire son pansement pour monter une grosse tache rouge]
+Milhouse : Beeuuuurrk !
+Ralph : Je peux le toucher ?
+Homer : Ouais, vas-y si ça t'amuse.
+Ralph : Il se cicatrise avec ma main dedans !
+Homer : C'est parce qu'il sent que t'as peur.
+[On sonne à la porte. C'est Apu et ses 8 enfants]
+Apu : Je suis ravi de profiter de votre prison pour bébés.
+Marge : On appelle ça une garderie.
+Apu : Si vous voulez, en tout cas, gardez-les.
+Homer : Oh, qu'ils sont mignons. Y'a des médicaments à leur donner ?
+[Apu part en courant]
+Apu : Oh oui, sans doute.
+
+SEQ 14 - INT/JOUR Hôpital :
+[1 mois plus tard, le docteur Hibbert inspecte le genou d'Homer]
+Dr Hibbert : Parfait. Votre incision chirurgicale est totalement cicatrisée.
+Homer : C'est surtout grâce à mon travail avec les enfants, et pas parce que j'ai gratté.
+Dr Hibbert : Ah oui comment ça va votre garderie ?
+Homer : Merveilleusement. Mes journées avec les gosses me procurent autant de plaisir que votre morphine, docteur. Vous en avez ?
+Dr Hibbert : Ah ah ah ah ! Accro à la morphine, hein ?
+[Il lui donne une seringue]
+
+SEQ 15 - INT/JOUR Maison des Simpson - Séjour :
+[Homer joue avec Gerald, le bébé à 1 seul sourcil. Il joue avec lui en couvrant ses yeux]
+Homer : Coucou c'est moi. Coucou c'est moi. Coucou c'est moi. Coucou c'est moi. Coucou c'est moi...
+Bart : Il est chtarbé, ça fait 2 heures qu'il fait ça.
+Lisa : C'est la première fois que je vois un bébé qui en marre avant l'adulte.
+[Homer attrape le bébé]
+Homer : Ouh, je te tiens.
+Rod : Oncle Homer, tu veux nous chanter la drôle de chanson qu'on adore ?
+Homer : Hi hi ! Entendu. [il chante] Est-ce que tu le sais ? Est-ce que tu le sais ? Que j'ai le coeur qui chavire, quand tu me fais danser.
+Todd et Rod : Hé hé hé !
+Lisa : Je ne me souviens pas à quand remonte la dernière fois qu'il nous a chanté une chanson.
+Bart : Ouais. Eh Homer, je croyais que tu faisais une garderie jusqu'à ce que ton genou aille mieux.
+Homer : Ouais mais entre temps j'ai éprouvé un tel bonheur a élever ces enfants.
+Lisa : Et nous alors ?
+Homer : T'inquiète pas chérie. Un jour aussi t'auras tes propres enfants. Tu connaîtras alors mon bonheur.
+
+SEQ 16 - EXT/JOUR Ecole élémentaire - Cours de récréation :
+Milhouse : Eh Bart. Ton père m'a filé ce faux tatouage.
+[Il soulève sa chemise et on voit un dessin représentant Homer en moto sur son ventre]
+Milhouse : Il est hyper cool. Vrooouumm ! Rrrrmmmm !
+Ralph : Ton père c'est le meilleur de tous. Il m'a lu une histoire sur la cuisine chinoise.
+Bart : Vous connaissez pas le vrai Homer. Il passe son temps à péter et à roter.
+Milhouse : Je crois qu'on connaît ton père un tout petit peu mieux que toi, Bart.
+Bart : Eh, c'est pas ma veste que t'as ?
+Milhouse : Il m'a dit qu'elle m'allait mieux qu'à toi.
+Bart : [triste] Ohhh...
+
+SEQ 17 - INT/JOUR Maison des Simpson - Séjour :
+[Homer joue avec les enfants assis autour de lui]
+Homer : Ce...lui qui rigole dit des gros mots.
+Nelson : Popotin.
+Milhouse : Gros nénés.
+Ralph : Tétine.
+[Les enfants se mettent à rire. Bart et Lisa sont en haut de l'escalier sur le palier]
+Lisa : Ils n'arrêtent pas de rigoler. En plus, ils rigolent pour rien.
+Bart : Pourquoi les parents ils sont plus gentils avec les autres enfants qu'avec les leurs ?
+Lisa : Pour papa on fait partie du décor, c'est tout.
+Bart : Bah tu va voir. Avec ça je te garantis que je vais faire vibrer la corde sensible.
+[Il pose un cadeau sur son skate qu'il fait descendre des escaliers. Le skate s'arrête aux pieds d'Homer. Il ouvre le cadeau. C'est un cadre avec une photo de Homer, Bart et Lisa]
+Homer : Hou, qu'est-ce qu'il est beau ce carde. Idéal pour y mettre la licence de ma garderie.
+[Il retire la photo et la remplace par sa licence qu'il accroche au mur]
+Homer : Parfait.
+Bart et Lisa : [tristes] Ohhh...
+
+SEQ 18 - EXT/JOUR Maison des Simpson - Jardin :
+[Les enfants sont dans la cabane de Bart. Homer y est aussi. Il la fait basculer]
+Homer : Cramponnez-vous. 3... 2... 1... C'est partit !
+[Il descend de l'arbre. La cabane bouge dans tous les sens et secoue les enfants, ce qui les amuse beaucoup]
+Milhouse : C'est abracadabrantesque ! Il est où Ralph ?
+[Ralph est accroché à une girouette]
+Ralph : [content] J'ai faillit mourir !
+[Une équipe de télévision arrive]
+Marge : Ce monsieur est envoyé par le jury des Coeurs d'Or.
+Représentant du jury : Nous récompensons les gens qui facilitent la vie de leurs concitoyens, comme vous avec votre garderie.
+Marge : Je l'ai aidé en ne m'opposant pas à son projet.
+Homer : Mmm, t'es trop mignonnes.
+Représentant du jury : Alors voilà. Notre équipe va vous filmer au cours de vos remarquables activités.
+Homer : Est-ce qu'il y a un buffet ?
+Représentant du jury : Il est déjà dressé.
+[Homer se précipite sur le buffet et commence à se goinfrer. Les caméras filment]
+Homer : Filmez pas ça !
+
+SEQ 19 - INT/JOUR Maison des Simpson - Couloir de l'étage :
+[Lisa frappe à la porte de sa chambre]
+Technicien : Excuse-moi y'a un tournage en cours.
+Lisa : [énervée] C'est ma chambre !
+Technicien : Tiens, tu peux t'asseoir là dessus.
+[Il lui pose un carton par terre dans le couloir]
+Lisa : Mmm...
+[Bart est couché devant sa porte]
+Bart : Les chauffeurs dorment dans ma chambre.
+Chauffeur : Minute, on repose juste nos yeux.
+[Homer est interviewé sur le palier]
+Homer : L'idée en gros c'est que y'a pas de gosses méchants.
+[Homer marche sur le bras de Bart]
+Bart : Aïe ! Tu m'as marché sur le bras !
+Homer : Excuse-moi je croyais que c'était des câbles empilés.
+
+SEQ 20 - EXT/JOUR Maison des Simpson - Jardin :
+[Le reportage se poursuit]
+Représentant du jury : Parlez-moi de l'esprit de votre garderie.
+Homer : Mes gosses portent ce coeur pour ne pas oublier qu'ils sont toujours aimés.
+Représentant du jury : C'est vous qui les avez fait ?
+Homer : Oui, grâce à la magie de l'amour.
+
+SEQ 21 - INT/JOUR Maison des Simpson - Garage :
+[Bart et Lisa sont en train de découper les coeurs]
+Lisa : La nuit va pas tarder à tomber.
+Bart : Il doit bien y avoir un moyen de se venger de papa.
+Lisa : Ben, j'ai commencé à couper la feutrine de travers.
+Bart : Non. Ah ouais, on va montrer aux gens à quoi il ressemble vraiment. Alors, les choses redeviendront comme avant
+Lisa : Hi hi hi ! Redeviendront comme avant !
+[Ils se mettent à rire bêtement]
+
+SEQ 22 - INT/JOUR Cérémonie des Coeurs d'Or:
+[Krusty dirige la soirée]
+Krusty : [il chante] J'ai un coeur d'or, un coeur gros comme ça et ce soir on fête ça... arrêtez la musique ! Ca suffit ! [La musique s'arrête] une mesure de plus et on paye des droits d'auteur. Alors, est-ce qu'il y a des gens de Springfield dans la salle ?
+Kirk : C'est sûr, vous savez bien que oui.
+Krusty : [il tire sur son noeud papillon] Oh, public difficile, hein ? Ah ah ah ah ah ! Alors, quelles sont les nouvelles ? Ah, bien sûr, le grave accident de bus. C'est affreux. Bien, le premier coeur d'or est attribué à la personne la plus serviable. Le genre qu'on peut presser comme un citron. Ah ah ah ah ah ! Et les nominés sont... Ned Flanders, le proviseur Seymour Skinner [il n'est pas présent car il subit une intervention chirurgicale], et mère Theresa Junior. Le gagnant est... le proviseur Skinner !
+[Ned Flanders et mère Theresa sont déçus]
+Krusty : Bien. Il semble qu'il y ait un problème avec la retransmission sur Internet. Alors ce que vous avez à faire c'est taper "Contrôle", back slash, deux points, alternative doc, sauvegarde et ça devrait aller.
+[Le vendeur de comics est devant son ordinateur]
+Vendeur de BD: Oh, parfait.
+[Sur son écran, on voit une toute petite image sur laquelle Krusty est bloqué et on entend une petite musique]
+Krusty : J'aimerai remercier notre sponsor "Chelou Spiralo Disquettes". [une femme montre une hypno-pièce] Si vous en trouvez une plus solide dans le commerce... vous l'achetez.
+[Les gens applaudissent]
+Krusty : Donc, chaque année nous découvrons un bon samaritain dont les mérites sont tels que si nous ne le récompensions pas, le Père Noël en personne nous vomirait dessus. Oh... Qui a écrit ce truc ?
+Mr Teeny : [traduit du singe] Je trouve ça remarquable.
+Krusty : Cette année, le plus convoité des Coeurs d'Or est attribué à...
+Homer : Seigneur, faîtes que je l'ai. Je vous préviens, si je l'ai pas...
+Krusty : ... Homer Simpson !
+Homer : Ouais ! Tout mon amour me revient sous la forme d'un trophée.
+Krusty : Je vous invite maintenant à regarder le remarquable travail d'Homer.
+[Krusty lance le reportage filmé sur Homer Simpson. On voit des images de la maison]
+Narrateur : Elle ressemble à n'importe quelle maison américaine, mais cette maison abrite l'amour.
+[Les images montre les enfants tirer sur une corde accrochée à la voiture. Quand ils lâchent la corde, la voiture fonce dans un poteau et flambe]
+Homer : [dans le film] Hi hi hi !
+[Homer est assis avec les enfants]
+Narrateur : Ce genou rouge et couvert de croûte est devenu un symbole d'espoir.
+Gens : [heureux] Aahhh !
+Narrateur : Je crois que 2 mots suffisent à décrire Homer...
+Bart : Faux cul !
+Gens : Oohh !
+Bart : Voilà le véritable Homer Simpson, un monstrueux buveur de bière...
+[Il montre des images d'Homer devant le sapin couché par terre en slip à côté du chien]
+Bart : ... et un joueur invétéré
+[On voit des images d'Homer misant Maggie au poker]
+Homer : Hé hé ! Pour voir.
+Moe : Trois neufs.
+Homer : Ohh, j'avais presque une quinte.
+Moe : [ramassant les mises] Viens avec ton nouveau papa.
+Gens : [outrés] Ohhh !
+Homer : Eh, c'est quoi l'idée ?
+Lisa : On a intercalé des images de notre caméscope. Qu'est-ce que tu en dis ?
+Homer : Je préfère réserver mon jugement à plus... Oh !
+[Sur le film, on voit Homer poursuivre Bart avec une masse d'armes]
+Homer : [dans le film] C'est pas vrai ! Je vais t'écrabouiller...
+Bart : [dans le film] Aaahh !
+Gens : Oohhh !
+Homer : Ces images ont été sorties de leur contexte. Espèce de sale pitit.
+[Homer monte sur la scène près de Bart et l'étrangle]
+Tahiti Mel : Nos petits sont en danger auprès de ce monstre.
+Kirk : Ne t'approche pas de Milhouse, une fois.
+Wiggum : Toi non plus, Ralph. Tu n'iras plus dans cette garderie.
+Apu : [il met ses enfants dans un filet] Ma culture m'interdit de laisser libre cours à ma colère.
+Homer : Non ! Non ! Vous ne m'enlèverez pas mes enfants. Courez les enfants.
+[Homer s'enfuie avec les enfants]
+Cletus : Sale détraqué !
+Krusty : Le terme papa poule est employé à toutes les sauces, de nos jours. Enfin, les nominés dans la prochaine catégorie.
+[Homer vole une camionnette de police et y met les enfants]
+Ralph : Où c'est qu'on va ?
+Homer : Euh, s'envoyer des milk-shakes au chocolat, s'envoyer des milk-shakes au chocolat.
+Kent : La cérémonie des Coeurs d'Or a été le théâtre d'un kidnapping. Le soi-disant gentil Homer Simpson s'est enfuit dans une camionnette en enlevant plusieurs enfants. Nous allons retrouver Arnie Pie, notre ange gardien.
+
+SEQ 23 - EXT/JOUR Endroit reculé de la ville :
+[Arnie est en hélicoptère]
+Arnie : Je les vois en dessous. Je vais essayer d'assommer le chauffeur avec ma chaussure.
+Kent : Je vous en prie, laissez donc faire la police.
+Arnie : J'en ai marre d'être journaliste. J'ai envie de faire la une.
+Kent : C'est pas vraiment le moment
+Arnie : Ce n'est pas à vous de le dire, Kent. Ce n'est pas à vous de le dire.
+[Dans le camion]
+Ralph : Où c'est qu'on va, monsieur Simpson ?
+Homer : En tout cas, je peux vous dire où on va pas... en prison.
+Milhouse : Alors z'avez intérêt à tourner.
+[Homer fonce droit sur la prison. Il tourne in-extrémis à gauche et s'écrase dans un arbre. Il sort du camion et s'enfuie. Arnie décrit ce qu'Homer fait]
+Arnie : Il vient de sortir du camion, Kent. Il essaye de grimper par dessus la clôture. Il s'est aperçu qu'il était trop gros. Il creuse un trou comme un chien. Il vient d'y renoncer, à présent il marche de long en large. Il rentre dans un tuyau. Il semble qu'il soit coincé. Il agite ses jambes, c'est burlesque ! Oh, c'est le spectacle le plus triste que j'ai jamais vu.
+Kent : Arnie, Arnie. Comment vont les enfants ?
+Arnie : Je ne vois pas à travers le métal, Kent.
+[La police arrive]
+Wiggum : Ca va, gros lard. Sort de ce tuyau.
+
+SEQ 24 - INT/JOUR Maison des Simpson :
+[3 procès ajournés plus tard]
+Homer : Dîtes pourquoi vous m'avez balancé ? C'est parce que je donnais de l'amour à ces enfants au lieu de vous en donner à vous ?
+Bart : Ouais.
+Lisa : Bien vu.
+Homer : Bon, j'ai compris la leçon. A partir de maintenant, je m'occuperai plus que de vous. Ah, et de Maggie. Allez, on va se régaler avec le buffet pendant qu'il est encore là.
+Marge : Les chauffeurs passent le prendre à 5 heures.
+Homer : C'est ça, ils peuvent toujours passer.
+[Ils se mettent à rire]
+Homer : Hi hi ! Chauffeurs !

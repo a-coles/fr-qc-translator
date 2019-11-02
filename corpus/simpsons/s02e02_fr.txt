@@ -1,0 +1,414 @@
+SEQ 1 - INT/JOUR Maison des Simpson - Salon[Bart, Lisa, Maggie, Homer, Patty, Selma et le chien sont devant la télévision en train de manger]
+Voix de la télé : Très bien. La capitale du Nord Dakota porte le nom de quel dirigeant allemand ?
+[Pendant ce temps-là, Marge arrive à son tour dans le salon portant des glaces]
+Homer : Hitler !
+Marge : Hitler dans le Dakota ??
+Patty+Selma : Bismarck !
+Voix de la télé : Bismarck.
+[Bart se retourne ver Homer]
+Bart : Hitler !
+Homer : Eh je te bats encore fiston !
+[Marge sert les glaces]
+Voix de la télé : Eh bien et maintenant les couleurs du drapeau italien sont le rouge, le banc et le ...?
+Bart : Bleu.
+Homer : Jaune.
+Selma : Vert.
+Bart : Rouge.
+Patty : Vert.
+Homer : Noir. Noir. Vert.
+Voix de la télé : Vert.
+[Homer lève les bras et frappe dans ses mains]
+Homer : J'avais bon! Ouais!
+Voix de la télé : Bien! Nous retrouvons les compétitions inter-écoles après cet important message publicitaire.
+[On voit la télé. On y voit un homme marchant le long d'une plage]
+Pub : J'ai toujours pensé que perdre mes cheveux était aussi inéluctable que les marées. Puis j'ai découvert Dimoxinil, un produit révolutionnaire qui fait des miracles dans la repousse des cheveux.
+[Homer s'arrête de manger]
+Homer : Oh! Il a découvert un produit révolutionnaire qui fait des miracles !
+[Homer se jette devant la télé]
+Pub : L'avantage de Dimoxinil, c'est qu'il me permet de faire pousser la quantité de cheveux que je désire.
+[On retourne sue la Publicité et l'on voit un homme avec beaucoup de cheveux qui pense]
+Pub : Tiens, aujourd'hui je vais me faire pousser la frange.
+[On retourne sur Homer qui a l'air perplexe]
+Pub : Pour recevoir la documentation, adressez 5 dollars à Dimoxinil, rue de la toison d'or à Tif City.
+Homer : Des cheveux. Des cheveux. Avoir des cheveux comme n'importe qui.
+
+SEQ 2 - INT/JOUR Maison des Simpson - Salle de bains[Homer s'avance face au miroir et ouvre l'armoire miroir. On aperçoit alors plein de produits pour la repousse des cheveux. Homer les prends un par un. Marge arrive derrière lui]
+Marge : Il y a des femmes qui trouvent qu'un homme chauve, ça fait viril.
+[Homer se retourne vers Marge]
+Homer : T'as pas entendu ce qu'ils en disent? C'est une invention révolutionnaire, un produit miraculeux. Pas un de ces attrape-couillons qui font rien du tout!
+[Homer jette les produits dans la poubelle]
+
+SEQ 3 - INT/JOUR Centre commercial[Homer monte un escalator et entre dans une clinique du cheveu. Il y rencontre un docteur]
+Docteur : Permettez-moi de vous présenter la gamme complète du traitement Dimoxinil. Un flacon de lotion pour 6 mois d’application, des chevillières anti-gravité, un vibromasseur pour le cuir chevelu et votre t-shirt.
+[Sur le t-shirt est écrit : I love Dimoxinil]
+Homer : Parfait, parfait. Combien, combien, combien ?
+Docteur : 1000 $ mon vieux.
+Homer : 1000 $ ! C’est pas vrai ! Je peux pas m’offrir ça moi !
+Docteur : Hmm, eh bien nous avons un produit qui sera certainement plus dans vos possibilités. Seulement si vous constatez la moindre repousse de cheveux, ça ne pourra être que pure coïncidence.
+Homer : 1000 $ votre potion magique ? Mais c’est une escroquerie, une arnaque. C’est dégoûtant de truander les pauvres gens.
+[Homer se met à pleurer]
+Homer : N’en parlons plus mon vieux. Merci quand même.
+[Homer part de la clinique]
+
+SEQ 4 – INT/JOUR Centrale nucléaire – Cafétéria[Homer, en colère, est en train de manger avec Carl et Lenny]
+Homer : Alors je lui ai dit : « N’en parlons plus mon vieux. Vous pouvez vous la garder votre saloperie. » Et je suis sortie en claquant la porte.
+Lenny : Ouah ! Ca s’était envoyé Homer.
+[Homer trempe un poisson pané dans un petit récipient]
+Homer : Thoo ! J’ai plus de sauce tartare ! Ils servent ça dans un dé à coudre ! Eh Lenny, tu penses que tu vas toute la manger ta sauce ? Le poisson pané sans rien, c’est étouffe-chrétien !
+Carl : Arrête de larmoyer pauvre cloche !
+Homer : Oh, t’oserais jamais me traiter comme ça si j’avais des cheveux.
+[Les 3 se dirigent vers la machine à café]
+Lenny : Tu vas pas être une andouille toute ta vie Homer. Ton Dimoxinil, fais le prendre en charge par l’assurance de la boîte. Il suffit de savoir remplir le formulaire.
+Homer : Ca coûte 1000 $. Burns va me virer à coup de pompe.
+Lenny : Ben, 1000 $ ce n’est pas la mer à boire ! Le patron s’offrira un gratte-dos en ivoire en moins.
+Carl : Et sans compter que tous les mois, tu raques pour cette assurance. Qu’est ce que ça t’as rapporté jusqu’à présent ?
+Homer : Que dalle ! Leur journal d’informations.
+Lenny : Exactement ! Pourquoi tu toucherais rien toi, alors qu’un mec qui perd un doigt va toucher le jackpot ?
+Homer : Ouais, t’as raison.
+
+SEQ 5 – INT/JOUR Clinique du cheveu[Homer parle avec le docteur]
+Homer : Euh, j’aimerais bien faire prendre le traitement en charge par mon assurance.
+Docteur : Vous rêvez mon vieux ! Je ne sais pas qui vous a mis ça dans la tête mais il n’y a pas une assurance dans ce pays qui vous paiera un truc aussi futile que le Dimoxinil !
+[Le docteur se retourne et met de la musique à fond]
+Docteur : [en chuchotant] Retrouvez-moi dans le parc dans 15 minutes. Venez seul.
+
+SEQ 6 – EXT/JOUR Impasse[Le docteur, emmitouflé dans un grand manteau noir, donne un paquet à Homer. Celui-ci lui donne les papiers de l’assurance et ils se quittent]
+
+SEQ 7 – INT/JOUR Maison des Simpson- Salle de bain[Homer se masse les cheveux avec la lotion Dimoxinil. Puis, tête en bas, retenu par les chevillières, il utilise le vibromasseur pour le cuir chevelu]
+
+SEQ 8 – INT/NUIT Maison des Simpson – Chambre d’Homer et Marge[Homer, prêt à aller se coucher, met un bonnet et s’agenouille pour faire une prière]
+Homer : Seigneur, fais une fleur à un pauvre type chauve. Amen.
+
+SEQ 9 – INT/JOUR Maison des Simpson – Chambre d’Homer et Marge[Homer se réveille et bâille puis se dirige vers la salle de bains]
+
+SEQ 10 – INT/JOUR Maison des Simpson – Salle de bain[Homer se rince la bouche, puis enlève son bonnet et recrache le tout quand il voit que ses cheveux ont poussés jusqu’au épaules]
+Homer : J’ai des cheveux ! J’ai des cheveux !!
+
+SEQ 11 – INT/JOUR Maison des Simpson – Chambre d’Homer et Marge[Homer court à travers la chambre en criant ce qui réveille Marge]
+Homer : J’ai des cheveux !
+
+SEQ 12 – EXT/JOUR Rue[Homer sort de la maison et court sur la rue]
+Homer : Réveillez-vous tous ! Bonjour Springfield ! Bonjour M. et Mme Winfield !
+M. Winfield : Va donc te faire couper les cheveux, espèce de sale hippie !
+
+SEQ 13 – INT/JOUR Chez Moe[Homer se colle à la vitre de la taverne alors que Barney est au comptoir avec Moe]
+Homer : Bonjour Moe ! Bonjour les copains !
+Barney : Hé ! C’est le président !
+
+SEQ 14 – EXT/JOUR Cimetière[Homer salue les personnes en train de faire un enterrement]
+Homer : Bonjour tout le monde !
+Groupe : Bonjour monsieur.
+
+SEQ 15 – EXT/JOUR Place de Springfield[Homer s’arrête devant la statue. On voit arriver alors une autre personne avec aussi de longs cheveux]
+Inconnu : Bonjour tout le monde ! Bonjour Springfield !
+Homer+Inconnu : Dimoxinil !
+[Homer et l’inconnu danse de joie. Au son des cloches, Homer court vers la maison, traverse une pelouse dont l’arrosage automatique se met en marche, faisant apparaître un arc en ciel. Le reste de la famille l’attend sur le palier. Lisa le pointe du doigt. Marge est émerveillé. Alors Bart et Lisa dans les bras d’Homer avec le chien et le chat se roule dans l’herbe en rigolant, heureux]
+
+SEQ 16 – INT/JOUR Coiffeur[Homer se rends alors, encore en pyjama, chez Jake, Palais du cheveu (coiffure)]
+Coiffeur : Homer Simpson ! Ben ça alors, ça fait au moins 20 ans que vous avez pas mis les pieds chez moi. Dis donc, je vois que vous vous êtes coupé les pattes.
+Homer : Hé Hé ! Comme d’habitude s’il vous plait.
+
+SEQ 17 – INT/SOIREE Maison des Simpson – Salon[Marge est en train de discuter avec ses sœurs]
+Marge : Il est plus heureux à son travail. Et puis entre nous les filles, ça fait des années qu’il a pas été aussi polisson.
+Selma : J’préfère pas imaginer.
+[Homer arrive. Marge va le rejoindre à l’entrée]
+Homer : C’est papa ma petite choute ! Viens ici, toi !
+[On entend Homer et Marge se faire des câlins]
+Marge : Non Homer, mes sœurs sont là.
+Homer : Ah ! Je vais dîner avec 3 jolies femmes. Mais c’est le paradis !
+[Marge et Homer revienne dans le salon. Patty et Selma sont surprises]
+Patty : C’est vraiment Homer ? Et ben ça alors !
+Selma : Patty, arrête de t’extasier.
+Patty : Eh, tu t’es pas regardée !
+
+SEQ 18 – INT/JOUR Centrale nucléaire – Machine à café[Homer fait une pause. Il pose son casque sur un compteur qui est dans le rouge et va prendre son café avec Lenny, Carl et une autre personne]
+Carl : Dis moi, il y a quelque chose de changer chez toi Homer. Tu as perdu du poids ?
+Lenny : Eh, on dirait que t’as bonze ! J’me trompe ?
+Inconnu : Moi je sais. Il a une nouvelle cravate.
+
+SEQ 19 – INT/JOUR Centrale nucléaire – Bureau de Burns[Burns et Smithers regardent Homer et les autres via les caméras de surveillance]
+Burns : Tous des minables. J’ai à mon service une bande d’idiots tous juste bons à voler mon argent. C’est sans espoir. Aucun de ces crétins ne méritent une promotion.
+Smithers : C’est dans les accords syndicaux monsieur : une promotion bidon par an pour la forme.
+Burns : Attendez. Qui est ce jeune arriviste là ?
+[Burns pointe du doigt Homer]
+Smithers : Et bien, il ressemble fort à Homer Simpson mais en plus, en plus dynamique, en plus créatif.
+Burns : Simpson ? Un gros bloc d’argile que je vais pouvoir modeler à ma propre image. Notre nouveau jeune cadre. Amenez-le moi !
+
+SEQ 20 – INT/JOUR Centrale nucléaire[Smithers fait une annonce à travers le haut-parleur]
+Smithers : Votre attention Homer Simpson, vous venez d’avoir une promotion. Vous êtes passé cadre. Prenez deux minutes pour dire adieu à vos anciens amis et rendez-vous au bureau 503 où vous signerez votre engagement pour une vie meilleure.
+
+SEQ 21 - INT/JOUR Centrale nucléaire – Bureau d’Homer[Homer fait passer des candidats pour être son secrétaire. Tout d’abord est devant lui une superbe femme]
+Homer : Votre Currilum vite est pas mal. A part taper à la machine est d’autres bazars, vous auriez d’autres qualifications ?
+Candidate : Je masse très bien le dos des jeunes cadres surmenés. Je vais vous montrer...
+Homer : Non, non, non, c’est pas la peine, au revoir et merci.
+[Ensuite Marge téléphone à Homer]
+Homer : Allo ?
+Marge : Allo Homer ? Comment va mon grand méchant cadre ?
+Homer : Oh Marge, toutes les femmes que je reçois pour le poste de secrétaire me font du rentre-dedans.
+Marge : Hmm !
+[Un autre candidat arrive]
+Candidat : Bonjour monsieur Simpson. Je m’appelle Karl.
+Marge : Il a l’air très bien. Engage le.
+Homer : J’te rappelle Marge.
+[Homer raccroche et Smithers rentre dans le bureau]
+Smithers : Simpson, réunion demain matin en salle du conseil. Vous vous contenterez d’écouter et de vous taire.
+Homer : Oui monsieur Smithers.
+[Smithers part]
+Homer : Mais qu’est-ce qu’il se croit ? Le patron ?
+Karl : Vous n’êtes pas à votre place ici.
+Homer : Hein ?
+Karl : Vous n’êtes pas à votre place ici ! Vous êtes un fumiste, un imposteur. Et ça ne prendra longtemps avant qu’ils ne s’en rendent compte.
+Homer : Mais qui est-ce qui vous l’a dit ?
+Karl : C’est vous. Vous et votre air de victime, vos épaules tombantes. Vous et votre façon de parler dans votre barbe. Vous et votre costume vert pomme, acheter en solde. Je veux que vous vous disiez et que vous vous répétiez : « Je mérite tout ça. Et j’aime ça. Je suis le plus grand miracle de la nature. » Allez dites-le.
+Homer : Euh, je...
+Karl : Faîtes-moi confiance, Homer.
+Homer : Je...
+Karl : Allez, lancez-vous, bon sang !
+Homer : [tout doucement] Je mérite tout ça.
+Karl : Plus fort !
+Homer : [normalement] Je mérite tout ça.
+Karl : Criez-le !
+[Homer se lève et crie]
+Homer : Je suis le plus grand miracle de la nature !
+Karl : Je veux six semaines de congé et les notes de frais en plus.
+Homer : Vous les aurez mon vieux !
+Karl : Venez allons faire quelques achats.
+
+SEQ 22 – INT/JOUR Boutique de luxe[Homer et Karl vont au magasin appelé « L’élégance des obèses ». Homer choisit d’abord un costume dans le rayon « 2 pour 0,99$]
+Homer : Oh, qu’est-ce qu’il est beau celui-là !
+Karl : Un costume doit permettre à un homme de se sentir comme un prince. Il doit hurler à la face du monde : « Me voici. Ne me jugez pas. Aimez-moi. ».
+Homer : Y’a des costumes qui font ça dans ceux-là ?
+Karl : Non.
+[Homer se fait mesurer par un tailleur]
+Homer : Ouh ! Je rentre le ventre.
+Karl : Non, non, non, non, non. Soyez naturel M. Simpson. Laissez-le ressortir. [au tailleur] Et vous, vous le cacherez.
+
+SEQ 23 – INT/JOUR Maison des Simpson – Cuisine[Marge fait la cuisine en chantonnant. Bart, Lisa et Maggie sont à la table]
+Bart : ‘Pa et ‘Man se sont encore pelotés.
+[Homer arrive dans un costume très classe]
+Homer : J’y vais Marge. Je veux pas être en retard.
+Marge : Joyeux anniversaire Homer !
+Homer : Quoi ? C’est notre anniversaire ? T’es sûr ?
+Marge : T’en fais pas, Homer. Cette année, t’as une excuse d’avoir oublié avec ton nouveau travail.
+[Quelqu’un frappe à la porte. Homer ouvre. Il y a un homme en costume avec des fleurs]
+Homme : Joyeux anniversaire, madame Simpson.
+[Il se met à chanter et offre les fleurs à Marge]
+Homme : Je t’aime. Comme au premier jour. Ma chérie. Yeah. Je t’aime comme au premier jour. Ma chérie. Ma chérie.
+Marge : Homer, grand fou !
+[Le téléphone sonne. Homer décroche]
+Homer : Allo ?
+Karl : [dans son lit] M. Simpson, c’est Karl. Ah ! J’entends que le petit cadeau est arrivé. Formidable.
+Homer : Oh, c’est vous alors ?
+Karl : Oui, j’espère ne pas avoir outrepassé mes fonctions ?
+Homme : Je t’aime comme au premier jour. Ma chérie.
+Marge : Oh ! Homer ! Je t’aime !
+Homer : Je t’aime Karl... Euh, Marge.
+
+SEQ 24 – INT/JOUR Centrale nucléaire – Salle de réunion[Homer est en réunion avec plusieurs autres personnes présidées par Burns et Smithers]
+Burns : On vous écoute Smithers.
+Smithers : Le premier dossier concerne une baisse de la productivité et une hausse record des accidents du travail.
+Burns : Quelqu’un a des suggestions ?
+1ère personne : Une série de mises à pied réveillerait ces idiots.
+2ème personne : On pourrait leur mettre de la caféine dans l’eau.
+Burns : Toutes ces idées ce sont les miennes. Vous ne réfléchissez pas. Vous régurgitez. C’est pourquoi j’ai choisi quelqu’un qui est en contact avec les ouvriers. Vous !
+[Burns pointe une personne que l’on ne connaît pas]
+3ème personne : Vous parlez de lui monsieur.
+[La personne pointe du doigt Homer]
+Burns : Euh, vous alors ! Que feriez-vous pour améliorer la situation ?
+Homer : Ben, heu, c’est-à-dire monsieur... On avait un problème tous les mardis à la cantine quand ils servaient le poisson pané.
+Burns : Le poisson pané ? Mais enfin, de quoi parlez-vous ?
+Homer : Ben, on coupe la tête du poisson, on le débite en bâtonnets, on les trempe dans la chapelure et...
+Burns : Je sais ce que sont les poissons panés. Venez-en au fait !
+Homer : Et ben voilà. On nous sert toujours une minuscule portion de sauce tartare pour les tremper dedans et j’en ai jamais assez.
+Smithers : Cessez de nous faire perdre notre temps !
+Burns : Taisez-vous Smithers ! Vous ne comprenez pas ce qu’il nous dit : un ouvrier heureux, c’est un ouvrier actif. Trois sous de sauce tartare peuvent nous faire économiser des milliers d’heures de main-d’œuvre. J’aime votre façon de louvoyer Simpson. Vous avez mon feu vert. Qu’on gave ces idiots de sauce tartare.
+
+SEQ 25 – INT/JOUR Centrale nucléaire - Cafétéria[Homer est derrière le comptoir avec toute une marmite de sauce. Les gens viennent se servir]
+Homer : Régalez-vous avec la sauce tartare les gars ! Régalez-vous ! Tendez-moi vos assiettes. Poussez pas ! Y’en a plein pour tout le monde !
+[Homer est pris alors en photo]
+
+SEQ 26 – INT/JOUR Centrale nucléaire – Bureau de M. Burns[Cette photo parait dans le journal de l’entreprise avec le titre : « Les accidents du travail atteignent les sommets les plus bas »]
+Burns : Bien joué ! Qui auraient pu imaginé que les réformes radicales de Simpson auraient si vite porté leurs fruits ?
+Smithers : Mais vous savez monsieur, le nombre d’accidents en moins correspond ni plus ni moins au nombre d’accidents que Simpson a causé le mois dernier. Et la production est au même niveau que pendant les vacances de Simpson.
+Burns : Oh, mon pauvre vieux Smithers. Dois-je soupçonner une note de jalousie ? Hé Hé Hé... L’heure est venue de confier à Simpson...la clé.
+
+SEQ 27 – INT/JOUR Centrale nucléaire – Toilettes[Homer est dans les toilettes absolument dégoûtantes, jonchée d’ordures]
+Karl : Monsieur Simpson, ne restez pas assis sur cette chose immonde une seconde de plus ! Ils vous ont donné... la clé.
+Homer : La clé.
+
+SEQ 28 – INT/JOUR Centrale nucléaire – Toilettes des cadres[Homer s’avance dans le couloir vers les toilettes des cadres attendu pas tous. Il ouvre alors la porte avec la clé. On voit alors un endroit comme un palace : deux grands escaliers de part et d’autres pour monter au toilettes avec un torrent au milieu avec des arbres, des oiseaux...]
+Tous : Oh regardez !
+[Alors qu’Homer, Karl et Smithers s’avance dans le hall, des violonistes jouent]
+Karl : Eblouissant. Absolument éblouissant.
+[Burns sort des toilettes et s’avance pour se laver les mains à une fontaine]
+Burns : Oh, salut messieurs. Vous savez, hier soir, je regardais la télévision, et je suis tombé sur un documentaire sur Rommel, le renard du désert. Ca c’est un homme quoi savait s’y prendre. Serviette Simpson.
+Smithers : Permettez monsieur.
+Burns : J’ai dit Simpson.
+Homer : A votre service monsieur Burns.
+Burns : C’est très bien Simpson. Maintenant traversez le hall derrière moi.
+Homer : C’est parti monsieur.
+[Smithers reste là, en colère. Il jette la serviette pas terre et s’en va. Un homme vient tout de suite la ramasser et il se retire en courbant le dos]
+
+SEQ 29 – INT/NUIT Centrale nucléaire – Bureau du personnel[On voit un homme, tapi dans l’ombre, qui se faufile avec une lampe torche dans le bureau du personnel. Il tire le casier intitulé A-S. Il prend alors le dossier confidentiel d’Homer Simpson. On devine l’ombre de Smithers. Il s’assoit et consulte le dossier. Il regarde la photo, et découvre les papiers qu’Homer avait utilisé pour prendre son Dimoxinil]
+Smithers : 1000 $. Dimoxinil. Traitement pour empêcher le cerveau de geler. Maintenant je te tiens Simpson.
+[Smithers se met alors à rire méchamment]
+
+SEQ 30 – EXT/JOUR Maison des Simpson[On aperçoit plein de nouveaux objets sur la maison : une antenne satellite, des mobiliers de jardin, des jeux pour les enfants, un château dans l’arbre. Bart est d’ailleurs en train de jouer et Marge est en train de masser la tête d’Homer avec la lotion. Homer qui est allongé sur une transat avec un ventilateur. Lisa est en train de lire sur l’herbe et Maggie de jouer dans une petite piscine avec une bouée]
+Marge : Entre tes lotions et ta nouvelle garde-robe, on n’a plus un sou de coté pour les mauvais jours.
+Homer : Les mauvais jours ? Il n’y aura plus jamais de mauvais jours, Marge. Il n’a pas un nuage dans le ciel des Simpson. Et ma petite fille qu’est-ce qu’elle voudrait ?
+Lisa : Moins de sautes d’humeur et un peu de stabilité dans ma vie.
+Homer : Ouais, et pourquoi pas un poney ?
+Lisa : D’accord !
+
+SEQ 31 – INT/JOUR Centrale nucléaire – Bureau de Burns[Sous un ciel très nuageux, Homer est debout devant le bureau de Burns]
+Burns : Je veux que vous appliquiez la fameuse méthode Simpson à l’ensemble des cadres avec un petit discours : « Boulot, boulot », vous voyez.
+Homer : D’accord, tout ce que vous voulez.
+Burns : Excellent. Allez, retournez à votre poste Simpson.
+[Homer s’en va et Smithers arrive tout sourire]
+Smithers : Monsieur Burns, j’ai le pénible devoir de vous informer que l’un de vos cadres à escroquer l’assurance de la société de 1000 $.
+Burns : Quoi ? La vermine ! Qu’il grille en enfer !
+[L’orage éclate]
+Burns : Dire que j’étais sur le point d’acheter un nouveau gratte-dos en ivoire. Comment a-t-il fait ?
+Smithers : Il s’est offert du Dimoxinil au frais de la société et c’est contre la calvitie.
+Burns : Merci du renseignement, professeur la science. Je sais ce que c’est le Dimoxinil. Et maintenant, vous allez faire un exemple avec ce voyou.
+Smithers : Avec plaisir, monsieur.
+
+SEQ 32 – INT/JOUR Centrale nucléaire – Bureau d’Homer[Homer arrive dans son bureau alors que Karl est en train de taper à la machine]
+Homer : Karl, il va falloir que vous m’aidiez, je suis dans le pétrin. Monsieur Burns veut que je fasse un discours pour les cadres.
+[Smithers arrive dans le bureau]
+Smithers : Heu...
+Homer : Qu’est-ce que vous voulez ?
+Smithers : Oh rien, je passais juste vous dire que vous êtes viré.
+Homer : Quoi ?
+Smithers : La direction ne voit pas d’un bon œil les employés qui escroquent 1000 $ à l’assurance. Débarrassez votre bureau Simpson.
+Karl : Attendez monsieur Smithers. Homer Simpson est innocent. C’est moi.
+Homer : Vous Karl ?
+Smithers : Qu’est-ce que vous racontez ?
+Karl : Monsieur Simpson n’était pas au courant de cette indélicatesse. J’assure l’entière responsabilité.
+Smithers : Vraiment ? Bon, alors, vous êtes viré, qui que vous soyez.
+Karl : Tenez, voici 1000 $.
+Smithers : Ah ! Et qu’est-ce que ça pouvait vous faire qu’il soit chauve ?
+Karl : J’ai des raisons qui ne regardent que moi.
+[Smithers part en colère]
+Homer : Karl ! Vous m’avez sauvé. Pourquoi ?
+Karl : Aurais-je fait quelque chose d’extraordinaire aujourd’hui ? Non. J’ai fait ce pour quoi je suis sur Terre. J’ai fait ce que tout bon soldat aurait fait devant une grenade qui menace son capitaine. Je lui ai servi de bouclier et j’ai supporté seul le terrible choc.
+Homer : Ben, merci Karl. Là je sais vraiment pas quoi dire.
+Karl : Accompagnez-moi à ma voiture, c’est tout.
+
+SEQ 33 – INT/JOUR Centrale nucléaire – Porte[Homer et Karl se prennent dans les bras. Il pleut dehors]
+Homer : Adieu Karl. Vous allez me manquer.
+Karl : Adieu Monsieur Simpson.
+[Karl ouvre son parapluie et sort]
+Karl : Oh, Monsieur Simpson, avez-vous pris un parapluie ?
+Homer : Thoo, non !
+Karl : Tenez !
+[Karl lance son parapluie à Homer et s’en va sous la pluie]
+
+SEQ 34 – EXT/NUIT Voiture[Homer est dans sa voiture et rentre chez lu]
+Homer : D’accord, d’accord, d’accord ! T’es fauché, complètement fauché. Karl est plus là, c’est fini. Mais il te reste tes cheveux, c’est vrai ça, c’est pas rien. Oh, puis il y a le discours.
+
+SEQ 35 – INT/NUIT Maison des Simpson[Bart entre dans la chambre des parents. Il prend alors le Dimoxinil et rêve en grattant le menton]
+Bart : Alors, les mecs, ça gaze ?
+[Dans son rêve, Bart a une barbe et parle à Milhouse et à Lewis]
+Milhouse : Eh, l’autre !
+Lewis : Oh, ça doit être une fausse !
+[Lewis et Milhouse tirent sur la barbe encore et encore]
+Bart : C’est pas du chiqué, les zigues ! Qu’est-ce que vous croyez !
+[Bart sort de son rêve et s’asperge le visage de Dimoxinil. Homer arrive alors]
+Homer : Bart, qu’est-ce que tu fais ?
+[Bart lâche le Dimoxinil par terre qui se vide sur la moquette]
+Bart : Oh !
+Homer : Tu vas voir ta... !
+Bart : Oh, Oh !
+[Bart s’enfuie de la chambre et lui court après dans l’escalier]
+Homer : Il y en a un de nous deux qui de trop dans cette baraque !
+[Homer trébuche sur une lampe dans sa course. Il attrape Bart et l’étrangle]
+Homer : J’vais t’étrangler, t’entends !
+Bart : Je t’aime papa !
+Homer : Oh ! Tu perds pas le nord hein !
+[Homer relâche Bart]
+Homer : C’est bon, je vais pas te tuer. Mais je vais te dire trois choses qui vont te traumatiser pour le restant de tes jours : t’as ruiné ton père, t’as bousillé ta famille et la calvitie est héréditaire !
+Bart : Héréditaire ?
+
+SEQ 36 – INT/NUIT Maison des Simpson – Chambre de Homer et Marge[Homer revient dans la chambre, s’agenouille près de la bouteille, la ramasse et pleurs. Marge arrive]
+Marge : Homer, pourquoi tu vas pas à la pharmacie ?
+Homer : J’ai pas 1000 $ à dépenser ! Mais toi tu les as Marge, hein ? Dis le moi, dis-moi que t’as joué les fourmis et que tu les as mis de côté pour les mauvais jours comme tu disais. C’est vrai, hein, c’est vrai...
+[Homer se met à fouiller dans les cheveux de Marge]
+Marge : Homer !
+[Homer se jette par terre en pleurant et se frotte la tête dans la flaque sur la moquette. Bart et Lisa arrivent]
+Lisa : On ne peut pas dire qu’il prenne ça de manière stoïque.
+
+SEQ 37 – INT/JOUR Maison des Simpson – Salle de bain[Du lit à la salle de bain, on voit plein de cheveux par terre. On voit qu’Homer est redevenue comme avant]
+Marge : Oh, Homer ! Je suis désolée !
+[Homer pleure]
+
+SEQ 38 – INT/JOUR Centrale nucléaire – Bureau d’Homer[Homer est assis à son bureau, vêtu d’un chapeau. Smithers arrive]
+Smithers : Vous faîtes votre discours dans 5 minutes Simpson. Vous n’avez pas l’intention de vous pendre, hein ?
+[Smithers s’en va en ricanant. Simpson est désespéré mais il aperçoit une lettre sur son bureau à son nom. Il ouvre et le lit (on entend alors la voix de Karl)]
+Karl : Cher M. Simpson, je me suis permis de vous préparez votre discours sur des petites fiches que vous trouverez ci-jointe. Tous les grands mots sont écrits phonétiquement.
+[Homer lit alors le mot phonétiquement de manière très détachée]
+Karl : Dieu vous bénisse. Vous êtes l’un des êtres les plus remarquables de Springfield. Votre employé dévoué, Karl.
+[On s’aperçoit que Karl est en fait derrière Homer. Il lui tape sur l’épaule]
+Karl : Bonne chance monsieur.
+Homer : Oh ! C’est vous Karl ! C’était pas seulement une voix douce que j’entendais dans ma tête. Qu’est-ce que vous faîtes ici ?
+Karl : Je suis venu dire adieu aux filles du poule dactylos.
+Homer : Je vous remercie pour le discours Karl, c’est gentil, mais je p eux pas le faire. Regardez moi ça.
+[Homer enlève son chapeau]
+Karl : C’est à croire que je ne vous ai rien appris.
+Homer : Pourquoi vous dîtes ça ?
+Karl : Réfléchissez ! La sauce tartare, la clé des toilettes, la serviette pour les mains du patron. C’est vous qui avez tout fait. Ca n’a rien à voir avec les cheveux. Vous l’aviez fait parce que vous étiez convaincu de pouvoir le faire. Et vous pouvez encore.
+Homer : Non, je peux pas. Je suis qu’un pauvre idiot.
+Karl : Oh, non, vous ne l’êtes pas !
+Homer : Comment vous le savez ?
+Karl : Parce que ma mère m’a appris à ne jamais embrassé un idiot.
+[Karl embrasse alors Homer sur la bouche]
+Homer : Karl !
+Karl : Allez, maintenant, à l’attaque ! Pas de quartier !
+[Homer sort alors en hurlant et Karl lui tape sur les fesses]
+
+SEQ 39 – INT/JOUR Centrale nucléaire – Auditorium[Burns est sur la scène face aux cadres]
+Burns : Et maintenant, avec un point de vue tout neuf, voici l’un des tous jeunes espoirs de la grande famille du nucléaire, Homer Simson !
+[Simson entre en scène. Burns va se rasseoir dans le public et a l’air surpris]
+Burns : Mais enfin, qui diable est ce vieux bonhomme ? Et qu’est-ce qu’il a fait d’Homer Simpson ?
+Smithers : [en rigolant] C’est Homer Simpson, monsieur !
+Homer : Vous serez nombreux à penser que je suis cinglé de faire ça.
+[Homer brûle un billet]
+Burns : Il est cinglé !
+Homer : Mais pourtant ici, dans cette usine, c’est ce que nous faisons chaque heure, chaque jour. Stock trop lourd, procédés de fabrication dépassés, etcetera. Je peux vous faire économiser des millions de dollars chaque année à cette entreprise. Comment ? Grâce au Jinko Kanri, l’art japonais de l’auto organisation.
+Homme 1 : A mon avis, cet homme-là n’a pas plus d’idées que de cheveux.
+Homme 2 : Si c’est une plaisanterie, ça ne me fait pas rire.
+Femme : Il ne manque pas de culot ! Nous dire comment gérer la centrale. Il a même pas de cheveux.
+[Les gens commencent à quitter la salle]
+Homer : Par exemple, que le minerai d’uranium pourrait être acheté beaucoup moins cher sur les marchés étrangers.
+[Homer continue à parler alors que la salle se vide petit à petit]
+Homer : Les profits à long terme couvriraient non seulement le coût initial, mais feraient aussi économiser 526 000 $... à l’entreprise.
+[Alors que la salle est vide, Smithers arrive]
+Smithers : Dans le bureau du patron. Immédiatement ! En route pour la guillotine.
+
+SEQ 40 – INT/JOUR Centrale nucléaire – Bureau de M. Burns[Burns est assis à son bureau. Homer en face]
+Burns : Bien, bien, bien ! Il a fier allure notre jeune cadre dynamique ! Vous avez fait de cette conférence une farce grotesque. Je devrais vous mettre à la porte sur le champ. Mais... je ne le ferais pas.
+Homer : Euh... pourquoi ?
+Burns : Simpson, quel âge pensez vous que j’ai ?
+Homer : Je ne sais pas... 102 ans.
+Burns : Je n’ai que 81 ans. Vous aurez peut-être du mal à le croire mais, au printemps de ma vie, j’avais la tête couronnée d’une masse de cheveux bouclés d’un blond lumineux.
+[Burns a sorti un album photo où on le voit enfant. Puis on voit d’autres photos du même type de sa vie. On voit que quand il avait des cheveux, il était le plus populaire. Puis quand il n’en a pas, il était scientifique]
+Burns : Oui, j’étais une vedette sur le campus. Jusqu’à ma dernière année d’université où je me suis tout à coup déplumé comme un poulet. Voyez-vous Simpson, je ne connais que trop les affres de la calvitie. Et c’est pourquoi je vais vous remettre à votre ancien poste.
+Homer : Quoi ? Oh merci, merci, merci !
+Burns : Maintenant, sortez d’ici avant que je change d’avis !
+Homer : Oh, j’ai intérêt à me grouiller.
+
+SEQ 41 – INT/NUIT Maison des Simpson – Chambre d'Homer et Marge[Homer est assis sur le lit alors que Marge est couchée]
+Marge : Homer, tu es encore réveillé ?
+Homer : J’ai jamais été aussi réveillé de ma vie.
+Marge : Qu’est-ce qui va pas ?
+Homer : Ben t’es drôle toi ! Me voilà à nouveau dans un cul-de-sac avec ce boulot débile. Les gamins vont me détester parce que je peux pas leur payer les trucs que je leur avais promis. Et puis toi, tu vas plus m’aimer autant parce que je suis laid et chauve.
+Marge : Oh, Homer ! Ton travail a toujours rapporté de quoi remplir les assiettes. Et les enfants t’en voudront pas !
+Homer : Ah ouais ? Et pour ce qui est de m’aimer ?
+Marge : Oh, Homer ! Allez, viens.
+Homer : Quoi ?
+Marge : Approche.
+[Marge le prend dans ses bars et lui chante une chanson]
+Marge : Je t’aime comme au premier jour. Mon chéri. Je t’aime comme au premier jour. Mon chéri. Mon chéri. Tu es tout ce qu’il me faut.
+Homer : Je suis tout ce qu’il te faut.
+Homer+Marge : Je t’aime comme au premier jour. Mon (ma) chéri.
+[Homer et Marge s’embrassent]

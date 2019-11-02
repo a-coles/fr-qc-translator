@@ -1,0 +1,316 @@
+SEQ 1 - Présentation - Dans la cuisine
+[Homer allume une bougie dans une citrouille. Son T-shirt flambe et Homer court en criant.]
+
+SEQ 1 - INT/NUIT Maison des Simpson - Palier
+[Lisa et Bart sortent de leur chambre. On entend des bruits]
+Lisa : As-tu entendu ça, Bart ?
+Bart : C'est peut-être juste le chat.
+Lisa : Non il est couché avec moi.
+[Le chat miaule. Il est habillé en poupée. Les bruits viennent du grenier]
+
+SEQ 2 - INT/JOUR Maison des Simpson - Cuisine
+[Pendant le petit déjeuner]
+Bart : Avez-vous entendu quelque chose bouger dans le grenier la nuit passée ?
+Homer : Le grenier ? Sois pas ridicule. [il rie] Sérieusement, mettez jamais les pieds là.
+Marge : Homer est-ce que c’est pas le moment de ... tu sais quoi.
+Homer : Oui, oui. Je vais aller le nourrir, l’affaire. [il cherche dans le frigo] Têtes de poisson, têtes de poisson.
+
+SEQ 3 - INT/JOUR Maison des Simpson - Palier
+Homer ouvre le grenier et il monte pour vider le seau de têtes de poisson. Les enfants le regardent. On entend des bruits bizarres.
+
+SEQ 4 - INT/JOUR Maison des Simpson - Cuisine
+Lisa : [à Homer] Qu'est-ce qu'il y a en haut ?
+Bart : C'est-tu un monstre ?
+Lisa : On veut le savoir.
+Bart : Oui, c'est quoi le secret ?
+Homer : Je veux plus de questions. Je me fends le derrière pour nourrir mes 4 enfants puis tout c’que ... quoi ?
+Marge : Trois... on a trois enfants Homer.
+Homer : Ouais, trois enfants fouineurs. Vous savez ce qui arrive aux enfants fouineurs qui posent trop de questions ?
+Bart : Non ?
+Lisa : Non, qu'est-ce qui leur arrive ?
+Bart : Qu'est-ce qui leur arrive ? Dis-nous p'pa.
+
+SEQ 5 - INT/NUIT Maison des Simpson - Palier
+[Les enfants vont monter dans le grenier]
+Lisa : Dépêchons-nous avant que p’pa pis m’man reviennent.
+[Ils ouvrent la cave et ils entrent]
+
+SEQ 6 - INT/NUIT Maison des Simpson - Grenier
+[Bart a une lampe de poche. Il fouille et trouve un livre d'Homer "Je me suis à peine connu"]
+Bart : Les copies non vendues de l'autobiographie de papa.
+Lisa : Oh mon Dieu, Bart regarde !
+[Une chose est enchaînée. Elle bouge mais on ne la voit pas. La chose surgit. Les enfants sont effrayés et s'enfuient]
+
+SEQ 7 - INT/NUIT Maison des Simpson - Hall d'entrée
+[On voit trois vase de taille différente. Les enfants sont cachés]
+Lisa : Bart, je pense qu’on peut sortir.
+Bart : Tant pis, je m'en fiche, j'étouffe là-dedans.
+[Ils sortent du placard. Les parents reviennent, il y a de l'orage]
+Homer : Tu vois Marge. Pas besoin de faire laver l’auto quand on peut se promener sous la pluie.
+Bart et Lisa : Maman papa on a vu quelque chose dans le grenier, quelque chose dans le grenier.
+Marge : Vous êtes allés dans le grenier ? Oh, je suis très désappointée et un peu terrifiée.
+
+SEQ 8 - INT/NUIT Maison des Simpson - Grenier
+[Les Simpson recherchent la chose. Elle n'est plus là]
+Homer : Oh, c’est épouvantable Marge, il s’est échappé.
+
+SEQ 9 - INT/NUIT Maison des Simpson - Hall d'entrée
+[Marge téléphone]
+Marge : Allô docteur, c'est ce qu'on a toujours craint. Il s'est échappé, Hugo s'est échappé. Oui, à bientôt.
+Bart : C'est qui ou c'est quoi Hugo ?
+Marge : J'ai peur qu'on ait pas été entièrement honnête avec toi Bart. Tu vois, tu as un frère.
+Lisa : Ce qui fait que j'ai deux frères ?
+Homer : Lisa, s’il-te-plaît, oui. Bart, tu as un frère jumeau. Tu vois, quand t’es né, il y a eu comme une irrégularité.
+[Le docteur Hibbert entre]
+Dr Hibbert : Une monstrueuse irrégularité. Oui, je me souviens bien de la naissance de Bart. On oublie pas un chose comme ... une paire de jumeaux siamois.
+Lisa : Je pense qu'ils préfèrent qu'on les appelle des jumeaux unis.
+Dr Hibbert : Mais les montagnards du sud préfèrent se faire appeler "fils de la terre", mais c’est pas pour demain. Alors normalement, la naissance de jumeaux siamois est une occasion de réjouissances. Mais malheureusement, l'un des deux était... l'incarnation du mal.
+[Flash-back au moment de la naissance de Bart. Le docteur Hibbert montre les enfants siamois à Marge et celui de gauche mord celui de droite]
+Marge : Je pense que celui-là, je vais le nourrir à la bouteille.
+Dr Hibbert : [il raconte] Une analyse d’usage de l'âme a révélé la présence des forces du mal. J’ai alors compris que la seule option était de vous séparer tous les deux immédiatement.
+[Le docteur Hibbert utilise une machine pour couper le papier. Il a coupé un papier en deux et donne les deux parties à Homer et Marge]
+Dr Hibbert : [à Homer et Marge] Vous devez signer ça tous les deux. [il raconte] Mais que faire du pauvre Hugo ? Trop mauvais pour le monde, pas assez mauvais pour l’éliminer. L'enfant était un paria. Alors nous avons fait la seule chose humaine possible.
+Homer : On a enchaîné Hugo dans le grenier et on l'a nourri d’un seau de têtes de poisson une fois par semaine.
+Marge : Ca a sauvé notre mariage.
+Bart : Vous pensez qu’on va croire à cette histoire-là ? Pour commencer, si c'était vrai, je devrais avoir une affreuse cicatrice ici.
+[Bart regarde, il a une cicatrice. Il crie]
+Dr Hibbert : Il nous faut retrouver Hugo.
+Homer : On va fouiller tous les endroits où un pauvre inadapté solitaire peut se réfugier?
+Lisa : Je vais commencer par Radio-Shack.
+Homer : Parfait. [ils sortent, sauf Bart] Bart, reste pour enregistrer la partie de hockey.
+[Bart s'enferme à clef]
+Bart : [inquiet] T'es là hein ? C'est bien toi ?
+Hugo : Oui Bart, je t'ai jamais quitté.
+Bart : Qu’est-ce que tu veux de moi ?
+Hugo : Tu verras bien ... après l’opération !
+Bart : [il crie] Aahhhh !
+
+SEQ 10 - INT/NUIT Maison des Simpson - Grenier
+[Bart est attaché sur une table]
+Bart : Mais t’es fou !
+Hugo : Vraiment ? Bien peut-être qu’on est tous un peu fous. Je sais que je le suis. J’suis devenu fou après qu’ils nous aient séparés mais je vais aller beaucoup mieux, une fois qu’on sera recousus ensemble.
+[Il a du fil et une aiguille]
+Bart : Mais tu vas nous tuer tous les deux !
+Hugo : Non c'est facile, regarde. Je me suis pratiqué. J'ai fait un pigeon-rat.
+[On voit sa créature. Le pigeon s'envole avec le rat accroché. Le pigeon se cogne et retombe sur les pattes du rat qui essaye de rentrer dans un trou de souris mais il n'y arrive pas à cause du pigeon]
+Hugo : Bon ben en tous cas, allons-y. Tu veux être à droite ou à gauche ?
+Dr Hibbert : Hugo, arrête. [Hugo le menace avec une aiguille] Allons, allons Hugo, je te comprends. Toutes ces années enfermé ici. Je parie que tu n'as probablement jamais vu ton visage dans un miroir, n'est-ce pas ? Regarde.
+[Le docteur Hibbert lui tend un miroir. Hugo regarde mais il n'y a pas de glace, on voit le docteur Hibbert à travers qui met un coup de poing à Hugo qui s'effondre. Homer et Marge arrivent]
+Homer : On pense qu’on a vu Hugo à l'aéroport, il s’embarquait dans un avion pour la Suisse. [il voit Hugo] Ah ?
+Dr Hibbert : Vous savez, c’est intéressant de noter que le jumeau de gauche était variablement celui qui est mauvais. J'ai formé une théorie [il regarde Hugo et voit qu'il a la cicatrice à gauche, c'est donc le jumeau de droite] Attendez une minute. La cicatrice d'Hugo est du mauvais côté. Il n’a jamais pu être le mauvais jumeau de gauche. Ce qui signifie que le mauvais jumeau est et a toujours été depuis le début... Bart.
+[Ils regardent tous Bart]
+Bart : Ben pourquoi ça vous surprend tant que ça ?
+Dr Hibbert : Eh bien, oui, mettez-ça sur le compte de manque attention de ma part. Mais je crois que j’ai une trouvé solution qui pourrait arranger les choses.
+
+SEQ 11 - INT/NUIT Maison des Simpson - Salle à manger
+[Le docteur Hibbert a un grand couteau dans les mains. Il coupe la dinde]
+Dr Hibbert : Tu veux un pilon, Hugo ?
+[Hugo mange une cuisse et sa serviette]
+Lisa : Maman, Hugo mange sa serviette de table.
+[Ils rient. Bart les regarde manger par le conduit d'aération]
+Marge : Ah, si il est pas cute.
+Bart : Eh, je peux-tu avoir de la dinde ?
+Marge : Finis de manger tes têtes de poisson, après on verra.
+[Elle ferme le volet du conduit d'aération]
+
+~ Partie 2
+{L'éprouvette de la genèse}
+
+SEQ 1 - INT/JOUR Maison des Simpson - Chambre de Lisa
+[Lisa fait son projet de science]
+Lisa : Cette dent-là va être parfaite pour mon travail en sciences. La science a déjà prouvé les dangers de la cigarette, de l'alcool puis des mets chinois, mais je peux encore ruiner l’industrie des liqueurs douces.
+[Lisa verse du cola dans une coupelle où il y a la dent. Bart entre avec un ballon collé à sa tête]
+Bart : Eh Lisa, regarde mon projet en sciences ? [Il frotte le ballon sur sa tête]
+[Il touche Lisa et ça fait une étincelle]
+Lisa : Aie ! Qu'est-ce que t’essaie de prouver ?
+Bart : Que les bollés sont conducteurs d'électricité.
+[Il retouche Lisa et ça refait une étincelle. Un peu plus tard, Lisa touche la dent dans la coupelle. Elle reçoit une décharge]
+Lisa : Ah ! Qu’il est stupide, ce Bart-là !
+[Pendant qu'elle dort, la décharge se propage dans la coupelle. Le lendemain matin. Lisa découvre sa coupelle]
+Lisa : Oh bravo, de la moisissure. C’est un bon filon pour le concours de sciences. [elle regarde au microscope] Ça a encore l’air de la même chose. [elle remarque qu'elle regarde en x1 et elle grossit au x10] Ohh... [elle passe au x100 et voit des habitants miniatures à l'âge préhistorique] Oh ! Des petits bonhommes. Mon Dieu, mais j'ai créé la vie !
+Marge : [en bas] Lisa, viens déjeuner. J’ai fait des gaufres.
+Lisa : Oh, des gaufres !
+
+SEQ 2 - INT/JOUR Maison des Simpson - Cuisine
+[Lisa se précipite, mais elle est rapidement déçue]
+Lisa : Eh, c'est pas des gaufres ça. C'est juste des crêpes carrées.
+Marge : Je m’excuse ma chouette, le moule à gaufres est en réparation.
+Lisa : [en colère] Ça fait un an que le moule à gaufres est en réparation.
+
+SEQ 3 - INT/JOUR Maison des Simpson - Chambre de Lisa
+Lisa : Puis ? Comment ça va mes petits habitants de l’âge de pierre ? [elle regarde au microscope et voit qu'ils sont à la Renaissance] Ouais, mais mon Dieu, ils évoluent tellement vite. Ils en sont déjà rendus à la Renaissance. Attends ... il y en a un qui cloue quelque chose sur la porte de la cathédrale... j'ai créé des luthériens !
+[Plus tard, pendant la nuit, on voit des petites lumières s'allumer dans la coupelle. Le lendemain matin, Lisa se lève. Elle regarde au microscope et constate qu'ils ont énormément évolué. Ils ont des voitures vivantes]
+Lisa : Wow ! C’est presque comme regarder dans l’avenir.
+[Bart entre dans le chambre]
+Bart : C’est quoi ça ? T’essaie de te faire pousser un ami ? Eh, t’as construit une cité modèle. C’est-tu l’école ça ? [il enfonce son doigt dans la coupelle] Oups, mon doigt a glissé. [il enfonce son doigt dans la coupelle] Oups, mon doigt a glissé. [il enfonce son doigt dans la coupelle] Oups, mon doigt a glissé.
+Lisa : Bart, arrête-moi ça !
+[Bart rie et il sort. Elle regarde dans le microscope et elle voit que la ville est détruite et en flammes]
+Lisa : Mes pauvres petites créatures ... ah, Bart est tellement destructeur !
+[La nuit. Des mini-vaisseaux s'envolent de la coupelle et se dirigent dans la chambre de Bart]
+
+SEQ 4 - INT/NUIT Maison des Simpson - Chambre de Bart
+[Les vaisseaux tirent sur Bart des rayons lasers. Il se réveille]
+Bart : Mais qu’est-ce que ... ?
+[Il voit les vaisseaux et crie. Les vaisseaux retournent dans la coupelle]
+
+SEQ 5 - INT/NUIT Maison des Simpson - Chambre de Lisa
+[Bart entre et réveille Lisa. Il a pleins de boutons au visage]
+Bart : Ta bande de microbes est venue m’attaquer.
+Lisa : Ben, t’as presque failli détruire leur monde au complet.
+Bart : Tu peux pas les protéger à chaque seconde. Tôt ou tard, quand t’auras le dos tourné, j’vais tirer la chaîne ! Ta petite ville va se retrouver dans le bol de toilette.
+[Bart s'en va. Un rayon entoure Lisa]
+Lisa : Wô !
+[Le rayon rétrécit Lisa. Elle se retrouve dans la coupelle. Un mini-scientifique ressemblant au professeur Frink est près d'elle]
+Mini-scientifique : Ca a fonctionné ! Le débigulateur a fonctionné.
+Mini-habitants : Salut à toi Lisa.
+Mini-dirigeant : Sois la bienvenue dans notre monde, ô très gracieuse Lisa.
+Lisa : Votre monde est incroyable. On parle la même langue !
+Mini-dirigeant : Nous t’avons écouté parler depuis la nuit des temps ô créateur. Et nous avons appris à t’imiter parfaitement.
+[Lisa voit une statue d'elle]
+Lisa : Vous me prenez pour Dieu ?
+Mini-dirigeant : Mais bien sûr, tu nous as regardés du haut du ciel, tu nous as donné la vie et seule ta divine intervention peut nous sauver du démon.
+Lisa : Le démon ? Quel démon ?
+Mini-dirigeant : Celui que tu appelle Bart.
+[Les habitants se cachent les oreilles pour ne pas entendre son nom]
+Lisa : Non non non non non, vous comprenez pas. Voyez-vous, Bart, c’est mon frère.
+Mini-dirigeant : Quoi ? Le démon Bart est ton frère ? Je dois dire que cette notion est très compliquée pour nous.
+Watson : Dieu, salut euh, Bill Watson. J'habite l’édifice Clark. J'ai une question. Si t’es si bonne, pourquoi tu permets que le mal arrive ?
+Mini-habitant : Pourquoi est-ce que je suis aussi gros ?
+Lisa : Ecoutez, je peux m’occuper de tout. À condition que vous me rendiez ma taille.
+Mini-scientifique : Te rendre ta taille ? Mais cela nécessiterait une sorte de rébigulateur, un concept en soi tellement ridicule que j’en ai envie d’éclater de rire. Mais pas de toi ô notre très saint Dieu de courroux et de vengeance avec des pluies de sang et tes nombreux fléaux.
+Mini-dirigeant : Oh mon Dieu le destructeur ! Il est revenu !
+[Bart s'approche de la coupelle. Les gens s'enfuient]
+Mini-habitante : Au secours !
+Lisa : [elle crie] Bart noooooooooon !
+
+SEQ 6 - INT/JOUR Ecole élémentaire
+[Bart participe à l'exposition des projets de sciences avec la coupelle de Lisa]
+Skinner : Un excellent travail, Bart. Ce petit univers que tu as créé est encore plus impressionnant que le ukulélé en cartons de lait de Martin. Willie, vous pouvez jeter tous les autres travaux, nous avons un gagnant.
+[Willie jettes les autres travaux. les autres enfants sont déçus]
+Elèves : Oh non !
+Lisa : [elle crie] Directeur Skinner attendez. C'est moi qui aie créé l'univers, donnez-moi le certificat-cadeau. Oh, misère, j’suis pognée pour passer le reste de ma vie dans ce plat-là. [les habitants la regardent] Vous êtes pas supposés vous prosterner ? [ils se prosternent] Puis apportez-moi des souliers ... qui ont de l’allure.
+Mini-habitant 2 : Elle va avoir besoin de bas ! J’apporte des bas.
+
+~ Partie 3
+{Citoyen Kang}
+
+SEQ 1 - EXT/NUIT Sur un lac
+[Homer est dans un bateau, il pèche]
+Homer : Ah, un bel après-midi sur le lac. C’est tellement paisible et relaxant. Je m’en fiche même si j’attrape pas un seul poisson. [énervé] Bande de poissons stupides, mordez à l’hameçon ! Forcez-moi pas à descendre au fond.
+[Une soucoupe volante vole au dessus d'Homer. Une pince en sort et elle soulève Homer. Elle le fait tomber dans l'eau puis elle le repêche et elle l'emmène dans le vaisseau]
+
+SEQ 2 - INT/NUIT Dans le vaisseau
+[Homer voit Kang et Kodos]
+Homer : Oh mon Dieu, des extraterrestres. Mangez-moi pas. J'ai une femme puis des enfants... mangez-les.
+Kang : Silence ! Nous sommes des voyageurs d’une planète voisine encerclée d’un anneau dont on ne veut pas mentionner le nom. Moi, je m'appelle Kang et voici ma soeur Kodos.
+Kodos : Salut.
+Homer : [apeuré] Je suppose que vous voulez me sonder ? [il baisse son pantalon] Bon, finissons-en au plus vite.
+Kang : Arrêtez. Nous avons atteint les limites de ce que le sondage rectal peut nous apprendre.
+Kodos : Ceci est une mission de conquête. Menez-nous à votre chef.
+Homer : Vous voulez parler du président Clinton ? Il se tient à Washington d’habitude.
+Kang : Le président Clinton... excellent.
+Homer : Sauf que...il y a une élection la semaine prochaine puis après, il sera peut-être plus président. Ça pourrait être... voyons, comment il s'appelle... celui qui marmonne ... je l'ai vu à la télévision l'autre soir ... [il s'en souvient] Bob Dole !
+Kang : Ah une élection. Ça complique les choses. [à Kodos] Règle la grille de coordonnées pour Bob Dole.
+
+SEQ 3 - EXT/NUIT Devant le comité de Bob Dole
+Dole : Bonsoir tout le monde.
+Conseillers : Bonsoir Monsieur le sénateur. Bonne chance pour la semaine prochaine.
+[Bob Dole est attrapé par la pince du vaisseau]
+Dole : Bob Dole n'a pas besoin de ça.
+
+SEQ 4 - EXT/NUIT Devant la Maison Blanche
+[Kodos attrape Clinton et son lit avec la pince]
+Clinton : Mais qu’est-ce qui se passe ? est-ce qu’il est déjà midi ?
+
+SEQ 5 - INT/NUIT Dans le vaisseau
+[Kang et Kodos déshabillent Bob Dole et Bill Cinton et il les enferment dans un tube]
+Dole : Qu'est-ce que c'est ça ? Une sorte de tube ?
+[Le tube de Dole est remplit d'une matière visqueuse. Bob Dole ne bouge plus]
+Clinton : Merci de vous occuper de Dole pour moi.
+[Ils font la même chose avec le tube de Clinton. Homer regarde apeuré]
+Kang : Commencez la bio-duplication.
+[Kang se clone en Bob Dole et Kodos en Bill Clinton. Homer a tout vu]
+Homer : Oh non ! Des extraterrestres de la bio-duplication, des complots de gars tous nus. Oh mon Dieu, Raël Larouche avait raison.
+Kodos : [à Homer] Comment ? Vous êtes toujours là ? Il va falloir qu’on se débarrasse de vous, j’en ai bien peur.
+[Ils aspergent Homer de rhum]
+Homer : Non non ! Blllablallla m'asperger !
+Kang : Du rhum ! De sorte que personne ne croit votre histoire.
+Kodos : Et ne revenez pas.
+[Ils jettent Homer du vaisseau. Il retombe dans son bateau]
+
+SEQ 6 - INT/JOUR Maison des Simpson - Salon-TV
+Kent : Ici Kent Brockman avec la campagne 96. L'Amérique joue à pile ou face. Lors d’une apparition ce matin, le président Clinton a fait des remarques plutôt obscures que ses conseillers attribuent à une cravate un peu trop serrée.
+Kodos : [en Clinton] Je suis Clinton. En tant que chef suprême, tous devront s’agenouiller devant moi et obéir à mes commandements brutaux. Fin de la communication.
+Marge : Oh, ça c'est bien le rusé Willie. toujours aussi enjôleur.
+Homer : Marge, Marge, j’étais sur le lac. Je venais juste de prendre le plus gros poisson que t'ai jamais vu quand j'ai été enlevé par une soucoupe volante.
+Bart : Ben oui. Un autre verre de rhum avec ça ?
+[Homer voit Dole à la télé]
+Homer : Oh ! C'est une des deux créatures.
+Kent : Sénateur Dole, pourquoi les gens devraient voter pour vous plutôt que pour le président Clinton ?
+Kang : Ça ne fait pas de différence que vous votiez pour l'un ou pour l'autre. D’une façon ou d’une autre, votre planète est vouée à la mort... vouée à la mort !
+Kent : Voilà une réponse réconfortante de la part du sénateur Bob Dole.
+Homer : Ces candidats-là me donnent envie de vomir de terreur. Il faut les arrêter !
+
+SEQ 7 - EXT/JOUR Sur une scène
+Annonceur : Mesdames et messieurs, votre candidat de 73 ans, Bob Dole !
+Gens : Yééééééé !
+Kang : [en Dole] L'avortement pour tous.
+Gens : Ouh !
+Kang : Très bien. Pas d'avortement pour personne.
+Gens : Ouh !
+Kang : L’avortement pour certains, et des drapeaux américains miniatures pour les autres.
+Gens : Oui !
+
+SEQ 8 - EXT/JOUR Dans la rue
+[Kang et Kodos se baladent en se tenant par la main. Les gens les regardent étonnés]
+Kang : tromper ces électeurs terriens est plus facile que je ne le pensais.
+Kodos : Oui. Tout ce qu'ils veulent entendre, ce sont des plaisanteries fades, agrémentées d’un petit solo de saxophone à l’occasion ou d’un bébé embrassé.
+[Une fourgonnette s'arrête à côté d'eux. La porte s'ouvre et George Stephanopoulos apparaît]
+George : Monsieur le président. Les gens commencent à être un peu... déconcertés par la façon dont vous et votre adversaire vous ... vous vous tenez constamment par la main.
+Kang : Nous échangeons simplement des protéines à longue chaîne. Si vous connaissez un meilleur moyen, je serais ravi de l’entendre.
+
+SEQ 9 - INT/NUIT Salle de conférences
+[Le débat entre Clinton et Dole va avoir lieu]
+Kodos : [en Clinton] Mes chers concitoyens, quand j'étais petit, mon était de devenir un base-ball... mais ce soir je vous dis : Il faut aller de l’avant, pas à arrière, toujours plus haut et non pas en avant, er sans relâche tournoyer, tournoyer, tournoyer vers la liberté.
+Gens : Ouais !
+[Homer entre dans la salle]
+Homer : Arrêtez ! Ces candidats sont des imposteurs. Vous avez entendu ? C'est des extraterrestres venus de plus loin que la lune.
+[Les gens se moquent de lui. Des agents de sécurité veulent l'arrêter. Homer prend un drapeau américain pour se défendre mais les agents le mettent dehors avec le drapeau]
+Agent : Puis apporte ton drapeau avec toi !
+[Il claque la porte]
+
+SEQ 10 - EXT/NUIT Dans les bois
+Homer : Pourquoi est-ce que personne veut croire mon histoire de fous.
+[Il donne un coup de pied dans un buisson et il se fait mal au pied. Il voit qu'il a tapé dans le vaisseau de Kang et Kodos]
+
+SEQ 11 - INT/NUIT Dans le vaisseau
+[Homer veut sauver les vrais candidats]
+Homer : Tenez bon messieurs, je vais vous aider.
+Clinton : Oh non, est-ce que je suis encore là ? Je ne veux pas passer ma présidence tout nu à l’intérieur d’un tube.
+Dole : Les services secrets vont savoir ma façon de penser. Eh, vous êtes qui, vous ?
+Homer : Je suis Homer Simpson messieurs. Et je vais vous ramener à Washington avant qu'il soit trop tard.
+Clinton : Vous savez sénateur, ces quelques heures dans le coma m’ont donné le temps de réfléchir. La politique partisane est en train de déchirer le pays.
+Dole : Je suis de votre avis Bill. Si on veut réussir à vaincre ces extraterrestres, il faut mettre nos différends de côté.
+Clinton : Ensemble, on peut conduire l’Amérique toute entière vers un nouvel âge d’or.
+Dole : Marché conclu mon ami. Homer, Laisse-nous sortir. Il est temps de montrer à ces extraterrestres de quel bois on se chauffe.
+[Homer regarde le tableau de bord. Il cherche sur quel bouton appuyer]
+Homer : tiens. [il appui sur un bouton qui envoie Dole et Clinton dans l'espace] D'oh ! Oh non ! Qu'est-ce que j'ai fait, qu'est ce que je fais, qu'est ce que je vais faire !
+[Il tape sur le tableau de bord. La soucoupe descend brusquement]
+
+SEQ 12 - EXT/JOUR Devant la maison blanche
+[Kang et Kodos font un discours]
+Kang : La politique de l'échec a échoué. Il faut la faire fonctionner de nouveau. Demain quand vous vous retrouverez à l’intérieur de l'isoloir, votez pour moi, le sénateur Kan... [il lit le nom de Dole sur un badge] Bob Dole.
+[Les gens applaudissent]
+Kodos : Je me réjouis à l'avance de voir une élection en règle demain, ce qui éliminera d’avoir recours à un violent bain de sang.
+[La soucoupe s'écrase dans la maison blanche. Homer se précipite vers Kang et Kodos]
+Homer : Amérique, regarde bien tes candidats bien aimés. Ce ne sont que deux hideux reptiles de l'espace.
+[Homer retire les masques de Kang et Kodos. Les gens sont étonnés et effrayés]
+Kodos : C'est vrai. Nous sommes extraterrestres. Mais vous ne pouvez rien y faire. C'est un système bipartite. Vous devez voter pour l'un de nous.
+Femme : Il a raison on a un système à deux partis.
+Homme : Je vais voter pour un candidat d'un troisième parti.
+Kang : Mais allez-y. Gaspillez votre vote.
+[Kang et Kodos rient. Plus tard, Kodos annonce le vainqueur]
+Kodos : Saluez tous le président Kang.
+[Kang est sur un trône. Autour de lui, les habitants sont devenus des esclaves et ils sont enchaînés. Marge se fait fouetter]
+Marge : Je comprends pas pourquoi il faut construire un canon laser contre une planète que je connais même pas.
+Homer : Blâme-moi pas. Moi, j’ai voté pour Kodos. [il se fait fouetter] Aie ! 
