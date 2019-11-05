@@ -74,7 +74,8 @@
   impossible ! 
   non , nous sommes presque certains . cet enfant n' est pas censé connaître son q.i mais regardez . devant un tel chiffre le doute n' est pas permis 
   quoi , 912 ? 
-  non , vous tenez la feuille à l' envers . il faut lire 216 . ça reste étonnamment élevé .   bart , t' es t - il arrivé de t' ennuyer à l' école ? 
+  non , vous tenez la feuille à l' envers . il faut lire 216 . ça reste étonnamment élevé . 
+  bart , t' es t - il arrivé de t' ennuyer à l' école ? 
   j' arrête pas . 
   te sens - tu frustré parfois ? 
   ah ouais , tout le temps monsieur . 
@@ -89,8 +90,7 @@
   excellent nous sommes d' accord . voici toutes les instructions utiles . présente toi là - bas vers 9 heures . monsieur et madame simpson , encore toutes mes félicitations . 
   je crois que ce soir tout le monde aura envie de fêter ça . 
   alors ça docteur ça me dépasse . mon fils un génie ? mais comment c' est arrivé ? 
-  hé bien en général un tel niveau d' intelligence résulte à la fois de l' hérédité et de l' environnement ... 
-  bien que dans certains cas ce soit un mystère total . 
+  hé bien en général un tel niveau d' intelligence résulte à la fois de l' hérédité et de l' environnement ... bien que dans certains cas ce soit un mystère total . 
   oh laisse moi m' man ! 
   mais ça te donne l' air plus intelligent chéri . 
   pas question ! 
@@ -159,7 +159,6 @@
   fais pas ta mauvaise tête , ta mère fait ça pour ton bien alors vas - y , va te culturer . 
   homer , tu viens aussi toi . 
   ben moi je suis pas un génie , pourquoi je devrais me farcir ça ? 
-  et en plus c' est du russe . 
   eh lisa , regarde si tu vois pas la dame qui vend des esquimaux . 
   personne ne vend d' esquimaux ici , chéri . 
   pas de bières , pas de hot dog , pas d' esquim' opéra . 
@@ -176,7 +175,7 @@
   je crois que ça s' arrêtera pas tant que la grosse chantera . 
   elle est assez grosse à ton goût celle - là ? 
   viens , on va aller se taper un hamburger . 
-  soit y égal r au cube sur 3 ( y = r^3/3 ) . vous allez donc devoir calculer la dérivée dy et si vous réussissez , je suis convaincue que trouver la solution sera pour vous un jeu d' enfant . 
+  soit y égal r au cube sur 3 . vous allez donc devoir calculer la dérivée dy et si vous réussissez , je suis convaincue que trouver la solution sera pour vous un jeu d' enfant . 
   voyons , tu ne saisis pas , bart ? la dérivé dy égale 3 au carré dr sur 3 , ou r au carré dr , ou rdrr .   rdrr . cqfd ? 
   ah ouais . 
   ah les mecs , je suis content de vous voir . 
@@ -217,7 +216,6 @@
   mon projet ? 
   oui , tu traces les grandes lignes , le but que tu espères atteindre , les moyens dont tu as besoin . 
   ok , ça marche . 
-   pour ça , je vais avoir ... besoin ... c' est vachement dur ! 
   ma confession , par bart simpson . je suis un enfant ordinaire pas très doué , point . j' ai triché au test d' intelligence , point . 
   oh , tu as déjà fini ? le principal sera certainement très intéressé par ce ...   oh ! tu sais , tu as mal orthographié " confession " . 
   ah ça te va bien le vert , bart . 
