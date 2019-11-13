@@ -1,4 +1,4 @@
 {
 	"train_bsz": 4,
-	"valid_bsz": 4,
+	"valid_bsz": 4
 }
