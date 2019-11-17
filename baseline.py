@@ -32,5 +32,3 @@ class Decoder(nn.Module):
         self.embedding = nn.Embedding(vocab_size, embedding_size)
         self.lstm = nn.LSTM(embedding_size, hidden_size, layers)
         self.output = nn.Linear(hidden_size, vocab_size)
-
-
