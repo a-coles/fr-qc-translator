@@ -32,3 +32,35 @@ class Decoder(nn.Module):
         self.embedding = nn.Embedding(vocab_size, embedding_size)
         self.lstm = nn.LSTM(embedding_size, hidden_size, layers)
         self.output = nn.Linear(hidden_size, vocab_size)
+
+    def forward(self, dec_input, hid, cell):
+        # accept one token per time step
+        dec_input = dec_input.unsqueeze(0)
+        out, (hid, cell) = self.lstm(self.embedding(dec_input), (hid, cell))
+        preds = self.output(out.squeeze(0))
+        return preds, hid, cell
+
+# # seq2seq
+class Seq2Seq(nn.Module):
+    def __init__(self, encoder, decoder, device):
+        super().__init__()
+        self.encoder = encoder
+        self.decoder = decoder
+        self.device = device
+
+    def forward(self, x, y):
+        # init decoder
+        hid, cell = self.encoder(x)
+        y_vocab_size = self.decoder.vocab_size
+        max_lengh,bsz = y.shape[0],y.shape[1]
+        # for storing outputs
+        outs = torch.zeros(max_lengh, bsz, y_vocab_size)
+        outs = outs.to(self.device)
+        # <BOS> token
+        dec_input = y[0, :]
+        for tok in range(1, max_lengh):
+            out, hid, cell = self.decoder(dec_input, hid, cell)
+            outs[tok] = out
+            # outs = self.softmax(self.output(out))
+            outs = output.argmax(1)
+        return outs
