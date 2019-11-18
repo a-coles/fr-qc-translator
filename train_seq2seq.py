@@ -11,7 +11,6 @@ from dataset import QcFrDataset
 from torch.utils.data import DataLoader
 
 from baseline import Encoder, Decoder, Seq2Seq
-from train import train
 
 
 if __name__ == '__main__':
@@ -52,8 +51,9 @@ if __name__ == '__main__':
             optimizer.zero_grad()
             qc_idx, fr_idx = qc_idx.to(device), fr_idx.to(device)
             out = model(qc_idx, fr_idx)
-            # break
+            # TODO reshape tensors
         #     loss = criterion(out, qc_idx)
+        #     break
         #     loss.backward()
         #     optimizer.step()
         #     total_loss += loss.item()
