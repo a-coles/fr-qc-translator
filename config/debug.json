@@ -1,4 +1,11 @@
 {
-	"train_bsz": 4,
-	"valid_bsz": 4
+	"train_bsz": 1,
+	"valid_bsz": 1,
+	"test_bsz": 1,
+
+	"vocab_size": 8029,
+    "embedding_size": 256,
+    "hidden_size": 512,
+    "layers": 2,
+	"epochs": 3
 }
