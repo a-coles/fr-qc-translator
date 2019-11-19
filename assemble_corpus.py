@@ -13,10 +13,10 @@ from sklearn.model_selection import train_test_split
 
 class Vocab():
     def __init__(self):
-        self.word2idx = {'BOS': 0, 'EOS': 1}
-        # Always start with the two known beginning and ending tokens
-        self.idx2word = {0: 'BOS', 1: 'EOS'}
-        self.num_words = 2
+        self.word2idx = {'PAD': 0, 'BOS': 1, 'EOS': 2}
+        # Always start with the known beginning and ending tokens, and padding
+        self.idx2word = {0: 'PAD', 1: 'BOS', 2: 'EOS'}
+        self.num_words = 3
 
     def add_example(self, example):
         qc_example = example[0]
@@ -38,6 +38,14 @@ class Vocab():
              'num_words': self.num_words}
         with io.open(save_path, mode='w', encoding='utf-8') as fp:
             json.dump(v, fp, indent=4, sort_keys=True, ensure_ascii=False)
+
+    def get_sentence(self, idx_batch):
+        sentences = []
+        for idx_tensor in idx_batch:
+            idx_np = idx_tensor.numpy()
+            sentence = [self.idx2word[str(idx)] for idx in idx_np]
+            sentences.append(sentence)
+        return sentences
 
     def load(self, load_path):
         with io.open(load_path, mode='r', encoding='utf-8') as fp:
@@ -61,17 +69,20 @@ def write_examples(qc_file, fr_file, examples):
 if __name__ == '__main__':
     # Read in simpsons corpus
     simpsons_qc, simpsons_fr = [], []
-    eps_qc = glob.glob('corpus/simpsons/*_qc_preproc.txt')
+    eps_qc = sorted(glob.glob('corpus/simpsons/*_qc_preproc.txt'))
+    print(eps_qc)
     for ep in eps_qc:
         with io.open(ep, mode='r', encoding='utf-8') as fp:
             lines = [line.strip() for line in fp.readlines()]
         simpsons_qc.extend(lines)
-    eps_fr = glob.glob('corpus/simpsons/*_fr_preproc.txt')
+    eps_fr = sorted(glob.glob('corpus/simpsons/*_fr_preproc.txt'))
+    print(eps_fr)
     for ep in eps_fr:
         with io.open(ep, mode='r', encoding='utf-8') as fp:
             lines = [line.strip() for line in fp.readlines()]
         simpsons_fr.extend(lines)
     simpsons = list(zip(simpsons_qc, simpsons_fr))
+    print(simpsons[0])
 
     # Compose list of all examples from all corpora
     examples = simpsons

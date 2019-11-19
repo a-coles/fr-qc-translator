@@ -6,6 +6,6 @@
 	"vocab_size": 8029,
     "embedding_size": 256,
     "hidden_size": 512,
-    "layers": 2,
-	"epochs": 3
+    "num_layers": 2,
+	"epochs": 10
 }
