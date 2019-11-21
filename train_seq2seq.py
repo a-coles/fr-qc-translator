@@ -5,7 +5,6 @@ import argparse
 import json
 import torch
 import torch.nn as nn
-import torch.optim as optim
 
 from assemble_corpus import Vocab
 from dataset import QcFrDataset, pad_collate
@@ -42,3 +41,4 @@ if __name__ == '__main__':
     model = Seq2Seq(vocab, cfg, device)
     model.train(train_loader, loss_fn=criterion, train_bsz=cfg['train_bsz'], num_epochs=cfg['num_epochs'])
     model.log_learning_curves()
+    model.log_metrics()

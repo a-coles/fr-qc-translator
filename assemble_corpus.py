@@ -87,6 +87,11 @@ if __name__ == '__main__':
     # Compose list of all examples from all corpora
     examples = simpsons
 
+    # Heuristic: If the lengths of qc vs fr are very different,
+    # there is probably misalignment or noise in the original data.
+    # Filter out pairs with really mismatching numbers of tokens.
+    examples = [ex for ex in examples if abs(len(ex[0].split()) - len(ex[1].split())) < 10]
+
     # Shuffle and split into train, valid, test
     train_examples, test_examples = train_test_split(examples,
                                                      test_size=0.2, random_state=42)

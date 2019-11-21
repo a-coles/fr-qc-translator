@@ -4,6 +4,8 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
+from allennlp.training.metrics import BLEU
+
 
 class Seq2Seq():
     def __init__(self, vocab, cfg, device):
@@ -13,6 +15,9 @@ class Seq2Seq():
         self.vocab = vocab
         self.name = 'seq2seq'
 
+        # Evaluation metrics
+        self.bleu = BLEU()
+
         # Logging variables
         self.train_losses, self.valid_losses = [], []
         self.train_bleu, self.valid_bleu = [], []
@@ -20,7 +25,6 @@ class Seq2Seq():
     def log_learning_curves(self):
         '''
         Logs the learning curve info to a csv.
-        TODO: update with BLEU.
         '''
         header = 'epoch,train_loss,valid_loss'
         num_epochs = len(self.train_losses)
@@ -29,20 +33,32 @@ class Seq2Seq():
             for e in range(num_epochs):
                 fp.write('{0},{1}\n'.format(e, self.train_losses[e]))#, self.valid_losses[e]))
 
+    def log_metrics(self):
+        '''
+        Logs evaluation metrics (BLEU, etc.) to a csv.
+        '''
+        header = 'epoch,train_bleu'
+        num_epochs = len(self.train_bleu)
+        with open(os.path.join('log', '{0}_metrics.log'.format(self.name)), 'w') as fp:
+            fp.write('{0}\n'.format(header))
+            for e in range(num_epochs):
+                fp.write('{0},{1}\n'.format(e, self.train_bleu[e]))
+
     def train(self, train_loader, loss_fn=None, train_bsz=1, num_epochs=1):
         enc_opt = torch.optim.Adam(self.encoder.parameters())
         dec_opt = torch.optim.Adam(self.decoder.parameters())
         for epoch in range(num_epochs):
-            train_loss = self.train_epoch(train_loader, loss_fn, enc_opt, dec_opt, train_bsz)
-            print('EPOCH {0} \t train_loss {1}'.format(epoch, train_loss))
+            train_loss, train_bleu = self.train_epoch(train_loader, loss_fn, enc_opt, dec_opt, train_bsz)
+            print('EPOCH {0} \t train_loss {1} \t train_bleu {2}'.format(epoch, train_loss, train_bleu))
             self.train_losses.append(train_loss)
+            self.train_bleu.append(train_bleu)
 
     def train_epoch(self, train_loader, loss_fn, enc_opt, dec_opt, train_bsz=1):
         self.encoder.train()
         self.decoder.train()
-        loss_epoch = 0.0
+        loss_epoch, bleu_epoch = 0.0, 0.0
         for i, (x, y, x_len, y_len) in enumerate(train_loader):
-            if i > 100:
+            if i > 10:
                 break
             enc_opt.zero_grad()
             dec_opt.zero_grad()
@@ -55,7 +71,7 @@ class Seq2Seq():
             enc_hid = self.encoder.init_hidden(train_bsz).to(self.device)
 
             tgt_len = y.size(1)
-            loss = 0
+            loss = 0.0
 
             # To store decoder outputs
             outputs = torch.zeros(tgt_len, train_bsz, self.vocab.num_words).to(self.device)
@@ -78,18 +94,31 @@ class Seq2Seq():
             # When calculating loss, collapse batches together and
             # remove leading BOS (since we feed this to everything)
             all_outputs = outputs[1:].view(-1, outputs.shape[-1])
-            all_y = torch.transpose(y[1:].reshape(-1), 1, 0)
+            all_y = torch.transpose(y, 1, 0)
+            all_y = all_y[1:].reshape(-1)
             loss = loss_fn(all_outputs, all_y.long())
 
             loss.backward()
-            pred_tok = torch.transpose(torch.argmax(outputs.detach(), dim=2), 1, 0)
-            print(' '.join(self.vocab.get_sentence(pred_tok.cpu())[0]))
+            pred_tok = torch.argmax(outputs.detach(), dim=2)
+            pred_tok = torch.transpose(pred_tok, 1, 0)
+            pred_sents = [' '.join(x) for x in self.vocab.get_sentence(pred_tok.cpu())]
+            print(pred_sents[0])
 
             enc_opt.step()
             dec_opt.step()
+
+            # Report loss
             loss_batch = loss.item() / tgt_len
             loss_epoch += loss_batch
-        return loss_epoch
+
+            # Report BLEU
+            self.bleu(pred_tok, y)
+            bleu_batch = self.bleu.get_metric()['BLEU']
+            bleu_epoch += bleu_batch
+
+        # Average BLEU over all batches in epoch
+        bleu_epoch = bleu_epoch / len(train_loader)
+        return loss_epoch, bleu_epoch
 
 
 class Encoder(nn.Module):
