@@ -114,7 +114,7 @@ class Seq2Seq():
             dec_hid = enc_hid  # First decoder hidden state is last encoder hidden state
 
             # One token at a time from decoder
-            for di in range(1, tgt_len):
+            for di in range(tgt_len - 1):
                 dec_out, dec_hid = self.model.decoder(dec_inp, dec_hid)
                 outputs[di] = dec_out
                 tok = dec_out.argmax(1)
@@ -176,7 +176,7 @@ class Seq2Seq():
             dec_hid = enc_hid  # First decoder hidden state is last encoder hidden state
 
             # One token at a time from decoder
-            for di in range(1, tgt_len):
+            for di in range(tgt_len - 1):
                 dec_out, dec_hid = self.model.decoder(dec_inp, dec_hid)
                 outputs[di] = dec_out
                 tok = dec_out.argmax(1)
