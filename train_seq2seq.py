@@ -31,14 +31,15 @@ if __name__ == '__main__':
     # Create training dataset
     train_dataset = QcFrDataset('corpus/train_qc.txt', 'corpus/train_fr.txt', 'corpus/vocab.json')
     train_loader = DataLoader(train_dataset, batch_size=cfg['train_bsz'],
-                              shuffle=True, collate_fn=pad_collate)
+                              shuffle=True, drop_last=True, collate_fn=pad_collate)
 
     valid_dataset = QcFrDataset('corpus/valid_qc.txt', 'corpus/valid_fr.txt', 'corpus/vocab.json')
-    valid_loader = DataLoader(valid_dataset, batch_size=cfg['valid_bsz'], shuffle=True)
+    valid_loader = DataLoader(valid_dataset, batch_size=cfg['valid_bsz'],
+                              shuffle=True, drop_last=True)
 
     # Training loop
     criterion = nn.CrossEntropyLoss(ignore_index=vocab.word2idx['PAD'])
     model = Seq2Seq(vocab, cfg, device)
     model.train(train_loader, loss_fn=criterion, train_bsz=cfg['train_bsz'], num_epochs=cfg['num_epochs'])
-    model.log_learning_curves()
-    model.log_metrics()
+    model.log_learning_curves(log_dir='log')
+    model.log_metrics(log_dir='log')

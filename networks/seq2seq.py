@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+import matplotlib.pyplot as plt
 import os
 import torch
 import torch.nn as nn
@@ -22,27 +23,43 @@ class Seq2Seq():
         self.train_losses, self.valid_losses = [], []
         self.train_bleu, self.valid_bleu = [], []
 
-    def log_learning_curves(self):
+    def log_learning_curves(self, log_dir, graph=True):
         '''
         Logs the learning curve info to a csv.
         '''
         header = 'epoch,train_loss,valid_loss'
         num_epochs = len(self.train_losses)
-        with open(os.path.join('log', '{0}_learning_curves.log'.format(self.name)), 'w') as fp:
+        with open(os.path.join(log_dir, '{0}_learning_curves.csv'.format(self.name)), 'w') as fp:
             fp.write('{0}\n'.format(header))
             for e in range(num_epochs):
-                fp.write('{0},{1}\n'.format(e, self.train_losses[e]))#, self.valid_losses[e]))
+                fp.write('{0},{1}\n'.format(e, self.train_losses[e])) #, self.valid_losses[e]))
+        if graph:
+            plt.plot(list(range(num_epochs)), self.train_losses, color='blue', label='Train')
+            plt.title('Cross-entropy loss over training')
+            plt.xlabel('Epoch')
+            plt.ylabel('Loss')
+            plt.legend()
+            plt.savefig(os.path.join(log_dir, '{0}_learning_curves.png'.format(self.name)))
+            plt.clf()
 
-    def log_metrics(self):
+    def log_metrics(self, log_dir, graph=True):
         '''
         Logs evaluation metrics (BLEU, etc.) to a csv.
         '''
         header = 'epoch,train_bleu'
         num_epochs = len(self.train_bleu)
-        with open(os.path.join('log', '{0}_metrics.log'.format(self.name)), 'w') as fp:
+        with open(os.path.join(log_dir, '{0}_metrics.csv'.format(self.name)), 'w') as fp:
             fp.write('{0}\n'.format(header))
             for e in range(num_epochs):
                 fp.write('{0},{1}\n'.format(e, self.train_bleu[e]))
+        if graph:
+            plt.plot(list(range(num_epochs)), self.train_bleu, color='blue', label='Train')
+            plt.title('BLEU score over training')
+            plt.xlabel('Epoch')
+            plt.ylabel('BLEU')
+            plt.legend()
+            plt.savefig(os.path.join(log_dir, '{0}_metrics.png'.format(self.name)))
+            plt.clf()
 
     def train(self, train_loader, loss_fn=None, train_bsz=1, num_epochs=1):
         enc_opt = torch.optim.Adam(self.encoder.parameters())
@@ -159,7 +176,7 @@ class Decoder(nn.Module):
         # Input here is always one token at a time,
         # so need to do some unsqueezing to account for length dimension (1)
         x = x.long().unsqueeze(0)
-        embedded = self.embedding(x)#.permute(0, 2, 1)#.unsqueeze(0)  # TODO: ?
+        embedded = self.embedding(x)
         embedded = F.relu(embedded)
         output, hidden = self.gru(embedded, hidden)
         output = self.out(output.squeeze(0))
