@@ -11,8 +11,9 @@ from allennlp.training.metrics import BLEU
 class Seq2Seq():
     def __init__(self, vocab, cfg, device):
         self.device = device
-        self.encoder = Encoder(vocab.num_words, cfg['embedding_size'], cfg['hidden_size'], device).to(device)
-        self.decoder = Decoder(cfg['hidden_size'], cfg['embedding_size'], vocab.num_words, device).to(device)
+        self.model = Seq2SeqArch(vocab, cfg, device)
+        # self.encoder = Encoder(vocab.num_words, cfg['embedding_size'], cfg['hidden_size'], device).to(device)
+        # self.decoder = Decoder(cfg['hidden_size'], cfg['embedding_size'], vocab.num_words, device).to(device)
         self.vocab = vocab
         self.name = 'seq2seq'
 
@@ -22,6 +23,12 @@ class Seq2Seq():
         # Logging variables
         self.train_losses, self.valid_losses = [], []
         self.train_bleu, self.valid_bleu = [], []
+
+    def load_model(self, model_path):
+        self.model.load_state_dict(torch.load(model_path))
+
+    def save_model(self, save_path):
+        torch.save(self.model.state_dict(), save_path)
 
     def log_learning_curves(self, log_dir, graph=True):
         '''
@@ -62,8 +69,8 @@ class Seq2Seq():
             plt.clf()
 
     def train(self, train_loader, loss_fn=None, train_bsz=1, num_epochs=1):
-        enc_opt = torch.optim.Adam(self.encoder.parameters())
-        dec_opt = torch.optim.Adam(self.decoder.parameters())
+        enc_opt = torch.optim.Adam(self.model.encoder.parameters())
+        dec_opt = torch.optim.Adam(self.model.decoder.parameters())
         for epoch in range(num_epochs):
             train_loss, train_bleu = self.train_epoch(train_loader, loss_fn, enc_opt, dec_opt, train_bsz)
             print('EPOCH {0} \t train_loss {1} \t train_bleu {2}'.format(epoch, train_loss, train_bleu))
@@ -71,8 +78,8 @@ class Seq2Seq():
             self.train_bleu.append(train_bleu)
 
     def train_epoch(self, train_loader, loss_fn, enc_opt, dec_opt, train_bsz=1):
-        self.encoder.train()
-        self.decoder.train()
+        self.model.encoder.train()
+        self.model.decoder.train()
         loss_epoch, bleu_epoch = 0.0, 0.0
         for i, (x, y, x_len, y_len) in enumerate(train_loader):
             if i > 10:
@@ -85,7 +92,7 @@ class Seq2Seq():
             print('inp_fr', ' '.join(inp_fr[0]))
 
             x, y = x.to(self.device), y.to(self.device)
-            enc_hid = self.encoder.init_hidden(train_bsz).to(self.device)
+            enc_hid = self.model.encoder.init_hidden(train_bsz).to(self.device)
 
             tgt_len = y.size(1)
             loss = 0.0
@@ -94,7 +101,7 @@ class Seq2Seq():
             outputs = torch.zeros(tgt_len, train_bsz, self.vocab.num_words).to(self.device)
 
             # Whole sequence through encoder
-            enc_out, enc_hid = self.encoder(x, x_len, enc_hid)
+            enc_out, enc_hid = self.model.encoder(x, x_len, enc_hid)
 
             # First input to the decoder is BOS (hardcoded: idx is 1)
             dec_inp = torch.ones(train_bsz, device=self.device) * 1
@@ -102,7 +109,7 @@ class Seq2Seq():
 
             # One token at a time from decoder
             for di in range(1, tgt_len):
-                dec_out, dec_hid = self.decoder(dec_inp, dec_hid)
+                dec_out, dec_hid = self.model.decoder(dec_inp, dec_hid)
                 outputs[di] = dec_out
                 tok = dec_out.argmax(1)
                 # No teacher forcing: next input is current output
@@ -136,6 +143,18 @@ class Seq2Seq():
         # Average BLEU over all batches in epoch
         bleu_epoch = bleu_epoch / len(train_loader)
         return loss_epoch, bleu_epoch
+
+
+class Seq2SeqArch(nn.Module):
+    def __init__(self, vocab, cfg, device):
+        '''
+        This is a helper class that itself does nothing,
+        but putting all the model parts together here facilitates
+        saving/loading weights in just one model file.
+        '''
+        super(Seq2SeqArch, self).__init__()
+        self.encoder = Encoder(vocab.num_words, cfg['embedding_size'], cfg['hidden_size'], device).to(device)
+        self.decoder = Decoder(cfg['hidden_size'], cfg['embedding_size'], vocab.num_words, device).to(device)
 
 
 class Encoder(nn.Module):
