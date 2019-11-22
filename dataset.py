@@ -27,8 +27,8 @@ class QcFrDataset(Dataset):
         example = self.examples[idx]
         qc_words = ['BOS'] + example[0].split() + ['EOS']
         fr_words = ['BOS'] + example[1].split() + ['EOS']
-        qc_idx = torch.tensor([self.vocab.word2idx[word] for word in qc_words])
-        fr_idx = torch.tensor([self.vocab.word2idx[word] for word in fr_words])
+        qc_idx = torch.tensor(self.vocab.get_indices(qc_words))
+        fr_idx = torch.tensor(self.vocab.get_indices(fr_words))
         # if self.transform:
         #     sample = self.transform(sample)
         qc_idx, fr_idx = qc_idx.int(), fr_idx.int()

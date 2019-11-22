@@ -45,7 +45,7 @@ if __name__ == '__main__':
 
     valid_dataset = QcFrDataset('corpus/valid_qc.txt', 'corpus/valid_fr.txt', 'corpus/vocab.json')
     valid_loader = DataLoader(valid_dataset, batch_size=cfg['valid_bsz'],
-                              shuffle=True, drop_last=True)
+                              shuffle=True, drop_last=True, collate_fn=pad_collate)
 
     # Training loop
     criterion = nn.CrossEntropyLoss(ignore_index=vocab.word2idx['PAD'])
@@ -53,7 +53,9 @@ if __name__ == '__main__':
     if args.continue_model:
         print('Continuing training from {0}'.format(args.continue_model))
         model.load_model(args.continue_model)
-    model.train(train_loader, loss_fn=criterion, train_bsz=cfg['train_bsz'], num_epochs=cfg['num_epochs'])
+    model.train(train_loader, valid_loader,
+                loss_fn=criterion, train_bsz=cfg['train_bsz'],
+                valid_bsz=cfg['valid_bsz'], num_epochs=cfg['num_epochs'])
     model.log_learning_curves(log_dir=args.log_dir)
-    model.log_metrics(log_dir=args.model_dir)
+    model.log_metrics(log_dir=args.log_dir)
     model.save_model(os.path.join(args.model_dir, '{0}.pt'.format(args.name)))

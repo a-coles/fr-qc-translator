@@ -39,9 +39,10 @@ class Seq2Seq():
         with open(os.path.join(log_dir, '{0}_learning_curves.csv'.format(self.name)), 'w') as fp:
             fp.write('{0}\n'.format(header))
             for e in range(num_epochs):
-                fp.write('{0},{1}\n'.format(e, self.train_losses[e])) #, self.valid_losses[e]))
+                fp.write('{0},{1},{2}\n'.format(e, self.train_losses[e], self.valid_losses[e]))
         if graph:
             plt.plot(list(range(num_epochs)), self.train_losses, color='blue', label='Train')
+            plt.plot(list(range(num_epochs)), self.valid_losses, color='red', label='Valid')
             plt.title('Cross-entropy loss over training')
             plt.xlabel('Epoch')
             plt.ylabel('Loss')
@@ -53,14 +54,15 @@ class Seq2Seq():
         '''
         Logs evaluation metrics (BLEU, etc.) to a csv.
         '''
-        header = 'epoch,train_bleu'
+        header = 'epoch,train_bleu,valid_bleu'
         num_epochs = len(self.train_bleu)
         with open(os.path.join(log_dir, '{0}_metrics.csv'.format(self.name)), 'w') as fp:
             fp.write('{0}\n'.format(header))
             for e in range(num_epochs):
-                fp.write('{0},{1}\n'.format(e, self.train_bleu[e]))
+                fp.write('{0},{1},{2}\n'.format(e, self.train_bleu[e], self.valid_bleu[e]))
         if graph:
             plt.plot(list(range(num_epochs)), self.train_bleu, color='blue', label='Train')
+            plt.plot(list(range(num_epochs)), self.valid_bleu, color='red', label='Valid')
             plt.title('BLEU score over training')
             plt.xlabel('Epoch')
             plt.ylabel('BLEU')
@@ -68,7 +70,7 @@ class Seq2Seq():
             plt.savefig(os.path.join(log_dir, '{0}_metrics.png'.format(self.name)))
             plt.clf()
 
-    def train(self, train_loader, loss_fn=None, train_bsz=1, num_epochs=1):
+    def train(self, train_loader, valid_loader, loss_fn=None, train_bsz=1, valid_bsz=1, num_epochs=1):
         enc_opt = torch.optim.Adam(self.model.encoder.parameters())
         dec_opt = torch.optim.Adam(self.model.decoder.parameters())
         for epoch in range(num_epochs):
@@ -76,6 +78,10 @@ class Seq2Seq():
             print('EPOCH {0} \t train_loss {1} \t train_bleu {2}'.format(epoch, train_loss, train_bleu))
             self.train_losses.append(train_loss)
             self.train_bleu.append(train_bleu)
+            valid_loss, valid_bleu = self.valid_epoch(valid_loader, loss_fn, valid_bsz)
+            print('\t valid_loss {1} \t valid_bleu {2}'.format(epoch, valid_loss, valid_bleu))
+            self.valid_losses.append(valid_loss)
+            self.valid_bleu.append(valid_bleu)
 
     def train_epoch(self, train_loader, loss_fn, enc_opt, dec_opt, train_bsz=1):
         self.model.encoder.train()
@@ -142,6 +148,61 @@ class Seq2Seq():
 
         # Average BLEU over all batches in epoch
         bleu_epoch = bleu_epoch / len(train_loader)
+        return loss_epoch, bleu_epoch
+
+    def valid_epoch(self, valid_loader, loss_fn, valid_bsz=1):
+        self.model.encoder.eval()
+        self.model.decoder.eval()
+        loss_epoch, bleu_epoch = 0.0, 0.0
+        for i, (x, y, x_len, y_len) in enumerate(valid_loader):
+            # inp_qc = self.vocab.get_sentence(x)
+            # print('inp qc', ' '.join(inp_qc[0]))
+            # inp_fr = self.vocab.get_sentence(y)
+            # print('inp_fr', ' '.join(inp_fr[0]))
+            x, y = x.to(self.device), y.to(self.device)
+            enc_hid = self.model.encoder.init_hidden(valid_bsz).to(self.device)
+
+            tgt_len = y.size(1)
+            loss = 0.0
+
+            # To store decoder outputs
+            outputs = torch.zeros(tgt_len, valid_bsz, self.vocab.num_words).to(self.device)
+
+            # Whole sequence through encoder
+            enc_out, enc_hid = self.model.encoder(x, x_len, enc_hid)
+
+            # First input to the decoder is BOS (hardcoded: idx is 1)
+            dec_inp = torch.ones(valid_bsz, device=self.device) * 1
+            dec_hid = enc_hid  # First decoder hidden state is last encoder hidden state
+
+            # One token at a time from decoder
+            for di in range(1, tgt_len):
+                dec_out, dec_hid = self.model.decoder(dec_inp, dec_hid)
+                outputs[di] = dec_out
+                tok = dec_out.argmax(1)
+                # No teacher forcing: next input is current output
+                dec_inp = tok
+
+            # When calculating loss, collapse batches together and
+            # remove leading BOS (since we feed this to everything)
+            all_outputs = outputs[1:].view(-1, outputs.shape[-1])
+            all_y = torch.transpose(y, 1, 0)
+            all_y = all_y[1:].reshape(-1)
+            loss = loss_fn(all_outputs, all_y.long())
+
+            # Report loss
+            loss_batch = loss.item() / tgt_len
+            loss_epoch += loss_batch
+
+            # Report BLEU
+            pred_tok = torch.argmax(outputs.detach(), dim=2)
+            pred_tok = torch.transpose(pred_tok, 1, 0)
+            self.bleu(pred_tok, y)
+            bleu_batch = self.bleu.get_metric()['BLEU']
+            bleu_epoch += bleu_batch
+
+        # Average BLEU over all batches in epoch
+        bleu_epoch = bleu_epoch / len(valid_loader)
         return loss_epoch, bleu_epoch
 
 

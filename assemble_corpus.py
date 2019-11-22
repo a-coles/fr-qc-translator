@@ -13,10 +13,10 @@ from sklearn.model_selection import train_test_split
 
 class Vocab():
     def __init__(self):
-        self.word2idx = {'PAD': 0, 'BOS': 1, 'EOS': 2}
-        # Always start with the known beginning and ending tokens, and padding
-        self.idx2word = {0: 'PAD', 1: 'BOS', 2: 'EOS'}
-        self.num_words = 3
+        self.word2idx = {'PAD': 0, 'BOS': 1, 'EOS': 2, 'UNK': 3}
+        self.idx2word = {0: 'PAD', 1: 'BOS', 2: 'EOS', 3: 'UNK'}
+        self.counts = {}
+        self.num_words = 4
 
     def add_example(self, example):
         qc_example = example[0]
@@ -31,6 +31,29 @@ class Vocab():
             self.word2idx[word] = self.num_words
             self.idx2word[self.num_words] = word
             self.num_words += 1
+        if word not in self.counts:
+            self.counts[word] = 1
+        else:
+            self.counts[word] += 1
+
+    def filter_unk(self, threshold=2):
+        # If a word occurs under the threshold # of times,
+        # remove from the vocab. Dataloader will cast it to UNK.
+        infrequent_words = [k for k, v in self.counts.items() if v < threshold]
+        word2idx = {'PAD': 0, 'BOS': 1, 'EOS': 2, 'UNK': 3}
+        idx2word = {0: 'PAD', 1: 'BOS', 2: 'EOS', 3: 'UNK'}
+        for k, v in self.word2idx.items():
+            if k in ['PAD', 'BOS', 'EOS', 'UNK']:
+                continue
+            if k not in infrequent_words:
+                word2idx[k] = len(word2idx)
+                idx2word[word2idx[k]] = k
+        self.word2idx = word2idx
+        self.idx2word = idx2word
+        # for word in infrequent_words:
+        #     idx = self.word2idx.pop(word)
+        #     del self.idx2word[idx]
+        self.num_words -= len(infrequent_words)
 
     def save(self, save_path):
         v = {'word2idx': self.word2idx,
@@ -38,6 +61,13 @@ class Vocab():
              'num_words': self.num_words}
         with io.open(save_path, mode='w', encoding='utf-8') as fp:
             json.dump(v, fp, indent=4, sort_keys=True, ensure_ascii=False)
+
+    def load(self, load_path):
+        with io.open(load_path, mode='r', encoding='utf-8') as fp:
+            v = json.load(fp)
+        self.word2idx = v['word2idx']
+        self.idx2word = v['idx2word']
+        self.num_words = v['num_words']
 
     def get_sentence(self, idx_batch):
         sentences = []
@@ -47,12 +77,14 @@ class Vocab():
             sentences.append(sentence)
         return sentences
 
-    def load(self, load_path):
-        with io.open(load_path, mode='r', encoding='utf-8') as fp:
-            v = json.load(fp)
-        self.word2idx = v['word2idx']
-        self.idx2word = v['idx2word']
-        self.num_words = v['num_words']
+    def get_indices(self, words):
+        indices = []
+        for word in words:
+            try:
+                indices.append(self.word2idx[word])
+            except KeyError:
+                indices.append(self.word2idx['UNK'])
+        return indices
 
 
 def write_examples(qc_file, fr_file, examples):
@@ -102,7 +134,9 @@ if __name__ == '__main__':
     vocab = Vocab()
     for ex in train_examples:
         vocab.add_example(ex)
+    vocab.filter_unk()
     vocab.save('corpus/vocab.json')
+    print('Vocab size:', vocab.num_words)
 
     # Write examples to files
     write_examples('corpus/train_qc.txt', 'corpus/train_fr.txt', train_examples)
