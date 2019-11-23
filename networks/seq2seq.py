@@ -93,6 +93,7 @@ class Seq2Seq():
             enc_opt.zero_grad()
             dec_opt.zero_grad()
             inp_qc = self.vocab.get_sentence(x)
+            print('---')
             print('inp qc', ' '.join(inp_qc[0]))
             inp_fr = self.vocab.get_sentence(y)
             print('inp_fr', ' '.join(inp_fr[0]))
@@ -155,10 +156,6 @@ class Seq2Seq():
         self.model.decoder.eval()
         loss_epoch, bleu_epoch = 0.0, 0.0
         for i, (x, y, x_len, y_len) in enumerate(valid_loader):
-            # inp_qc = self.vocab.get_sentence(x)
-            # print('inp qc', ' '.join(inp_qc[0]))
-            # inp_fr = self.vocab.get_sentence(y)
-            # print('inp_fr', ' '.join(inp_fr[0]))
             x, y = x.to(self.device), y.to(self.device)
             enc_hid = self.model.encoder.init_hidden(valid_bsz).to(self.device)
 

@@ -128,3 +128,6 @@ dmypy.json
 corpus/orig/
 s*_qc.txt
 s*_fr.txt
+log/*.csv
+log/*.png
+models/*.pt

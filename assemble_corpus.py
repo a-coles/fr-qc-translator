@@ -116,8 +116,16 @@ if __name__ == '__main__':
     simpsons = list(zip(simpsons_qc, simpsons_fr))
     print(simpsons[0])
 
+    # Read in bible corpus
+    with io.open('corpus/bible/marc_qc_preproc.txt', mode='r', encoding='utf-8') as fp:
+        bible_qc = [line.strip() for line in fp.readlines()]
+    with io.open('corpus/bible/marc_fr_preproc.txt', mode='r', encoding='utf-8') as fp:
+        bible_fr = [line.strip() for line in fp.readlines()]
+    bible = list(zip(bible_qc, bible_fr))
+    print(bible[0])
+
     # Compose list of all examples from all corpora
-    examples = simpsons
+    examples = simpsons + bible
 
     # Heuristic: If the lengths of qc vs fr are very different,
     # there is probably misalignment or noise in the original data.
