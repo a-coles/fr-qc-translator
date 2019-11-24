@@ -9,13 +9,13 @@ from allennlp.training.metrics import BLEU
 
 
 class Seq2Seq():
-    def __init__(self, vocab, cfg, device):
+    def __init__(self, vocab, cfg, device, name=None, bi=True, att=True):
         self.device = device
-        self.model = Seq2SeqArch(vocab, cfg, device)
+        self.model = Seq2SeqArch(vocab, cfg, device, bi=bi, att=att)
         # self.encoder = Encoder(vocab.num_words, cfg['embedding_size'], cfg['hidden_size'], device).to(device)
         # self.decoder = Decoder(cfg['hidden_size'], cfg['embedding_size'], vocab.num_words, device).to(device)
         self.vocab = vocab
-        self.name = 'seq2seq'
+        self.name = name if name else 'seq2seq'
 
         # Evaluation metrics
         self.bleu = BLEU()
@@ -144,27 +144,26 @@ class Seq2Seq():
 
             # One token at a time from decoder
             for di in range(tgt_len):  # Minus 2 so that we start at 0, and we exclude BOS
-                dec_out, dec_hid = self.model.decoder(dec_inp, dec_hid)
+                if self.model.decoder.att:
+                    dec_out, dec_hid = self.model.decoder(dec_inp, dec_hid, enc_out=enc_out)
+                    print('!')
+                else:
+                    dec_out, dec_hid = self.model.decoder(dec_inp, dec_hid)
                 outputs[di] = dec_out
                 tok = dec_out.argmax(1)
                 # No teacher forcing: next input is current output
                 dec_inp = tok
 
             # Replace the predicted tokens that should be padding with padding
-            print('output_size', outputs.size())
-            # mask = torch.zeros(tgt_len, train_bsz, self.vocab.num_words).to(self.device)
             mask = torch.arange(tgt_len).expand(len(y_len), tgt_len) < y_len.unsqueeze(1)
             mask = torch.transpose(mask, 1, 0).unsqueeze(2).float().to(self.device)
-            print('mask', mask.size())
             outputs = outputs * mask
-
 
             # When calculating loss, collapse batches together and
             # remove leading BOS (since we feed this to everything)
             all_outputs = outputs.view(-1, outputs.shape[-1])
             all_y = torch.transpose(y, 1, 0)
             all_y = all_y.reshape(-1)
-
             loss = loss_fn(all_outputs, all_y.long())
 
             loss.backward()
@@ -212,17 +211,26 @@ class Seq2Seq():
 
             # One token at a time from decoder
             for di in range(tgt_len - 1):
-                dec_out, dec_hid = self.model.decoder(dec_inp, dec_hid)
+                if self.model.att:
+                    dec_out, dec_hid = self.model.decoder(dec_inp, dec_hid, enc_out=enc_out)
+                    print('!')
+                else:
+                    dec_out, dec_hid = self.model.decoder(dec_inp, dec_hid)
                 outputs[di] = dec_out
                 tok = dec_out.argmax(1)
                 # No teacher forcing: next input is current output
                 dec_inp = tok
 
+            # Replace the predicted tokens that should be padding with padding
+            mask = torch.arange(tgt_len).expand(len(y_len), tgt_len) < y_len.unsqueeze(1)
+            mask = torch.transpose(mask, 1, 0).unsqueeze(2).float().to(self.device)
+            outputs = outputs * mask
+
             # When calculating loss, collapse batches together and
             # remove leading BOS (since we feed this to everything)
-            all_outputs = outputs[1:].view(-1, outputs.shape[-1])
+            all_outputs = outputs.view(-1, outputs.shape[-1])
             all_y = torch.transpose(y, 1, 0)
-            all_y = all_y[1:].reshape(-1)
+            all_y = all_y.reshape(-1)
             loss = loss_fn(all_outputs, all_y.long())
 
             # Report loss
@@ -242,24 +250,31 @@ class Seq2Seq():
 
 
 class Seq2SeqArch(nn.Module):
-    def __init__(self, vocab, cfg, device):
+    def __init__(self, vocab, cfg, device, bi=True, att=False):
         '''
         This is a helper class that itself does nothing,
         but putting all the model parts together here facilitates
         saving/loading weights in just one model file.
         '''
         super(Seq2SeqArch, self).__init__()
-        self.encoder = Encoder(vocab.num_words, cfg['embedding_size'], cfg['hidden_size'], device).to(device)
-        self.decoder = Decoder(cfg['hidden_size'], cfg['embedding_size'], vocab.num_words, device).to(device)
+        self.encoder = Encoder(vocab.num_words, cfg['embedding_size'],
+                               cfg['hidden_size'], device,
+                               bi=bi).to(device)
+        self.decoder = Decoder(cfg['hidden_size'], cfg['embedding_size'],
+                               vocab.num_words, device,
+                               att=att).to(device)
 
 
 class Encoder(nn.Module):
-    def __init__(self, input_size, embedding_size, hidden_size, device):
+    def __init__(self, input_size, embedding_size, hidden_size, device, bi=True):
         super(Encoder, self).__init__()
         self.device = device
+        self.bi = bi
         self.hidden_size = hidden_size
         self.embedding = nn.Embedding(input_size, embedding_size)
-        self.gru = nn.GRU(embedding_size, hidden_size)
+        self.gru = nn.GRU(embedding_size, hidden_size, bidirectional=bi)
+        if bi:
+            self.fc = nn.Linear(hidden_size * 2, hidden_size)
 
     def forward(self, x, x_lens, hidden):
         x = x.long()
@@ -271,14 +286,19 @@ class Encoder(nn.Module):
         output, hidden = self.gru(embedded, hidden)
         # Re-pad
         output, output_len = torch.nn.utils.rnn.pad_packed_sequence(output, batch_first=True)
+        if self.bi:
+            # Combine forward and backward RNN states
+            hidden = self.fc(torch.cat((hidden[-2,:,:], hidden[-1,:,:]), dim=1))
+            hidden = torch.tanh(hidden).unsqueeze(0)
         return output, hidden
 
     def init_hidden(self, batch_size):
-        return torch.zeros(1, batch_size, self.hidden_size)
+        dim = 2 if self.bi else 1
+        return torch.zeros(dim, batch_size, self.hidden_size)
 
 
 class Decoder(nn.Module):
-    def __init__(self, hidden_size, embedding_size, output_size, device):
+    def __init__(self, hidden_size, embedding_size, output_size, device, att=False, max_length=100):
         super(Decoder, self).__init__()
         self.device = device
         self.hidden_size = hidden_size
@@ -286,13 +306,24 @@ class Decoder(nn.Module):
         self.gru = nn.GRU(embedding_size, hidden_size)
         self.out = nn.Linear(hidden_size, output_size)
         self.softmax = nn.LogSoftmax(dim=1)
+        self.att = att
+        if att:
+            # Add attn layers here
 
-    def forward(self, x, hidden):
+    def forward(self, x, hidden, enc_out=None):
         # Input here is always one token at a time,
         # so need to do some unsqueezing to account for length dimension (1)
         x = x.long().unsqueeze(0)
         embedded = self.embedding(x)
-        embedded = F.relu(embedded)
+        if self.att:
+            # Add attn mechanics here
+            to_gru = 
+        else:
+            to_gru = embedded
+        to_gru = F.relu(to_gru)
         output, hidden = self.gru(embedded, hidden)
         output = self.out(output.squeeze(0))
-        return output, hidden
+        if self.att:
+            return output, hidden, attn_weights
+        else:
+            return output, hidden
