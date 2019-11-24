@@ -45,8 +45,8 @@ def pad_collate(batch):
     # qc = [example[0] for example in batch]
     # fr = [example[1] for example in batch]
     (qc, fr) = zip(*batch)
-    qc_lens = [len(x) for x in qc]
-    fr_lens = [len(x) for x in fr]
+    qc_lens = torch.tensor([len(x) for x in qc])
+    fr_lens = torch.tensor([len(x) for x in fr])  # Decoding mask should exclude BOS
     # Get the max length over all examples in qc + fr
     max_len = 0
     for example in (qc + fr):

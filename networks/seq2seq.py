@@ -70,9 +70,37 @@ class Seq2Seq():
             plt.savefig(os.path.join(log_dir, '{0}_metrics.png'.format(self.name)))
             plt.clf()
 
-    def train(self, train_loader, valid_loader, loss_fn=None, train_bsz=1, valid_bsz=1, num_epochs=1):
-        enc_opt = torch.optim.Adam(self.model.encoder.parameters())
-        dec_opt = torch.optim.Adam(self.model.decoder.parameters())
+    def generate(self, qc_sentence):
+        print('inp qc:', qc_sentence)
+        qc_words = ['BOS'] + qc_sentence.split() + ['EOS']
+        qc_idx = torch.tensor(self.vocab.get_indices(qc_words)).to(self.device).unsqueeze(0)
+        qc_len = torch.tensor(qc_idx.size()[1]).int().cpu().unsqueeze(0)
+        # Whole sequence through encoder
+        outputs = torch.zeros(100, 1, self.vocab.num_words).to(self.device)
+        enc_hid = self.model.encoder.init_hidden(1).to(self.device)
+        enc_out, enc_hid = self.model.encoder(qc_idx, qc_len, enc_hid)
+        dec_inp = torch.ones(1, device=self.device) * 1
+        dec_hid = enc_hid  # First decoder hidden state is last encoder hidden state
+
+        # One token at a time from decoder
+        tok, i = 0, 0
+        while tok != 2:  # EOS
+            dec_out, dec_hid = self.model.decoder(dec_inp, dec_hid)
+            outputs[i] = dec_out
+            tok = dec_out.argmax(1)
+            dec_inp = tok
+            i = i + 1
+        pred_tok = torch.argmax(outputs.detach(), dim=2)
+        pred_tok = torch.transpose(pred_tok, 1, 0)
+        pred_sents = [' '.join(x) for x in self.vocab.get_sentence(pred_tok.cpu())][0]
+        pred_sents = pred_sents.replace('PAD', '').strip()
+        pred_sents = pred_sents[4:-4]
+        print('out fr:', pred_sents)
+
+
+    def train(self, train_loader, valid_loader, loss_fn=None, lr=1e-2, train_bsz=1, valid_bsz=1, num_epochs=1):
+        enc_opt = torch.optim.Adam(self.model.encoder.parameters(), lr=lr)
+        dec_opt = torch.optim.Adam(self.model.decoder.parameters(), lr=lr)
         for epoch in range(num_epochs):
             train_loss, train_bleu = self.train_epoch(train_loader, loss_fn, enc_opt, dec_opt, train_bsz)
             print('EPOCH {0} \t train_loss {1} \t train_bleu {2}'.format(epoch, train_loss, train_bleu))
@@ -115,18 +143,28 @@ class Seq2Seq():
             dec_hid = enc_hid  # First decoder hidden state is last encoder hidden state
 
             # One token at a time from decoder
-            for di in range(tgt_len - 1):
+            for di in range(tgt_len):  # Minus 2 so that we start at 0, and we exclude BOS
                 dec_out, dec_hid = self.model.decoder(dec_inp, dec_hid)
                 outputs[di] = dec_out
                 tok = dec_out.argmax(1)
                 # No teacher forcing: next input is current output
                 dec_inp = tok
 
+            # Replace the predicted tokens that should be padding with padding
+            print('output_size', outputs.size())
+            # mask = torch.zeros(tgt_len, train_bsz, self.vocab.num_words).to(self.device)
+            mask = torch.arange(tgt_len).expand(len(y_len), tgt_len) < y_len.unsqueeze(1)
+            mask = torch.transpose(mask, 1, 0).unsqueeze(2).float().to(self.device)
+            print('mask', mask.size())
+            outputs = outputs * mask
+
+
             # When calculating loss, collapse batches together and
             # remove leading BOS (since we feed this to everything)
-            all_outputs = outputs[1:].view(-1, outputs.shape[-1])
+            all_outputs = outputs.view(-1, outputs.shape[-1])
             all_y = torch.transpose(y, 1, 0)
-            all_y = all_y[1:].reshape(-1)
+            all_y = all_y.reshape(-1)
+
             loss = loss_fn(all_outputs, all_y.long())
 
             loss.backward()

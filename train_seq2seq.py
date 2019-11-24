@@ -54,8 +54,14 @@ if __name__ == '__main__':
         print('Continuing training from {0}'.format(args.continue_model))
         model.load_model(args.continue_model)
     model.train(train_loader, valid_loader,
-                loss_fn=criterion, train_bsz=cfg['train_bsz'],
-                valid_bsz=cfg['valid_bsz'], num_epochs=cfg['num_epochs'])
+                loss_fn=criterion,
+                lr=cfg['learning_rate'],
+                train_bsz=cfg['train_bsz'],
+                valid_bsz=cfg['valid_bsz'],
+                num_epochs=cfg['num_epochs'])
     model.log_learning_curves(log_dir=args.log_dir)
     model.log_metrics(log_dir=args.log_dir)
     model.save_model(os.path.join(args.model_dir, '{0}.pt'.format(args.name)))
+
+    test_sent = "voilà une phrase de test ."
+    model.generate(test_sent)

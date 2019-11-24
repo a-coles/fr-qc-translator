@@ -130,13 +130,19 @@ if __name__ == '__main__':
     # Heuristic: If the lengths of qc vs fr are very different,
     # there is probably misalignment or noise in the original data.
     # Filter out pairs with really mismatching numbers of tokens.
-    examples = [ex for ex in examples if abs(len(ex[0].split()) - len(ex[1].split())) < 10]
+    examples = [ex for ex in examples if abs(len(ex[0].split()) - len(ex[1].split())) < 5]
+    # Clean up other things
+    examples = [(ex[0].replace('…', '...'), ex[1].replace('…', '...')) for ex in examples]
+    examples = [(ex[0].replace('œ', 'oe'), ex[1].replace('œ', 'oe')) for ex in examples]
+    examples = [(ex[0].replace('«', '\"'), ex[1].replace('«', '\"')) for ex in examples]
+    examples = [(ex[0].replace('»', '\"'), ex[1].replace('»', '\"')) for ex in examples]
+    examples = [(ex[0].replace('’', '\''), ex[1].replace('’', '\'')) for ex in examples]
 
     # Shuffle and split into train, valid, test
     train_examples, test_examples = train_test_split(examples,
                                                      test_size=0.2, random_state=42)
     train_examples, valid_examples = train_test_split(train_examples,
-                                                      test_size=0.2, random_state=42)
+                                                      test_size=0.5, random_state=42)
 
     # Build vocab from training examples
     vocab = Vocab()
@@ -147,6 +153,7 @@ if __name__ == '__main__':
     print('Vocab size:', vocab.num_words)
 
     # Write examples to files
+    print('Number of training examples:', len(train_examples))
     write_examples('corpus/train_qc.txt', 'corpus/train_fr.txt', train_examples)
     write_examples('corpus/valid_qc.txt', 'corpus/valid_fr.txt', valid_examples)
     write_examples('corpus/test_qc.txt', 'corpus/test_fr.txt', test_examples)
