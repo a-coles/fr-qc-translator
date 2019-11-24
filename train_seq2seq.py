@@ -21,7 +21,7 @@ if __name__ == '__main__':
     parser.add_argument('config_file', type=str, help='Training config.')
     parser.add_argument('--log_dir', type=str, default='log', help='Log output dir.')
     parser.add_argument('--model_dir', type=str, default='models', help='Saved model dir.')
-    parser.add_argument('--name', type=str, default='seq2seq', help='Name for model.')
+    parser.add_argument('--name', type=str, default=None, help='Name for model.')
     parser.add_argument('--continue_model', type=str, help='Path to model for continuing training.')
     args = parser.parse_args()
 
@@ -48,7 +48,7 @@ if __name__ == '__main__':
 
     # Training loop
     criterion = nn.CrossEntropyLoss(ignore_index=vocab.word2idx['PAD'])
-    model = Seq2Seq(vocab, cfg, device)
+    model = Seq2Seq(vocab, cfg, device, name=args.name)
     if args.continue_model:
         print('Continuing training from {0}'.format(args.continue_model))
         model.load_model(args.continue_model)
@@ -62,5 +62,5 @@ if __name__ == '__main__':
     model.log_metrics(log_dir=args.log_dir)
     model.save_model(os.path.join(args.model_dir, '{0}.pt'.format(args.name)))
 
-    test_sent = "voilà une phrase de test ."
+    test_sent = "voici une petite phrase de test ."
     model.generate(test_sent)
