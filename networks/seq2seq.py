@@ -147,7 +147,7 @@ class Seq2Seq():
             # One token at a time from decoder
             for di in range(tgt_len):  # Minus 2 so that we start at 0, and we exclude BOS
                 if self.model.decoder.att:
-                    dec_out, dec_hid = self.model.decoder(dec_inp, dec_hid, enc_out=enc_out)
+                    dec_out, dec_hid, dec_attn = self.model.decoder(dec_inp, dec_hid, enc_out=enc_out)
                     print('!')
                 else:
                     dec_out, dec_hid = self.model.decoder(dec_inp, dec_hid)
@@ -211,11 +211,14 @@ class Seq2Seq():
             dec_inp = torch.ones(valid_bsz, device=self.device) * 1
             dec_hid = enc_hid  # First decoder hidden state is last encoder hidden state
 
+            # TODO retrun dec attention output's ?
+            dec_attns = torch.zeros(100, 100)
+
             # One token at a time from decoder
             for di in range(tgt_len - 1):
                 if self.model.att:
-                    dec_out, dec_hid = self.model.decoder(dec_inp, dec_hid, enc_out=enc_out)
-                    print('!')
+                    dec_out, dec_hid, dec_attn = self.model.decoder(dec_inp, dec_hid, enc_out=enc_out)
+                    dec_attns[di] = dec_attn
                 else:
                     dec_out, dec_hid = self.model.decoder(dec_inp, dec_hid)
                 outputs[di] = dec_out
@@ -310,7 +313,9 @@ class Decoder(nn.Module):
         self.softmax = nn.LogSoftmax(dim=1)
         self.att = att
         if att:
-            # Add attn layers here
+            self.attn_l1 = nn.Linear(2*self.hidden_size, max_length) # dim=1 ?
+            self.attn_l2 = nn.Linear(2*self.hidden_size, self.hidden_size)
+
 
     def forward(self, x, hidden, enc_out=None):
         # Input here is always one token at a time,
@@ -318,12 +323,21 @@ class Decoder(nn.Module):
         x = x.long().unsqueeze(0)
         embedded = self.embedding(x)
         if self.att:
-            # Add attn mechanics here
-            to_gru = 
+            concat = torch.cat((hidden.squeeze(0), embedded.squeeze(0)), 1)
+            att_l1 = self.att_l1(concat)
+            attn_weights = F.softmax(att_l1, dim=1)
+
+            # print('enc_out shape', enc_out.shape, 'attn weights unsqueeze', attn_weights.unsqueeze(0).shape)
+            # import pdb; pdb.set_trace()
+            # batch matrix-matrix product
+            context = torch.bmm(attn_weights.unsqueeze(0), enc_out)
+            to_gru = torch.cat((embedded.squeeze(0), context.squeeze(0)))
+            to_gru = self.attn_comb(to_gru).unsqueeze(0)
         else:
             to_gru = embedded
         to_gru = F.relu(to_gru)
         output, hidden = self.gru(embedded, hidden)
+        # TODO output = self.softmax(self.out(output.squeeze(0)), dim=1)
         output = self.out(output.squeeze(0))
         if self.att:
             return output, hidden, attn_weights
