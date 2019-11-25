@@ -211,7 +211,7 @@ class Seq2Seq():
             dec_inp = torch.ones(valid_bsz, device=self.device) * 1
             dec_hid = enc_hid  # First decoder hidden state is last encoder hidden state
 
-            # TODO retrun dec attention output's ?
+            # TODO return dec attention output's ?
             dec_attns = torch.zeros(100, 100)
 
             # One token at a time from decoder
@@ -332,7 +332,7 @@ class Decoder(nn.Module):
             # batch matrix-matrix product
             context = torch.bmm(attn_weights.unsqueeze(0), enc_out)
             to_gru = torch.cat((embedded.squeeze(0), context.squeeze(0)))
-            to_gru = self.attn_comb(to_gru).unsqueeze(0)
+            to_gru = self.attn_l2(to_gru).unsqueeze(0)
         else:
             to_gru = embedded
         to_gru = F.relu(to_gru)
