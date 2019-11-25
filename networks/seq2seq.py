@@ -6,14 +6,15 @@ import os
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
+import random
 
 from allennlp.training.metrics import BLEU
 
 
 class Seq2Seq():
-    def __init__(self, vocab, cfg, device, name=None, bi=True, att=True):
+    def __init__(self, vocab, cfg, device, name=None, bi=True, att=True, teach_forc=True):
         self.device = device
-        self.model = Seq2SeqArch(vocab, cfg, device, bi=bi, att=att)
+        self.model = Seq2SeqArch(vocab, cfg, device, bi=bi, att=att, teach_forc=teach_forc)
         # self.encoder = Encoder(vocab.num_words, cfg['embedding_size'], cfg['hidden_size'], device).to(device)
         # self.decoder = Decoder(cfg['hidden_size'], cfg['embedding_size'], vocab.num_words, device).to(device)
         self.vocab = vocab
@@ -108,6 +109,7 @@ class Seq2Seq():
             print('EPOCH {0} \t train_loss {1} \t train_bleu {2}'.format(epoch, train_loss, train_bleu))
             self.train_losses.append(train_loss)
             self.train_bleu.append(train_bleu)
+            # import pdb; pdb.set_trace()
             valid_loss, valid_bleu = self.valid_epoch(valid_loader, loss_fn, valid_bsz)
             print('\t valid_loss {1} \t valid_bleu {2}'.format(epoch, valid_loss, valid_bleu))
             self.valid_losses.append(valid_loss)
@@ -144,6 +146,9 @@ class Seq2Seq():
             dec_inp = torch.ones(train_bsz, device=self.device) * 1
             dec_hid = enc_hid  # First decoder hidden state is last encoder hidden state
 
+            use_teach_forc = True if random.random() < self.model.decoder.teach_forc_ratio else False
+
+            
             # One token at a time from decoder
             for di in range(tgt_len):  # Minus 2 so that we start at 0, and we exclude BOS
                 if self.model.decoder.att:
@@ -153,8 +158,11 @@ class Seq2Seq():
                     dec_out, dec_hid = self.model.decoder(dec_inp, dec_hid)
                 outputs[di] = dec_out
                 tok = dec_out.argmax(1)
-                # No teacher forcing: next input is current output
-                dec_inp = tok
+
+                if use_teach_forc: # Teacher forcing: Feed the target as the next input
+                    dec_inp = y[:, di]
+                else:
+                    dec_inp = tok
 
             # Replace the predicted tokens that should be padding with padding
             mask = torch.arange(tgt_len).expand(len(y_len), tgt_len) < y_len.unsqueeze(1)
@@ -216,7 +224,7 @@ class Seq2Seq():
 
             # One token at a time from decoder
             for di in range(tgt_len - 1):
-                if self.model.att:
+                if self.model.decoder.att:
                     dec_out, dec_hid, dec_attn = self.model.decoder(dec_inp, dec_hid, enc_out=enc_out)
                     dec_attns[di] = dec_attn
                 else:
@@ -255,7 +263,7 @@ class Seq2Seq():
 
 
 class Seq2SeqArch(nn.Module):
-    def __init__(self, vocab, cfg, device, bi=True, att=False):
+    def __init__(self, vocab, cfg, device, bi=True, att=False, teach_forc=True):
         '''
         This is a helper class that itself does nothing,
         but putting all the model parts together here facilitates
@@ -267,7 +275,7 @@ class Seq2SeqArch(nn.Module):
                                bi=bi).to(device)
         self.decoder = Decoder(cfg['hidden_size'], cfg['embedding_size'],
                                vocab.num_words, device,
-                               att=att).to(device)
+                               att=att, teach_forc=teach_forc).to(device)
 
 
 class Encoder(nn.Module):
@@ -303,7 +311,7 @@ class Encoder(nn.Module):
 
 
 class Decoder(nn.Module):
-    def __init__(self, hidden_size, embedding_size, output_size, device, att=False, max_length=100):
+    def __init__(self, hidden_size, embedding_size, output_size, device, att=False, max_length=100, teach_forc=False, teach_forc_ratio=0.5):
         super(Decoder, self).__init__()
         self.device = device
         self.hidden_size = hidden_size
@@ -315,6 +323,9 @@ class Decoder(nn.Module):
         if att:
             self.attn_l1 = nn.Linear(2*self.hidden_size, max_length)
             self.attn_l2 = nn.Linear(2*self.hidden_size, self.hidden_size)
+        self.teach_forc = teach_forc
+        if teach_forc:
+            self.teach_forc_ratio = teach_forc_ratio
 
 
     def forward(self, x, hidden, enc_out=None):
