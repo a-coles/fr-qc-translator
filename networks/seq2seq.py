@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
-import matplotlib
-matplotlib.use('Agg')
-import matplotlib.pyplot as plt
 import os
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
+import matplotlib
+matplotlib.use('Agg')  # noqa
+import matplotlib.pyplot as plt  # noqa
 
-from allennlp.training.metrics import BLEU
+from allennlp.training.metrics import BLEU  # noqa
 
 
 class Seq2Seq():
@@ -87,7 +87,10 @@ class Seq2Seq():
         # One token at a time from decoder
         tok, i = 0, 0
         while tok != 2:  # EOS
-            dec_out, dec_hid = self.model.decoder(dec_inp, dec_hid)
+            if self.model.decoder.att:
+                dec_out, dec_hid = self.model.decoder(dec_inp, dec_hid, enc_out=enc_out)
+            else:
+                dec_out, dec_hid = self.model.decoder(dec_inp, dec_hid)
             outputs[i] = dec_out
             tok = dec_out.argmax(1)
             dec_inp = tok
@@ -98,7 +101,6 @@ class Seq2Seq():
         pred_sents = pred_sents.replace('PAD', '').strip()
         pred_sents = pred_sents[4:-4]
         print('out fr:', pred_sents)
-
 
     def train(self, train_loader, valid_loader, loss_fn=None, lr=1e-2, train_bsz=1, valid_bsz=1, num_epochs=1):
         enc_opt = torch.optim.Adam(self.model.encoder.parameters(), lr=lr)
@@ -147,8 +149,7 @@ class Seq2Seq():
             # One token at a time from decoder
             for di in range(tgt_len):  # Minus 2 so that we start at 0, and we exclude BOS
                 if self.model.decoder.att:
-                    dec_out, dec_hid, dec_attn = self.model.decoder(dec_inp, dec_hid, enc_out=enc_out)
-                    print('!')
+                    dec_out, dec_hid = self.model.decoder(dec_inp, dec_hid, enc_out=enc_out)
                 else:
                     dec_out, dec_hid = self.model.decoder(dec_inp, dec_hid)
                 outputs[di] = dec_out
@@ -211,14 +212,14 @@ class Seq2Seq():
             dec_inp = torch.ones(valid_bsz, device=self.device) * 1
             dec_hid = enc_hid  # First decoder hidden state is last encoder hidden state
 
-            # TODO return dec attention output's ?
+            # TODO return dec attention output's (for viz)?
             dec_attns = torch.zeros(100, 100)
 
             # One token at a time from decoder
             for di in range(tgt_len - 1):
-                if self.model.att:
-                    dec_out, dec_hid, dec_attn = self.model.decoder(dec_inp, dec_hid, enc_out=enc_out)
-                    dec_attns[di] = dec_attn
+                if self.model.decoder.att:
+                    dec_out, dec_hid = self.model.decoder(dec_inp, dec_hid, enc_out=enc_out)
+                    # dec_attns[di] = dec_attn
                 else:
                     dec_out, dec_hid = self.model.decoder(dec_inp, dec_hid)
                 outputs[di] = dec_out
@@ -293,7 +294,7 @@ class Encoder(nn.Module):
         output, output_len = torch.nn.utils.rnn.pad_packed_sequence(output, batch_first=True)
         if self.bi:
             # Combine forward and backward RNN states
-            hidden = self.fc(torch.cat((hidden[-2,:,:], hidden[-1,:,:]), dim=1))
+            hidden = self.fc(torch.cat((hidden[-2, :, :], hidden[-1, :, :]), dim=1))
             hidden = torch.tanh(hidden).unsqueeze(0)
         return output, hidden
 
@@ -313,9 +314,10 @@ class Decoder(nn.Module):
         self.softmax = nn.LogSoftmax(dim=1)
         self.att = att
         if att:
-            self.attn_l1 = nn.Linear(2*self.hidden_size, max_length) # dim=1 ?
-            self.attn_l2 = nn.Linear(2*self.hidden_size, self.hidden_size)
-
+            self.attn_l1 = nn.Linear((hidden_size * 3), hidden_size)
+            self.v = nn.Parameter(torch.rand(hidden_size))
+            self.gru = nn.GRU((hidden_size * 2) + embedding_size, hidden_size)
+            self.out = nn.Linear((hidden_size * 3) + embedding_size, output_size)
 
     def forward(self, x, hidden, enc_out=None):
         # Input here is always one token at a time,
@@ -323,23 +325,28 @@ class Decoder(nn.Module):
         x = x.long().unsqueeze(0)
         embedded = self.embedding(x)
         if self.att:
-            concat = torch.cat((hidden.squeeze(0), embedded.squeeze(0)), 1)
-            att_l1 = self.att_l1(concat)
-            attn_weights = F.softmax(att_l1, dim=1)
-
-            # print('enc_out shape', enc_out.shape, 'attn weights unsqueeze', attn_weights.unsqueeze(0).shape)
-            # import pdb; pdb.set_trace()
-            # batch matrix-matrix product
-            context = torch.bmm(attn_weights.unsqueeze(0), enc_out)
-            to_gru = torch.cat((embedded.squeeze(0), context.squeeze(0)))
-            to_gru = self.attn_l2(to_gru).unsqueeze(0)
+            bsz = enc_out.shape[0]
+            src_len = enc_out.shape[1]
+            # Repeat hidden state for every timestep (makes dims match)
+            hid_rep = hidden.squeeze(0).unsqueeze(1).repeat(1, src_len, 1)
+            concat = torch.cat((hid_rep, enc_out), 2)
+            att_l1 = self.attn_l1(concat).permute(0, 2, 1)
+            # Repeat for every example in the batch
+            v = self.v.repeat(bsz, 1).unsqueeze(1)
+            attn = torch.bmm(v, att_l1).squeeze(1)
+            attn = F.softmax(attn, dim=1)
+            attn = attn.unsqueeze(1)
+            # Weight the encoder states
+            context = torch.bmm(attn, enc_out).permute(1, 0, 2)
+            to_gru = torch.cat((embedded, context), 2)
         else:
             to_gru = embedded
         to_gru = F.relu(to_gru)
-        output, hidden = self.gru(embedded, hidden)
-        # TODO output = self.softmax(self.out(output.squeeze(0)), dim=1)
-        output = self.out(output.squeeze(0))
+        output, hidden = self.gru(to_gru, hidden)
         if self.att:
-            return output, hidden, attn_weights
+            to_out = torch.cat((output.squeeze(0), context.squeeze(0), embedded.squeeze(0)), 1)
+            output = self.out(to_out)
+            return output, hidden  #, attn_weights
         else:
+            output = self.out(output.squeeze(0))
             return output, hidden
