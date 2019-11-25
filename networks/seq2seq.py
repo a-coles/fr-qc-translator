@@ -313,7 +313,7 @@ class Decoder(nn.Module):
         self.softmax = nn.LogSoftmax(dim=1)
         self.att = att
         if att:
-            self.attn_l1 = nn.Linear(2*self.hidden_size, max_length) # dim=1 ?
+            self.attn_l1 = nn.Linear(2*self.hidden_size, max_length)
             self.attn_l2 = nn.Linear(2*self.hidden_size, self.hidden_size)
 
 
@@ -324,10 +324,10 @@ class Decoder(nn.Module):
         embedded = self.embedding(x)
         if self.att:
             concat = torch.cat((hidden.squeeze(0), embedded.squeeze(0)), 1)
-            att_l1 = self.att_l1(concat)
-            attn_weights = F.softmax(att_l1, dim=1)
+            attn_l1 = self.attn_l1(concat)
+            attn_weights = F.softmax(attn_l1, dim=1)
 
-            # print('enc_out shape', enc_out.shape, 'attn weights unsqueeze', attn_weights.unsqueeze(0).shape)
+            print('enc_out shape', enc_out.shape, 'attn weights unsqueeze', attn_weights.unsqueeze(0).shape)
             # import pdb; pdb.set_trace()
             # batch matrix-matrix product
             context = torch.bmm(attn_weights.unsqueeze(0), enc_out)
@@ -335,9 +335,10 @@ class Decoder(nn.Module):
             to_gru = self.attn_l2(to_gru).unsqueeze(0)
         else:
             to_gru = embedded
+
         to_gru = F.relu(to_gru)
         output, hidden = self.gru(embedded, hidden)
-        # TODO output = self.softmax(self.out(output.squeeze(0)), dim=1)
+        # TODO? output = self.softmax(self.out(output.squeeze(0)), dim=1)
         output = self.out(output.squeeze(0))
         if self.att:
             return output, hidden, attn_weights
