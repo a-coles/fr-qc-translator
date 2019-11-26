@@ -3,7 +3,7 @@
 	"valid_bsz": 64,
 	"test_bsz": 1,
 
-    "embedding_size": 256,
+    "embedding_size": 32,
     "hidden_size": 512,
     "num_layers": 2,
 	"num_epochs": 1,

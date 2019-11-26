@@ -318,7 +318,6 @@ class Decoder(nn.Module):
         self.gru = nn.GRU(embedding_size, hidden_size)
         self.out = nn.Linear(hidden_size, output_size)
         self.softmax = nn.LogSoftmax(dim=1)
-        self.teach_forc = teach_forc
         self.teach_forc_ratio = teach_forc_ratio
         self.att = att
         if att:
