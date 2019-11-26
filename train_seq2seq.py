@@ -23,6 +23,9 @@ if __name__ == '__main__':
     parser.add_argument('--model_dir', type=str, default='models', help='Saved model dir.')
     parser.add_argument('--name', type=str, default=None, help='Name for model.')
     parser.add_argument('--continue_model', type=str, help='Path to model for continuing training.')
+
+    parser.add_argument('--bi', action='store_true', help='Use a bidirectional encoder.')
+    parser.add_argument('--att', action='store_true', help='Use a decoder with attention.')
     args = parser.parse_args()
 
     # Load config and vocab
@@ -48,7 +51,7 @@ if __name__ == '__main__':
 
     # Training loop
     criterion = nn.CrossEntropyLoss(ignore_index=vocab.word2idx['PAD'])
-    model = Seq2Seq(vocab, cfg, device, name=args.name)
+    model = Seq2Seq(vocab, cfg, device, name=args.name, bi=args.bi, att=args.att)
     if args.continue_model:
         print('Continuing training from {0}'.format(args.continue_model))
         model.load_model(args.continue_model)

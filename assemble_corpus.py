@@ -36,7 +36,7 @@ class Vocab():
         else:
             self.counts[word] += 1
 
-    def filter_unk(self, threshold=2):
+    def filter_unk(self, threshold=3):
         # If a word occurs under the threshold # of times,
         # remove from the vocab. Dataloader will cast it to UNK.
         infrequent_words = [k for k, v in self.counts.items() if v < threshold]
@@ -124,13 +124,25 @@ if __name__ == '__main__':
     bible = list(zip(bible_qc, bible_fr))
     print(bible[0])
 
+    # Read in querelle corpus
+    with io.open('corpus/querelle/querelle_qc_preproc.txt', mode='r', encoding='utf-8') as fp:
+        querelle_qc = [line.strip() for line in fp.readlines()]
+    with io.open('corpus/querelle/querelle_fr_preproc.txt', mode='r', encoding='utf-8') as fp:
+        querelle_fr = [line.strip() for line in fp.readlines()]
+    querelle = list(zip(querelle_qc, querelle_fr))
+    # If sentences are same, filter them out. TODO: see if this helps
+    print(len(querelle))
+    # querelle = [q for q in querelle if q[0] != q[1]]
+    print(querelle[-1])
+    print(len(querelle))
+
     # Compose list of all examples from all corpora
-    examples = simpsons + bible
+    examples = simpsons + bible + querelle
 
     # Heuristic: If the lengths of qc vs fr are very different,
     # there is probably misalignment or noise in the original data.
     # Filter out pairs with really mismatching numbers of tokens.
-    examples = [ex for ex in examples if abs(len(ex[0].split()) - len(ex[1].split())) < 5]
+    examples = [ex for ex in examples if abs(len(ex[0].split()) - len(ex[1].split())) < 10]
     # Clean up other things
     examples = [(ex[0].replace('…', '...'), ex[1].replace('…', '...')) for ex in examples]
     examples = [(ex[0].replace('œ', 'oe'), ex[1].replace('œ', 'oe')) for ex in examples]
