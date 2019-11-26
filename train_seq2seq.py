@@ -12,6 +12,7 @@ from dataset import QcFrDataset, pad_collate
 from networks.seq2seq import Seq2Seq
 from torch.utils.data import DataLoader
 
+
 if __name__ == '__main__':
     torch.manual_seed(3)
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
