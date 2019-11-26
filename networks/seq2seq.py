@@ -13,11 +13,10 @@ from allennlp.training.metrics import BLEU  # noqa
 
 
 class Seq2Seq():
-    def __init__(self, vocab, cfg, device, name=None, bi=True, att=True, teach_forc=True):
+    def __init__(self, vocab, cfg, device, name=None, bi=True, att=True, teach_forc_ratio=0.5):
         self.device = device
-        self.model = Seq2SeqArch(vocab, cfg, device, bi=bi, att=att, teach_forc=teach_forc)
-        # self.encoder = Encoder(vocab.num_words, cfg['embedding_size'], cfg['hidden_size'], device).to(device)
-        # self.decoder = Decoder(cfg['hidden_size'], cfg['embedding_size'], vocab.num_words, device).to(device)
+        self.model = Seq2SeqArch(vocab, cfg, device,
+                                 bi=bi, att=att, teach_forc_ratio=teach_forc_ratio)
         self.vocab = vocab
         self.name = name if name else 'seq2seq'
 
@@ -150,7 +149,6 @@ class Seq2Seq():
             dec_hid = enc_hid  # First decoder hidden state is last encoder hidden state
 
             use_teach_forc = True if random.random() < self.model.decoder.teach_forc_ratio else False
-
             
             # One token at a time from decoder
             for di in range(tgt_len):  # Minus 2 so that we start at 0, and we exclude BOS
@@ -160,8 +158,8 @@ class Seq2Seq():
                     dec_out, dec_hid = self.model.decoder(dec_inp, dec_hid)
                 outputs[di] = dec_out
                 tok = dec_out.argmax(1)
-
-                if use_teach_forc: # Teacher forcing: Feed the target as the next input
+                # Teacher forcing: Feed the target as the next input
+                if use_teach_forc:
                     dec_inp = y[:, di]
                 else:
                     dec_inp = tok
@@ -171,8 +169,7 @@ class Seq2Seq():
             mask = torch.transpose(mask, 1, 0).unsqueeze(2).float().to(self.device)
             outputs = outputs * mask
 
-            # When calculating loss, collapse batches together and
-            # remove leading BOS (since we feed this to everything)
+            # When calculating loss, collapse batches together
             all_outputs = outputs.view(-1, outputs.shape[-1])
             all_y = torch.transpose(y, 1, 0)
             all_y = all_y.reshape(-1)
@@ -264,7 +261,7 @@ class Seq2Seq():
 
 
 class Seq2SeqArch(nn.Module):
-    def __init__(self, vocab, cfg, device, bi=True, att=False, teach_forc=True):
+    def __init__(self, vocab, cfg, device, bi=True, att=False, teach_forc_ratio=0.5):
         '''
         This is a helper class that itself does nothing,
         but putting all the model parts together here facilitates
@@ -276,7 +273,8 @@ class Seq2SeqArch(nn.Module):
                                bi=bi).to(device)
         self.decoder = Decoder(cfg['hidden_size'], cfg['embedding_size'],
                                vocab.num_words, device,
-                               att=att, teach_forc=teach_forc).to(device)
+                               att=att,
+                               teach_forc_ratio=teach_forc_ratio).to(device)
 
 
 class Encoder(nn.Module):
@@ -312,7 +310,7 @@ class Encoder(nn.Module):
 
 
 class Decoder(nn.Module):
-    def __init__(self, hidden_size, embedding_size, output_size, device, att=False, max_length=100, teach_forc=False, teach_forc_ratio=0.5):
+    def __init__(self, hidden_size, embedding_size, output_size, device, att=False, max_length=100, teach_forc_ratio=0.5):
         super(Decoder, self).__init__()
         self.device = device
         self.hidden_size = hidden_size
@@ -321,8 +319,7 @@ class Decoder(nn.Module):
         self.out = nn.Linear(hidden_size, output_size)
         self.softmax = nn.LogSoftmax(dim=1)
         self.teach_forc = teach_forc
-        if teach_forc:
-            self.teach_forc_ratio = teach_forc_ratio
+        self.teach_forc_ratio = teach_forc_ratio
         self.att = att
         if att:
             self.attn_l1 = nn.Linear((hidden_size * 3), hidden_size)

@@ -52,7 +52,8 @@ if __name__ == '__main__':
 
     # Training loop
     criterion = nn.CrossEntropyLoss(ignore_index=vocab.word2idx['PAD'])
-    model = Seq2Seq(vocab, cfg, device, name=args.name, bi=args.bi, att=args.att)
+    model = Seq2Seq(vocab, cfg, device,
+                    name=args.name, bi=args.bi, att=args.att, teach_forc_ratio=cfg['teacher_forcing_ratio'])
     if args.continue_model:
         print('Continuing training from {0}'.format(args.continue_model))
         model.load_model(args.continue_model)
