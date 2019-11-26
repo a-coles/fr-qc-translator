@@ -21,7 +21,7 @@ class Seq2Seq():
         self.name = name if name else 'seq2seq'
 
         # Evaluation metrics
-        self.bleu = BLEU()
+        self.bleu = BLEU(exclude_indices=set([0]))  # Exclude padding
 
         # Logging variables
         self.train_losses, self.valid_losses = [], []
@@ -128,9 +128,9 @@ class Seq2Seq():
             dec_opt.zero_grad()
             inp_qc = self.vocab.get_sentence(x)
             print('---')
-            print('inp qc', ' '.join(inp_qc[0]))
+            print('TRAIN inp qc', ' '.join(inp_qc[0]).replace('PAD', '').strip())
             inp_fr = self.vocab.get_sentence(y)
-            print('inp_fr', ' '.join(inp_fr[0]))
+            print('TRAIN inp_fr', ' '.join(inp_fr[0]).replace('PAD', '').strip())
 
             x, y = x.to(self.device), y.to(self.device)
             enc_hid = self.model.encoder.init_hidden(train_bsz).to(self.device)
@@ -149,7 +149,7 @@ class Seq2Seq():
             dec_hid = enc_hid  # First decoder hidden state is last encoder hidden state
 
             use_teach_forc = True if random.random() < self.model.decoder.teach_forc_ratio else False
-            
+
             # One token at a time from decoder
             for di in range(tgt_len):  # Minus 2 so that we start at 0, and we exclude BOS
                 if self.model.decoder.att:
@@ -179,7 +179,7 @@ class Seq2Seq():
             pred_tok = torch.argmax(outputs.detach(), dim=2)
             pred_tok = torch.transpose(pred_tok, 1, 0)
             pred_sents = [' '.join(x) for x in self.vocab.get_sentence(pred_tok.cpu())]
-            print(pred_sents[0])
+            print('TRAIN out_fr', pred_sents[0].replace('PAD', '').strip())
 
             enc_opt.step()
             dec_opt.step()
@@ -202,6 +202,12 @@ class Seq2Seq():
         self.model.decoder.eval()
         loss_epoch, bleu_epoch = 0.0, 0.0
         for i, (x, y, x_len, y_len) in enumerate(valid_loader):
+            # inp_qc = self.vocab.get_sentence(x)
+            # print('---')
+            # print('VALID inp qc', ' '.join(inp_qc[0]))
+            # inp_fr = self.vocab.get_sentence(y)
+            # print('VALID inp_fr', ' '.join(inp_fr[0]))
+
             x, y = x.to(self.device), y.to(self.device)
             enc_hid = self.model.encoder.init_hidden(valid_bsz).to(self.device)
 
@@ -251,8 +257,13 @@ class Seq2Seq():
             # Report BLEU
             pred_tok = torch.argmax(outputs.detach(), dim=2)
             pred_tok = torch.transpose(pred_tok, 1, 0)
+            # pred_sents = [' '.join(x) for x in self.vocab.get_sentence(pred_tok.cpu())]
+            # print('VALID', pred_sents)
             self.bleu(pred_tok, y)
+            # print('out', pred_tok[0])
+            # print('tgt', y[0])
             bleu_batch = self.bleu.get_metric()['BLEU']
+            # print('bleu_batch:', bleu_batch)
             bleu_epoch += bleu_batch
 
         # Average BLEU over all batches in epoch
