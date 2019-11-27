@@ -102,16 +102,22 @@ if __name__ == '__main__':
     # Read in simpsons corpus
     simpsons_qc, simpsons_fr = [], []
     eps_qc = sorted(glob.glob('corpus/simpsons/*_qc_preproc.txt'))
-    print(eps_qc)
+    #print(eps_qc)
     for ep in eps_qc:
         with io.open(ep, mode='r', encoding='utf-8') as fp:
             lines = [line.strip() for line in fp.readlines()]
+            print('len qc', len(lines))
         simpsons_qc.extend(lines)
     eps_fr = sorted(glob.glob('corpus/simpsons/*_fr_preproc.txt'))
-    print(eps_fr)
+    #print(eps_fr)
+    #print(list(zip(eps_qc, eps_fr)))
+
+    print('--')
+
     for ep in eps_fr:
         with io.open(ep, mode='r', encoding='utf-8') as fp:
             lines = [line.strip() for line in fp.readlines()]
+            print('len fr', len(lines))
         simpsons_fr.extend(lines)
     simpsons = list(zip(simpsons_qc, simpsons_fr))
     print(simpsons[0])
@@ -142,13 +148,16 @@ if __name__ == '__main__':
     # Heuristic: If the lengths of qc vs fr are very different,
     # there is probably misalignment or noise in the original data.
     # Filter out pairs with really mismatching numbers of tokens.
-    examples = [ex for ex in examples if abs(len(ex[0].split()) - len(ex[1].split())) < 10]
+    #examples = [ex for ex in examples if abs(len(ex[0].split()) - len(ex[1].split())) < 10]
     # Clean up other things
     examples = [(ex[0].replace('…', '...'), ex[1].replace('…', '...')) for ex in examples]
     examples = [(ex[0].replace('œ', 'oe'), ex[1].replace('œ', 'oe')) for ex in examples]
     examples = [(ex[0].replace('«', '\"'), ex[1].replace('«', '\"')) for ex in examples]
     examples = [(ex[0].replace('»', '\"'), ex[1].replace('»', '\"')) for ex in examples]
     examples = [(ex[0].replace('’', '\''), ex[1].replace('’', '\'')) for ex in examples]
+    examples = [(ex[0].replace('“', '\''), ex[1].replace('“', '\'')) for ex in examples]
+    examples = [(ex[0].replace('”', '\''), ex[1].replace('”', '\'')) for ex in examples]
+    examples = [(ex[0].replace('\"', '\''), ex[1].replace('\"', '\'')) for ex in examples]
 
     # Shuffle and split into train, valid, test
     train_examples, test_examples = train_test_split(examples,
