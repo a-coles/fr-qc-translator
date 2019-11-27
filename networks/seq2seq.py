@@ -188,13 +188,11 @@ class Seq2Seq():
             loss_batch = loss.item() / tgt_len
             loss_epoch += loss_batch
 
-            # Report BLEU
+            # Store BLEU ngram counts
             self.bleu(pred_tok, y)
-            bleu_batch = self.bleu.get_metric()['BLEU']
-            bleu_epoch += bleu_batch
 
-        # Average BLEU over all batches in epoch
-        bleu_epoch = bleu_epoch / len(train_loader)
+        # Calculate BLEU over everything seen in epoch
+        bleu_epoch = self.bleu.get_metric(reset=True)['BLEU']
         return loss_epoch, bleu_epoch
 
     def valid_epoch(self, valid_loader, loss_fn, valid_bsz=1):
@@ -254,20 +252,13 @@ class Seq2Seq():
             loss_batch = loss.item() / tgt_len
             loss_epoch += loss_batch
 
-            # Report BLEU
+            # Store BLEU ngram counts
             pred_tok = torch.argmax(outputs.detach(), dim=2)
             pred_tok = torch.transpose(pred_tok, 1, 0)
-            # pred_sents = [' '.join(x) for x in self.vocab.get_sentence(pred_tok.cpu())]
-            # print('VALID', pred_sents)
             self.bleu(pred_tok, y)
-            # print('out', pred_tok[0])
-            # print('tgt', y[0])
-            bleu_batch = self.bleu.get_metric()['BLEU']
-            # print('bleu_batch:', bleu_batch)
-            bleu_epoch += bleu_batch
 
-        # Average BLEU over all batches in epoch
-        bleu_epoch = bleu_epoch / len(valid_loader)
+        # Calculate BLEU over everything seen in epoch
+        bleu_epoch = self.bleu.get_metric(reset=True)['BLEU']
         return loss_epoch, bleu_epoch
 
 
