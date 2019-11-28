@@ -13,7 +13,7 @@ from allennlp.training.metrics import BLEU  # noqa
 
 
 class Seq2Seq():
-    def __init__(self, vocab, cfg, device, name=None, bi=True, att=True, teach_forc_ratio=0.5):
+    def __init__(self, vocab, cfg, device, name=None, bi=True, att=True, teach_forc_ratio=0.5, patience=3):
         self.device = device
         self.model = Seq2SeqArch(vocab, cfg, device,
                                  bi=bi, att=att, teach_forc_ratio=teach_forc_ratio)
@@ -24,14 +24,24 @@ class Seq2Seq():
         self.bleu = BLEU(exclude_indices=set([0]))  # Exclude padding
 
         # Logging variables
-        self.train_losses, self.valid_losses = [], []
-        self.train_bleu, self.valid_bleu = [], []
+        self.train_losses, self.valid_losses, self.test_losses = [], [], []
+        self.train_bleu, self.valid_bleu, self.test_bleu = [], [], []
+        self.patience = patience  # For early stopping
+        self.outputs = []
 
     def load_model(self, model_path):
         self.model.load_state_dict(torch.load(model_path))
 
     def save_model(self, save_path):
         torch.save(self.model.state_dict(), save_path)
+
+    def log_outputs(self, log_dir):
+        '''
+        Log the test outputs to a txt.
+        '''
+        with open(os.path.join(log_dir, '{0}_outputs.txt'.format(self.name)), 'w') as fp:
+            for line in self.outputs:
+                fp.write('{0}\n'.format(line))
 
     def log_learning_curves(self, log_dir, graph=True):
         '''
@@ -92,7 +102,10 @@ class Seq2Seq():
                 dec_out, dec_hid = self.model.decoder(dec_inp, dec_hid, enc_out=enc_out)
             else:
                 dec_out, dec_hid = self.model.decoder(dec_inp, dec_hid)
-            outputs[i] = dec_out
+            try:
+                outputs[i] = dec_out
+            except IndexError:
+                print('EOS token not found, but max length reached. Returning truncated sequence.')
             tok = dec_out.argmax(1)
             dec_inp = tok
             i = i + 1
@@ -103,17 +116,35 @@ class Seq2Seq():
         pred_sents = pred_sents[4:-4]
         print('out fr:', pred_sents)
 
+    def test(self, test_loader, loss_fn, test_bsz):
+        test_loss, test_bleu = self.valid_epoch(test_loader, loss_fn, test_bsz, write_outputs=True)
+        print('Test loss: {0}'.format(test_loss))
+        print('Test bleu: {0}'.format(test_bleu))
+        self.test_losses.append(test_loss)
+        self.test_bleu.append(test_bleu)
+
     def train(self, train_loader, valid_loader, loss_fn=None, lr=1e-2, train_bsz=1, valid_bsz=1, num_epochs=1):
         enc_opt = torch.optim.Adam(self.model.encoder.parameters(), lr=lr)
         dec_opt = torch.optim.Adam(self.model.decoder.parameters(), lr=lr)
         for epoch in range(num_epochs):
             train_loss, train_bleu = self.train_epoch(train_loader, loss_fn, enc_opt, dec_opt, train_bsz)
             print('EPOCH {0} \t train_loss {1} \t train_bleu {2}'.format(epoch, train_loss, train_bleu))
-            self.train_losses.append(train_loss)
-            self.train_bleu.append(train_bleu)
-            # import pdb; pdb.set_trace()
             valid_loss, valid_bleu = self.valid_epoch(valid_loader, loss_fn, valid_bsz)
             print('\t valid_loss {1} \t valid_bleu {2}'.format(epoch, valid_loss, valid_bleu))
+            # Early stop
+            last_val_losses = self.valid_losses[-self.patience:]
+            if epoch > self.patience:
+                stop = True
+                for l in last_val_losses:
+                    if valid_loss < l:
+                        stop = False
+                        break
+                if stop:
+                    print('Early stopping: validation loss has not improved in {0} epochs.'.format(self.patience))
+                    break
+            # Log losses
+            self.train_losses.append(train_loss)
+            self.train_bleu.append(train_bleu)
             self.valid_losses.append(valid_loss)
             self.valid_bleu.append(valid_bleu)
 
@@ -195,16 +226,15 @@ class Seq2Seq():
         bleu_epoch = self.bleu.get_metric(reset=True)['BLEU']
         return loss_epoch, bleu_epoch
 
-    def valid_epoch(self, valid_loader, loss_fn, valid_bsz=1):
+    def valid_epoch(self, valid_loader, loss_fn, valid_bsz=1, write_outputs=False):
         self.model.encoder.eval()
         self.model.decoder.eval()
         loss_epoch, bleu_epoch = 0.0, 0.0
         for i, (x, y, x_len, y_len) in enumerate(valid_loader):
-            # inp_qc = self.vocab.get_sentence(x)
-            # print('---')
-            # print('VALID inp qc', ' '.join(inp_qc[0]))
-            # inp_fr = self.vocab.get_sentence(y)
-            # print('VALID inp_fr', ' '.join(inp_fr[0]))
+            if write_outputs:
+                # Test bsz should be 1, so indexing at 0 should include everything
+                inp_qc = ' '.join(self.vocab.get_sentence(x)[0])
+                inp_fr = ' '.join(self.vocab.get_sentence(y)[0])
 
             x, y = x.to(self.device), y.to(self.device)
             enc_hid = self.model.encoder.init_hidden(valid_bsz).to(self.device)
@@ -256,6 +286,14 @@ class Seq2Seq():
             pred_tok = torch.argmax(outputs.detach(), dim=2)
             pred_tok = torch.transpose(pred_tok, 1, 0)
             self.bleu(pred_tok, y)
+
+            if write_outputs:
+                # Test bsz should be 1, so indexing at 0 should be fine
+                pred_sents = [' '.join(x) for x in self.vocab.get_sentence(pred_tok.cpu())][0]
+                self.outputs.append('inp_qc: {0}'.format(inp_qc))
+                self.outputs.append('inp_fr: {0}'.format(inp_fr))
+                self.outputs.append('out_fr: {0}'.format(pred_sents))
+                self.outputs.append('----')
 
         # Calculate BLEU over everything seen in epoch
         bleu_epoch = self.bleu.get_metric(reset=True)['BLEU']
