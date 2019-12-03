@@ -44,7 +44,8 @@ if __name__ == '__main__':
 
     param_grid = {'bsz': cfg['train_bsz'],
                   'learning_rate': cfg['learning_rate'],
-                'teacher_forcing_ratio': cfg['teacher_forcing_ratio']
+                'teacher_forcing_ratio': cfg['teacher_forcing_ratio'],
+                  'grad_clip': cfg['grad_clip']
     
                   }
     for params in list(ParameterGrid(param_grid)):
@@ -74,12 +75,12 @@ if __name__ == '__main__':
                     lr=params['learning_rate'],
                     train_bsz=params['bsz'],
                     valid_bsz=params['bsz'],
-                    num_epochs=cfg['num_epochs'])
+                    num_epochs=cfg['num_epochs'],
+                    grad_clip=params['grad_clip'])
 
         output_dir = os.path.join(args.log_dir, str(params))
         if not os.path.exists(output_dir):
             os.mkdir(output_dir)
-
         # model.log_learning_curves(log_dir=output_dir)
         # model.log_metrics(log_dir=output_dir)
         model.save_model(os.path.join(args.model_dir,'{}.pt'.format(str(params))))

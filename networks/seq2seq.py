@@ -123,11 +123,11 @@ class Seq2Seq():
         self.test_losses.append(test_loss)
         self.test_bleu.append(test_bleu)
 
-    def train(self, train_loader, valid_loader, loss_fn=None, lr=1e-2, train_bsz=1, valid_bsz=1, num_epochs=1):
+    def train(self, train_loader, valid_loader, loss_fn=None, lr=1e-2, train_bsz=1, valid_bsz=1, num_epochs=1, grad_clip=.2):
         enc_opt = torch.optim.Adam(self.model.encoder.parameters(), lr=lr)
         dec_opt = torch.optim.Adam(self.model.decoder.parameters(), lr=lr)
         for epoch in range(num_epochs):
-            train_loss, train_bleu = self.train_epoch(train_loader, loss_fn, enc_opt, dec_opt, train_bsz)
+            train_loss, train_bleu = self.train_epoch(train_loader, loss_fn, enc_opt, dec_opt, lr, grad_clip, train_bsz)
             print('EPOCH {0} \t train_loss {1} \t train_bleu {2}'.format(epoch, train_loss, train_bleu))
             valid_loss, valid_bleu = self.valid_epoch(valid_loader, loss_fn, valid_bsz)
             print('\t valid_loss {1} \t valid_bleu {2}'.format(epoch, valid_loss, valid_bleu))
@@ -148,7 +148,7 @@ class Seq2Seq():
             self.valid_losses.append(valid_loss)
             self.valid_bleu.append(valid_bleu)
 
-    def train_epoch(self, train_loader, loss_fn, enc_opt, dec_opt, train_bsz=1):
+    def train_epoch(self, train_loader, loss_fn, enc_opt, dec_opt, lr, grad_clip, train_bsz=1):
         self.model.encoder.train()
         self.model.decoder.train()
         loss_epoch, bleu_epoch = 0.0, 0.0
@@ -158,10 +158,10 @@ class Seq2Seq():
             enc_opt.zero_grad()
             dec_opt.zero_grad()
             inp_qc = self.vocab.get_sentence(x)
-            print('---')
-            print('TRAIN inp qc', ' '.join(inp_qc[0]).replace('PAD', '').strip())
+            # print('---')
+            # print('TRAIN inp qc', ' '.join(inp_qc[0]).replace('PAD', '').strip())
             inp_fr = self.vocab.get_sentence(y)
-            print('TRAIN inp_fr', ' '.join(inp_fr[0]).replace('PAD', '').strip())
+            # print('TRAIN inp_fr', ' '.join(inp_fr[0]).replace('PAD', '').strip())
 
             x, y = x.to(self.device), y.to(self.device)
             enc_hid = self.model.encoder.init_hidden(train_bsz).to(self.device)
@@ -207,10 +207,16 @@ class Seq2Seq():
             loss = loss_fn(all_outputs, all_y.long())
 
             loss.backward()
+
+            # gradient clipping to avoid exploding gradients
+            torch.nn.utils.clip_grad_norm_(self.model.parameters(), grad_clip)
+            for param in self.model.parameters():
+                param.data.add_(-lr, param.grad.data)
+
             pred_tok = torch.argmax(outputs.detach(), dim=2)
             pred_tok = torch.transpose(pred_tok, 1, 0)
             pred_sents = [' '.join(x) for x in self.vocab.get_sentence(pred_tok.cpu())]
-            print('TRAIN out_fr', pred_sents[0].replace('PAD', '').strip())
+            # print('TRAIN out_fr', pred_sents[0].replace('PAD', '').strip())
 
             enc_opt.step()
             dec_opt.step()
