@@ -1,12 +1,14 @@
 {
-	"train_bsz": 64,
-	"valid_bsz": 64,
-	"test_bsz": 1,
+    "train_bsz": [128, 256],
+    "valid_bsz": 128,
+    "test_bsz": 128,
 
-    "embedding_size": 32,
+    "embedding_size": 256,
     "hidden_size": 512,
     "num_layers": 2,
-	"num_epochs": 1,
-	"learning_rate": 0.01,
-	"teacher_forcing_ratio": 0.5
+    "num_epochs": 30,
+    "learning_rate": [0.001, 0.0001],
+    "teacher_forcing_ratio": [0.7],
+    "patience": 10,
+    "clip": 0.9
 }
