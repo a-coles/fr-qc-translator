@@ -3,12 +3,12 @@
     "valid_bsz": 128,
     "test_bsz": 128,
 
-    "embedding_size": 256,
-    "hidden_size": 512,
-    "num_layers": 2,
-    "num_epochs": 30,
+    "embedding_size":  [512, 1024],
+    "hidden_size": [512, 1024],
+    "num_layers": [2, 4],
+    "num_epochs": 20,
     "learning_rate": [0.001, 0.0001],
-    "teacher_forcing_ratio": [0.7],
+    "teacher_forcing_ratio": [0.3, 0.7, 0.75],
     "patience": 10,
-    "clip": 0.9
+    "grad_clip": [0.25, 0.5, 0.9, 5]
 }
