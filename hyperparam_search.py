@@ -45,8 +45,10 @@ if __name__ == '__main__':
     param_grid = {'bsz': cfg['train_bsz'],
                   'learning_rate': cfg['learning_rate'],
                 'teacher_forcing_ratio': cfg['teacher_forcing_ratio'],
-                  'grad_clip': cfg['grad_clip']
-    
+                'grad_clip': cfg['grad_clip'],
+                'embeddine_size': cfg['embedding_size'],
+                'hidden_size': cfg['hidden_size'],
+                'num_layers': cfg['num_layers']
                   }
     for params in list(ParameterGrid(param_grid)):
 
@@ -60,6 +62,9 @@ if __name__ == '__main__':
         valid_loader = DataLoader(valid_dataset, batch_size=params['bsz'],
                                   shuffle=True, drop_last=True, collate_fn=pad_collate)
 
+        cfg['embedding_size'] = params['embeddine_size']
+        cfg['hidden_size'] = params['hidden_size']
+        cfg['num_layers'] = params['num_layers']
         
         # Training loop
         criterion = nn.CrossEntropyLoss(ignore_index=vocab.word2idx['PAD'])
@@ -76,13 +81,14 @@ if __name__ == '__main__':
                     train_bsz=params['bsz'],
                     valid_bsz=params['bsz'],
                     num_epochs=cfg['num_epochs'],
-                    grad_clip=params['grad_clip'])
+                    grad_clip=params['grad_clip']
+                    )
 
         output_dir = os.path.join(args.log_dir, str(params))
         if not os.path.exists(output_dir):
             os.mkdir(output_dir)
-        # model.log_learning_curves(log_dir=output_dir)
-        # model.log_metrics(log_dir=output_dir)
-        model.save_model(os.path.join(args.model_dir,'{}.pt'.format(str(params))))
+        model.log_learning_curves(log_dir=output_dir)
+        model.log_metrics(log_dir=output_dir)
+        model.save_model(os.path.join(args.model_dir, '{}.pt'.format(str(params))))
 
 
