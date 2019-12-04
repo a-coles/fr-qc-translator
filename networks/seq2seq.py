@@ -13,12 +13,13 @@ from allennlp.training.metrics import BLEU  # noqa
 
 
 class Seq2Seq():
-    def __init__(self, vocab, cfg, device, name=None, bi=True, att=True, teach_forc_ratio=0.5, patience=3):
+    def __init__(self, vocab, cfg, device, name=None, bi=True, att=True, teach_forc_ratio=0.5, patience=3, dropout=0.0):
         self.device = device
         self.model = Seq2SeqArch(vocab, cfg, device,
-                                 bi=bi, att=att, teach_forc_ratio=teach_forc_ratio)
+                                 bi=bi, att=att, teach_forc_ratio=teach_forc_ratio, dropout=dropout)
         self.vocab = vocab
         self.name = name if name else 'seq2seq'
+        self.cfg = cfg
 
         # Evaluation metrics
         self.bleu = BLEU(exclude_indices=set([0]))  # Exclude padding
@@ -90,7 +91,7 @@ class Seq2Seq():
         qc_len = torch.tensor(qc_idx.size()[1]).int().cpu().unsqueeze(0)
         # Whole sequence through encoder
         outputs = torch.zeros(100, 1, self.vocab.num_words).to(self.device)
-        enc_hid = self.model.encoder.init_hidden(1).to(self.device)
+        enc_hid = self.model.encoder.init_hidden(1, self.cfg['num_enc_layers']).to(self.device)
         enc_out, enc_hid = self.model.encoder(qc_idx, qc_len, enc_hid)
         dec_inp = torch.ones(1, device=self.device) * 1
         dec_hid = enc_hid  # First decoder hidden state is last encoder hidden state
@@ -106,6 +107,7 @@ class Seq2Seq():
                 outputs[i] = dec_out
             except IndexError:
                 print('EOS token not found, but max length reached. Returning truncated sequence.')
+                break
             tok = dec_out.argmax(1)
             dec_inp = tok
             i = i + 1
@@ -123,9 +125,9 @@ class Seq2Seq():
         self.test_losses.append(test_loss)
         self.test_bleu.append(test_bleu)
 
-    def train(self, train_loader, valid_loader, loss_fn=None, lr=1e-2, train_bsz=1, valid_bsz=1, num_epochs=1):
-        enc_opt = torch.optim.Adam(self.model.encoder.parameters(), lr=lr)
-        dec_opt = torch.optim.Adam(self.model.decoder.parameters(), lr=lr)
+    def train(self, train_loader, valid_loader, loss_fn=None, lr=1e-2, weight_decay=1e-5, train_bsz=1, valid_bsz=1, num_epochs=1):
+        enc_opt = torch.optim.Adam(self.model.encoder.parameters(), lr=lr, weight_decay=weight_decay)
+        dec_opt = torch.optim.Adam(self.model.decoder.parameters(), lr=lr, weight_decay=weight_decay)
         for epoch in range(num_epochs):
             train_loss, train_bleu = self.train_epoch(train_loader, loss_fn, enc_opt, dec_opt, train_bsz)
             print('EPOCH {0} \t train_loss {1} \t train_bleu {2}'.format(epoch, train_loss, train_bleu))
@@ -153,8 +155,6 @@ class Seq2Seq():
         self.model.decoder.train()
         loss_epoch, bleu_epoch = 0.0, 0.0
         for i, (x, y, x_len, y_len) in enumerate(train_loader):
-            if i > 10:
-                break
             enc_opt.zero_grad()
             dec_opt.zero_grad()
             inp_qc = self.vocab.get_sentence(x)
@@ -164,7 +164,7 @@ class Seq2Seq():
             print('TRAIN inp_fr', ' '.join(inp_fr[0]).replace('PAD', '').strip())
 
             x, y = x.to(self.device), y.to(self.device)
-            enc_hid = self.model.encoder.init_hidden(train_bsz).to(self.device)
+            enc_hid = self.model.encoder.init_hidden(train_bsz, self.cfg['num_enc_layers']).to(self.device)
 
             tgt_len = y.size(1)
             loss = 0.0
@@ -237,7 +237,7 @@ class Seq2Seq():
                 inp_fr = ' '.join(self.vocab.get_sentence(y)[0])
 
             x, y = x.to(self.device), y.to(self.device)
-            enc_hid = self.model.encoder.init_hidden(valid_bsz).to(self.device)
+            enc_hid = self.model.encoder.init_hidden(valid_bsz, self.cfg['num_enc_layers']).to(self.device)
 
             tgt_len = y.size(1)
             loss = 0.0
@@ -301,7 +301,7 @@ class Seq2Seq():
 
 
 class Seq2SeqArch(nn.Module):
-    def __init__(self, vocab, cfg, device, bi=True, att=False, teach_forc_ratio=0.5):
+    def __init__(self, vocab, cfg, device, bi=True, att=False, teach_forc_ratio=0.5, dropout=0.0):
         '''
         This is a helper class that itself does nothing,
         but putting all the model parts together here facilitates
@@ -309,22 +309,23 @@ class Seq2SeqArch(nn.Module):
         '''
         super(Seq2SeqArch, self).__init__()
         self.encoder = Encoder(vocab.num_words, cfg['embedding_size'],
-                               cfg['hidden_size'], device,
-                               bi=bi).to(device)
+                               cfg['hidden_size'], cfg['num_enc_layers'], device,
+                               bi=bi, dropout=dropout).to(device)
         self.decoder = Decoder(cfg['hidden_size'], cfg['embedding_size'],
-                               vocab.num_words, device,
+                               vocab.num_words, cfg['num_dec_layers'], device,
                                att=att,
                                teach_forc_ratio=teach_forc_ratio).to(device)
 
 
 class Encoder(nn.Module):
-    def __init__(self, input_size, embedding_size, hidden_size, device, bi=True):
+    def __init__(self, input_size, embedding_size, hidden_size, num_layers, device, bi=True, dropout=0.0):
         super(Encoder, self).__init__()
         self.device = device
         self.bi = bi
         self.hidden_size = hidden_size
         self.embedding = nn.Embedding(input_size, embedding_size)
-        self.gru = nn.GRU(embedding_size, hidden_size, bidirectional=bi)
+        self.gru = nn.GRU(embedding_size, hidden_size, num_layers=num_layers, bidirectional=bi)
+        self.dropout = torch.nn.Dropout(p=dropout)
         if bi:
             self.fc = nn.Linear(hidden_size * 2, hidden_size)
 
@@ -336,21 +337,23 @@ class Encoder(nn.Module):
                                                            batch_first=True,
                                                            enforce_sorted=False)
         output, hidden = self.gru(embedded, hidden)
+
         # Re-pad
         output, output_len = torch.nn.utils.rnn.pad_packed_sequence(output, batch_first=True)
+        output = self.dropout(output)
         if self.bi:
             # Combine forward and backward RNN states
             hidden = self.fc(torch.cat((hidden[-2, :, :], hidden[-1, :, :]), dim=1))
             hidden = torch.tanh(hidden).unsqueeze(0)
         return output, hidden
 
-    def init_hidden(self, batch_size):
+    def init_hidden(self, batch_size, num_layers):
         dim = 2 if self.bi else 1
-        return torch.zeros(dim, batch_size, self.hidden_size)
+        return torch.zeros(dim * num_layers, batch_size, self.hidden_size)
 
 
 class Decoder(nn.Module):
-    def __init__(self, hidden_size, embedding_size, output_size, device, att=False, max_length=100, teach_forc_ratio=0.5):
+    def __init__(self, hidden_size, embedding_size, output_size, num_layers, device, att=False, max_length=100, teach_forc_ratio=0.5):
         super(Decoder, self).__init__()
         self.device = device
         self.hidden_size = hidden_size

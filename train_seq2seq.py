@@ -54,13 +54,14 @@ if __name__ == '__main__':
     criterion = nn.CrossEntropyLoss(ignore_index=vocab.word2idx['PAD'])
     model = Seq2Seq(vocab, cfg, device,
                     name=args.name, bi=args.bi, att=args.att, teach_forc_ratio=cfg['teacher_forcing_ratio'],
-                    patience=cfg['patience'])
+                    patience=cfg['patience'], dropout=cfg['dropout'])
     if args.continue_model:
         print('Continuing training from {0}'.format(args.continue_model))
         model.load_model(args.continue_model)
     model.train(train_loader, valid_loader,
                 loss_fn=criterion,
                 lr=cfg['learning_rate'],
+                weight_decay=cfg['weight_decay'],
                 train_bsz=cfg['train_bsz'],
                 valid_bsz=cfg['valid_bsz'],
                 num_epochs=cfg['num_epochs'])
