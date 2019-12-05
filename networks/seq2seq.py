@@ -13,10 +13,10 @@ from allennlp.training.metrics import BLEU  # noqa
 
 
 class Seq2Seq():
-    def __init__(self, vocab, cfg, device, name=None, bi=True, att=True, teach_forc_ratio=0.5, patience=3, dropout=0.0):
+    def __init__(self, vocab, cfg, device, name=None, bi=True, att=True, batch_norm=True, teach_forc_ratio=0.5, patience=3, dropout=0.0):
         self.device = device
         self.model = Seq2SeqArch(vocab, cfg, device,
-                                 bi=bi, att=att, teach_forc_ratio=teach_forc_ratio, dropout=dropout)
+                                 bi=bi, att=att, batch_norm=batch_norm, teach_forc_ratio=teach_forc_ratio, dropout=dropout)
         self.vocab = vocab
         self.name = name if name else 'seq2seq'
         self.cfg = cfg
@@ -301,7 +301,7 @@ class Seq2Seq():
 
 
 class Seq2SeqArch(nn.Module):
-    def __init__(self, vocab, cfg, device, bi=True, att=False, teach_forc_ratio=0.5, dropout=0.0):
+    def __init__(self, vocab, cfg, device, bi=True, att=False, batch_norm=True, teach_forc_ratio=0.5, dropout=0.0):
         '''
         This is a helper class that itself does nothing,
         but putting all the model parts together here facilitates
@@ -310,7 +310,7 @@ class Seq2SeqArch(nn.Module):
         super(Seq2SeqArch, self).__init__()
         self.encoder = Encoder(vocab.num_words, cfg['embedding_size'],
                                cfg['hidden_size'], cfg['num_enc_layers'], device,
-                               bi=bi, dropout=dropout).to(device)
+                               bi=bi, batch_norm=batch_norm, dropout=dropout).to(device)
         self.decoder = Decoder(cfg['hidden_size'], cfg['embedding_size'],
                                vocab.num_words, cfg['num_dec_layers'], device,
                                att=att,
@@ -318,24 +318,38 @@ class Seq2SeqArch(nn.Module):
 
 
 class Encoder(nn.Module):
-    def __init__(self, input_size, embedding_size, hidden_size, num_layers, device, bi=True, dropout=0.0):
+    def __init__(self, input_size, embedding_size, hidden_size, num_layers, device, bi=True, batch_norm=True, dropout=0.0):
         super(Encoder, self).__init__()
         self.device = device
         self.bi = bi
+        self.batchnorm = batch_norm
         self.hidden_size = hidden_size
         self.embedding = nn.Embedding(input_size, embedding_size)
         self.gru = nn.GRU(embedding_size, hidden_size, num_layers=num_layers, bidirectional=bi)
         self.dropout = torch.nn.Dropout(p=dropout)
+        if batch_norm:
+           self.batchnorm = torch.nn.BatchNorm1d(embedding_size)
         if bi:
             self.fc = nn.Linear(hidden_size * 2, hidden_size)
 
     def forward(self, x, x_lens, hidden):
         x = x.long()
+        # print('x', x.size())
         embedded = self.embedding(x)
+        # print('x emb', embedded.size())
+        
+        #if self.batchnorm:
+        # batchnorm = torch.nn.BatchNorm1d(128).to(self.device)
+        embedded = self.batchnorm(embedded.permute(0, 2, 1))
+        # print('x after bn', embedded.size())
+        embedded = embedded.permute(0, 2, 1)
+        
+
         # Ignore the padding through the RNN
         embedded = torch.nn.utils.rnn.pack_padded_sequence(embedded, x_lens,
                                                            batch_first=True,
-                                                           enforce_sorted=False)
+                                                        enforce_sorted=False)
+            
         output, hidden = self.gru(embedded, hidden)
 
         # Re-pad
