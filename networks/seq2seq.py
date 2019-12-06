@@ -340,9 +340,10 @@ class Encoder(nn.Module):
         
         #if self.batchnorm:
         # batchnorm = torch.nn.BatchNorm1d(128).to(self.device)
-        embedded = self.batchnorm(embedded.permute(0, 2, 1))
-        # print('x after bn', embedded.size())
-        embedded = embedded.permute(0, 2, 1)
+        if self.batchnorm:
+            embedded = self.batchnorm(embedded.permute(0, 2, 1))
+            # print('x after bn', embedded.size())
+            embedded = embedded.permute(0, 2, 1)
         
 
         # Ignore the padding through the RNN
