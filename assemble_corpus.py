@@ -160,7 +160,7 @@ if __name__ == '__main__':
     examples = [(ex[0].replace('\"', '\''), ex[1].replace('\"', '\'')) for ex in examples]
 
     # Experiment: only take examples under a certain length
-    #examples = [ex for ex in examples if len(ex[0].split()) < 25]
+    examples = [ex for ex in examples if len(ex[0].split()) < 25]
 
     # Shuffle and split into train, valid, test
     train_examples, test_examples = train_test_split(examples,
