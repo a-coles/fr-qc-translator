@@ -22,7 +22,6 @@ class Seq2Seq():
         self.name = name if name else 'seq2seq'
         self.cfg = cfg
         self.write_idx = write_idx
-        print('write idx', write_idx)
 
         # Evaluation metrics
         self.bleu = BLEU(exclude_indices=set([0]))  # Exclude padding
@@ -259,9 +258,6 @@ class Seq2Seq():
             dec_inp = torch.ones(valid_bsz, device=self.device) * 1
             dec_hid = enc_hid  # First decoder hidden state is last encoder hidden state
 
-            # TODO return dec attention output's (for viz)?
-            dec_attns = torch.zeros(100, 100)
-
             # One token at a time from decoder
             for di in range(tgt_len - 1):
                 if self.model.decoder.att:
@@ -278,8 +274,7 @@ class Seq2Seq():
             mask = torch.transpose(mask, 1, 0).unsqueeze(2).float().to(self.device)
             outputs = outputs * mask
 
-            # When calculating loss, collapse batches together and
-            # remove leading BOS (since we feed this to everything)
+            # When calculating loss, collapse batches together
             all_outputs = outputs.view(-1, outputs.shape[-1])
             all_y = torch.transpose(y, 1, 0)
             all_y = all_y.reshape(-1)
@@ -340,23 +335,16 @@ class Encoder(nn.Module):
 
     def forward(self, x, x_lens, hidden):
         x = x.long()
-        # print('x', x.size())
         embedded = self.embedding(x)
-        # print('x emb', embedded.size())
         
-        #if self.batchnorm:
-        # batchnorm = torch.nn.BatchNorm1d(128).to(self.device)
         if self.batchnorm:
             embedded = self.batchnorm(embedded.permute(0, 2, 1))
-            # print('x after bn', embedded.size())
             embedded = embedded.permute(0, 2, 1)
         
-
         # Ignore the padding through the RNN
         embedded = torch.nn.utils.rnn.pack_padded_sequence(embedded, x_lens,
                                                            batch_first=True,
                                                         enforce_sorted=False)
-            
         output, hidden = self.gru(embedded, hidden)
 
         # Re-pad

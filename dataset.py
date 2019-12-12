@@ -29,8 +29,6 @@ class QcFrDataset(Dataset):
         fr_words = ['BOS'] + example[1].split() + ['EOS']
         qc_idx = torch.tensor(self.vocab.get_indices(qc_words))
         fr_idx = torch.tensor(self.vocab.get_indices(fr_words))
-        # if self.transform:
-        #     sample = self.transform(sample)
         qc_idx, fr_idx = qc_idx.int(), fr_idx.int()
         return (qc_idx, fr_idx)
 
@@ -42,8 +40,6 @@ def pad_tensor(tensor, max_len):
 
 
 def pad_collate(batch):
-    # qc = [example[0] for example in batch]
-    # fr = [example[1] for example in batch]
     (qc, fr) = zip(*batch)
     qc_lens = torch.tensor([len(x) for x in qc])
     fr_lens = torch.tensor([len(x) for x in fr])  # Decoding mask should exclude BOS
@@ -54,13 +50,9 @@ def pad_collate(batch):
             max_len = example.size(0)
 
     # Pad all examples to the max length
-    #qc = [pad_tensor(example, max_len) for example in qc]
-    #fr = [pad_tensor(example, max_len) for example in fr]
     qc = torch.nn.utils.rnn.pad_sequence(qc, batch_first=True, padding_value=0)
     fr = torch.nn.utils.rnn.pad_sequence(fr, batch_first=True, padding_value=0)
 
-    #qc = torch.stack(qc)
-    #fr = torch.stack(fr)
     return qc, fr, qc_lens, fr_lens
 
 

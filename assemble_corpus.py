@@ -51,9 +51,6 @@ class Vocab():
                 idx2word[word2idx[k]] = k
         self.word2idx = word2idx
         self.idx2word = idx2word
-        # for word in infrequent_words:
-        #     idx = self.word2idx.pop(word)
-        #     del self.idx2word[idx]
         self.num_words -= len(infrequent_words)
 
     def save(self, save_path):
@@ -103,16 +100,12 @@ if __name__ == '__main__':
     # Read in simpsons corpus
     simpsons_qc, simpsons_fr = [], []
     eps_qc = sorted(glob.glob('corpus/simpsons/*_qc_preproc.txt'))
-    #print(eps_qc)
     for ep in eps_qc:
         with io.open(ep, mode='r', encoding='utf-8') as fp:
             lines = [line.strip() for line in fp.readlines()]
             print('len qc', len(lines))
         simpsons_qc.extend(lines)
     eps_fr = sorted(glob.glob('corpus/simpsons/*_fr_preproc.txt'))
-    #print(eps_fr)
-    #print(list(zip(eps_qc, eps_fr)))
-
     print('--')
 
     for ep in eps_fr:
@@ -137,11 +130,9 @@ if __name__ == '__main__':
     with io.open('corpus/querelle/querelle_fr_preproc.txt', mode='r', encoding='utf-8') as fp:
         querelle_fr = [line.strip() for line in fp.readlines()]
     querelle = list(zip(querelle_qc, querelle_fr))
-    # If sentences are same, filter them out. TODO: see if this helps
-    print(len(querelle))
+    # If sentences are same, filter them out. NB: This did not help.
     # querelle = [q for q in querelle if q[0] != q[1]]
     print(querelle[-1])
-    print(len(querelle))
 
     # Compose list of all examples from all corpora
     examples = simpsons + bible + querelle
@@ -149,7 +140,9 @@ if __name__ == '__main__':
     # Heuristic: If the lengths of qc vs fr are very different,
     # there is probably misalignment or noise in the original data.
     # Filter out pairs with really mismatching numbers of tokens.
-    #examples = [ex for ex in examples if abs(len(ex[0].split()) - len(ex[1].split())) < 10]
+    # NB: This also did not help.
+    # examples = [ex for ex in examples if abs(len(ex[0].split()) - len(ex[1].split())) < 10]
+    
     # Clean up other things
     examples = [(ex[0].replace('…', '...'), ex[1].replace('…', '...')) for ex in examples]
     examples = [(ex[0].replace('œ', 'oe'), ex[1].replace('œ', 'oe')) for ex in examples]
@@ -161,6 +154,7 @@ if __name__ == '__main__':
     examples = [(ex[0].replace('\"', '\''), ex[1].replace('\"', '\'')) for ex in examples]
 
     # Experiment: only take examples under a certain length
+    # NB: This helped!
     examples = [ex for ex in examples if len(ex[0].split()) < 25]
 
     # Shuffle and split into train, valid, test
@@ -187,10 +181,10 @@ if __name__ == '__main__':
 
     # Histogram of source (qc) example lengths
     print('Number of total examples:', len(examples))
-    # lens = [len(ex[0].split()) for ex in examples]
-    # plt.hist(lens, bins=20)
-    # plt.xticks(range(0, 150, 10))
-    # plt.axis([0, 150, 0, 2500])
-    # plt.xlabel('Sequence length (in tokens)')
-    # plt.ylabel('Number of sequences')
-    # plt.savefig(os.path.join('corpus', 'histogram.png'))
+    lens = [len(ex[0].split()) for ex in examples]
+    plt.hist(lens, bins=20)
+    plt.xticks(range(0, 150, 10))  # NB: change to fit
+    plt.axis([0, 150, 0, 2500])    # NB: change to fit
+    plt.xlabel('Sequence length (in tokens)')
+    plt.ylabel('Number of sequences')
+    plt.savefig(os.path.join('corpus', 'histogram.png'))

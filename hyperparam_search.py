@@ -45,7 +45,6 @@ if __name__ == '__main__':
     param_grid = {'bsz': cfg['train_bsz'],
                   'learning_rate': cfg['learning_rate'],
                   'teacher_forcing_ratio': cfg['teacher_forcing_ratio'],
-                  # 'grad_clip': cfg['grad_clip'],
                   'embeddine_size': cfg['embedding_size'],
                   'hidden_size': cfg['hidden_size'],
                   'num_enc_layers': cfg['num_enc_layers'],
@@ -83,7 +82,6 @@ if __name__ == '__main__':
                     train_bsz=params['bsz'],
                     valid_bsz=params['bsz'],
                     num_epochs=cfg['num_epochs'],
-                    # grad_clip=params['grad_clip']
                     )
 
         output_dir = os.path.join(args.log_dir, str(params))
