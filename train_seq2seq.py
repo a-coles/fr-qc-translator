@@ -69,7 +69,7 @@ if __name__ == '__main__':
                 num_epochs=cfg['num_epochs'])
     model.log_learning_curves(log_dir=args.log_dir)
     model.log_metrics(log_dir=args.log_dir)
-    model.save_model(os.path.join(args.model_dir, '{0}.pt'.format(args.name)))
+    # model.save_model(os.path.join(args.model_dir, '{0}.pt'.format(args.name)))
 
     test_sent = "voici une petite phrase de test ."
     model.generate(test_sent)

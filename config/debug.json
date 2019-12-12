@@ -1,7 +1,7 @@
 {
 	"train_bsz": 100,
 	"valid_bsz": 100,
-	"test_bsz": 1,
+	"test_bsz": 100,
 
     "embedding_size": 32,
     "hidden_size": 64,
@@ -11,6 +11,7 @@
 	"learning_rate": 0.001,
 	"weight_decay":0.0001,
 	"patience": 1000000,
-	"dropout": 0.0,
+	"dropout": 0.2,
 	"teacher_forcing_ratio": 1.0
 }
+                                                                                                                                              

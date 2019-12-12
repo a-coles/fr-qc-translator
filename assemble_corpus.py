@@ -5,6 +5,7 @@
 import glob
 import io
 import json
+import matplotlib.pyplot as plt
 import pickle
 import os
 
@@ -164,9 +165,9 @@ if __name__ == '__main__':
 
     # Shuffle and split into train, valid, test
     train_examples, test_examples = train_test_split(examples,
-                                                     test_size=0.2, random_state=42)
+                                                     test_size=0.1, random_state=42)
     train_examples, valid_examples = train_test_split(train_examples,
-                                                      test_size=0.5, random_state=42)
+                                                      test_size=0.11, random_state=42)
 
     # Build vocab from training examples
     vocab = Vocab()
@@ -178,6 +179,18 @@ if __name__ == '__main__':
 
     # Write examples to files
     print('Number of training examples:', len(train_examples))
+    print('Number of valid examples:', len(valid_examples))
+    print('Number of test examples:', len(test_examples))
     write_examples('corpus/train_qc.txt', 'corpus/train_fr.txt', train_examples)
     write_examples('corpus/valid_qc.txt', 'corpus/valid_fr.txt', valid_examples)
     write_examples('corpus/test_qc.txt', 'corpus/test_fr.txt', test_examples)
+
+    # Histogram of source (qc) example lengths
+    print('Number of total examples:', len(examples))
+    # lens = [len(ex[0].split()) for ex in examples]
+    # plt.hist(lens, bins=20)
+    # plt.xticks(range(0, 150, 10))
+    # plt.axis([0, 150, 0, 2500])
+    # plt.xlabel('Sequence length (in tokens)')
+    # plt.ylabel('Number of sequences')
+    # plt.savefig(os.path.join('corpus', 'histogram.png'))

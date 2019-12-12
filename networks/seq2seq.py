@@ -13,13 +13,16 @@ from allennlp.training.metrics import BLEU  # noqa
 
 
 class Seq2Seq():
-    def __init__(self, vocab, cfg, device, name=None, bi=True, att=True, batch_norm=True, teach_forc_ratio=0.5, patience=3, dropout=0.0):
+    def __init__(self, vocab, cfg, device, name=None, bi=True, att=True, batch_norm=True,
+        teach_forc_ratio=0.5, patience=3, dropout=0.0, write_idx=3):
         self.device = device
         self.model = Seq2SeqArch(vocab, cfg, device,
                                  bi=bi, att=att, batch_norm=batch_norm, teach_forc_ratio=teach_forc_ratio, dropout=dropout)
         self.vocab = vocab
         self.name = name if name else 'seq2seq'
         self.cfg = cfg
+        self.write_idx = write_idx
+        print('write idx', write_idx)
 
         # Evaluation metrics
         self.bleu = BLEU(exclude_indices=set([0]))  # Exclude padding
@@ -40,7 +43,7 @@ class Seq2Seq():
         '''
         Log the test outputs to a txt.
         '''
-        with open(os.path.join(log_dir, '{0}_outputs.txt'.format(self.name)), 'w') as fp:
+        with open(os.path.join(log_dir, '{0}_outputs_{1}.txt'.format(self.name, self.write_idx)), 'w') as fp:
             for line in self.outputs:
                 fp.write('{0}\n'.format(line))
 
@@ -129,6 +132,7 @@ class Seq2Seq():
         enc_opt = torch.optim.Adam(self.model.encoder.parameters(), lr=lr, weight_decay=weight_decay)
         dec_opt = torch.optim.Adam(self.model.decoder.parameters(), lr=lr, weight_decay=weight_decay)
         for epoch in range(num_epochs):
+            max_valid_bleu = 0.0
             train_loss, train_bleu = self.train_epoch(train_loader, loss_fn, enc_opt, dec_opt, train_bsz)
             print('EPOCH {0} \t train_loss {1} \t train_bleu {2}'.format(epoch, train_loss, train_bleu))
             valid_loss, valid_bleu = self.valid_epoch(valid_loader, loss_fn, valid_bsz)
@@ -144,6 +148,9 @@ class Seq2Seq():
                 if stop:
                     print('Early stopping: validation loss has not improved in {0} epochs.'.format(self.patience))
                     break
+            if valid_bleu > max_valid_bleu:
+                max_valid_bleu = valid_bleu
+                self.save_model(os.path.join('models', self.name))
             # Log losses
             self.train_losses.append(train_loss)
             self.train_bleu.append(train_bleu)
@@ -231,10 +238,10 @@ class Seq2Seq():
         self.model.decoder.eval()
         loss_epoch, bleu_epoch = 0.0, 0.0
         for i, (x, y, x_len, y_len) in enumerate(valid_loader):
-            if write_outputs:
-                # Test bsz should be 1, so indexing at 0 should include everything
-                inp_qc = ' '.join(self.vocab.get_sentence(x)[0])
-                inp_fr = ' '.join(self.vocab.get_sentence(y)[0])
+            if write_outputs: # Writes only some outputs
+                write_idx = self.write_idx
+                inp_qc = ' '.join(self.vocab.get_sentence(x)[write_idx])
+                inp_fr = ' '.join(self.vocab.get_sentence(y)[write_idx])
 
             x, y = x.to(self.device), y.to(self.device)
             enc_hid = self.model.encoder.init_hidden(valid_bsz, self.cfg['num_enc_layers']).to(self.device)
@@ -288,8 +295,7 @@ class Seq2Seq():
             self.bleu(pred_tok, y)
 
             if write_outputs:
-                # Test bsz should be 1, so indexing at 0 should be fine
-                pred_sents = [' '.join(x) for x in self.vocab.get_sentence(pred_tok.cpu())][0]
+                pred_sents = [' '.join(x) for x in self.vocab.get_sentence(pred_tok.cpu())][write_idx]
                 self.outputs.append('inp_qc: {0}'.format(inp_qc))
                 self.outputs.append('inp_fr: {0}'.format(inp_fr))
                 self.outputs.append('out_fr: {0}'.format(pred_sents))

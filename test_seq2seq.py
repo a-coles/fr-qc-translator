@@ -25,6 +25,9 @@ if __name__ == '__main__':
     parser.add_argument('--name', type=str, default=None, help='Name for model.')
     parser.add_argument('--bi', action='store_true', help='Use a bidirectional encoder.')
     parser.add_argument('--att', action='store_true', help='Use a decoder with attention.')
+    parser.add_argument('--bn', action='store_true', help='Use batch normalization at encoder.')
+    parser.add_argument('--write_idx', type=int, help='Index of output examples to write. Change for new examples.')
+
     args = parser.parse_args()
 
     # Load config and vocab
@@ -45,8 +48,8 @@ if __name__ == '__main__':
     # Perform test
     criterion = nn.CrossEntropyLoss(ignore_index=vocab.word2idx['PAD'])
     model = Seq2Seq(vocab, cfg, device,
-                    name=args.name, bi=args.bi, att=args.att, teach_forc_ratio=cfg['teacher_forcing_ratio'],
-                    patience=cfg['patience'])
+                    name=args.name, bi=args.bi, att=args.att, batch_norm=args.bn, teach_forc_ratio=cfg['teacher_forcing_ratio'],
+                    patience=cfg['patience'], write_idx=args.write_idx)
     model.load_model(args.model_path)
     model.test(test_loader, criterion, cfg['test_bsz'])
     model.log_learning_curves(log_dir=args.log_dir, graph=False)
